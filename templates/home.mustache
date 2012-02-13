@@ -1,0 +1,17 @@
+<aside>
+  <h3>Stacks</h3>
+  <ul>
+  {{# stacks}}
+    <li>
+      <div>
+        <h4>{{ title }}</h4>
+        {{# apps }}
+          <div id="app_{{ id }}">
+            {{ name }}
+          </div>
+        {{/ apps}}
+      </div>
+    </li>
+  {{/ stacks}}
+  </ul>
+</aside>
