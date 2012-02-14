@@ -49,4 +49,15 @@ describe Capitan::Environment do
       new_environment.name.should == 'challengepost_staging_2'
     end
   end
+
+  describe "config" do
+    it "should return hash for app attributes and name" do
+      expected_config = {
+        app_name:         app.name,
+        environment_name: 'challengepost_staging',
+        account:          app.account_name
+      }
+      environment.config.should == expected_config
+    end
+  end
 end

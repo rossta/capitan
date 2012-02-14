@@ -23,23 +23,4 @@ Gem::Specification.new do |s|
   # specify any dependencies here; for example:
   # s.add_development_dependency "rspec"
   # s.add_runtime_dependency "rest-client"
-
-  s.add_dependency 'engineyard'
-  s.add_dependency 'redis-namespace'
-  s.add_dependency 'mustache'
-  s.add_dependency 'sinatra'
-  s.add_dependency 'sqlite3'
-  s.add_dependency 'activesupport'
-  s.add_dependency 'activerecord'
-
-  # gem "json"
-  # gem "pony"
-  # gem "tlsmail"
-  # gem "open4"
-
-  s.add_development_dependency 'rspec'
-  s.add_development_dependency 'database_cleaner'
-  s.add_development_dependency 'factory_girl'
-  s.add_development_dependency 'rack-test'
-
 end

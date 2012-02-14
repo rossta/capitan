@@ -44,5 +44,13 @@ module Capitan
       environment.app == self.app && environment.key == self.key && environment.name == self.name
     end
 
+    def config
+      {
+        environment_name: name,
+        app_name:         app.name,
+        account:          app.account_name
+      }
+    end
+
   end
 end

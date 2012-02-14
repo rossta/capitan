@@ -22,11 +22,11 @@ module Capitan
 
     def ey_app_and_environment(config)
       # {
-      #   app_name:         config.app_name,
-      #   environment_name: config.environment_name,
-      #   account:          config.account_name
+      #   app_name:         "app name",
+      #   environment_name: "app_environment",
+      #   account_name:     "account name"
       # }
-      api.resolver.app_and_environment(config)
+      api.resolver.app_and_environment(HashWithIndifferentAccess.new(config))
     end
 
     def last_deployment_on_stack(stack)
@@ -36,8 +36,8 @@ module Capitan
 
     def stack_app_and_environment(stack)
       api.resolver.app_and_environment({
-        environment_name: stack.environment,
-        app_name: stack.application,
+        environment: stack.environment,
+        app: stack.application,
         account: stack.account
       })
     end

@@ -1,6 +1,5 @@
 require 'sinatra/base'
 require 'active_record'
-require 'yaml'
 require 'logger'
 require 'mustache/sinatra'
 require 'capitan/views'

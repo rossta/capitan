@@ -1,7 +1,7 @@
 FactoryGirl.define do
   factory :'capitan/app' do
     sequence(:provider_id) { |n| n }
-    name 'Staging'
+    name 'CP App'
     account_name 'challengepostcom'
   end
 

@@ -3,8 +3,8 @@ require 'spec_helper'
 describe Capitan::Server do
   include Rack::Test::Methods
 
-  describe "/" do
-    it "should respond to /" do
+  describe "GET /" do
+    it "responds to /" do
       get '/'
       last_response.should be_ok
 
@@ -14,5 +14,9 @@ describe Capitan::Server do
         body.should include('Stacks')
       end
     end
+  end
+  
+  describe "POST /builds" do
+    
   end
 end

@@ -1,7 +1,7 @@
 module Capitan
   class App < ActiveRecord::Base
     include Capitan::Redis
-    
+
     has_many :deploys, order: 'finished_at DESC'
 
     def last_ey_deploy(environment_key)
@@ -16,11 +16,7 @@ module Capitan
     end
 
     def ey_config(environment_key)
-      {
-        app_name:         name,
-        environment_name: environments[environment_key],
-        account:          account_name
-      }
+      environment_for_key(environment_key).config
     end
 
     def environments
@@ -28,11 +24,15 @@ module Capitan
         Environment.new(app: self, key: key, name: name)
       end
     end
-    
+
+    def environment_for_key(environment_key)
+      environments.detect { |env| env.key == environment_key }
+    end
+
     def environment_names
       @environment_names ||= Environment.names_by_key(redis_environments_key)
     end
-    
+
     def add_environment(environment_key, environment_name)
       Environment.add(redis_environments_key, environment_key, environment_name)
     end

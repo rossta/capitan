@@ -1,0 +1,29 @@
+platform:
+  staging:
+    environment_name: challengepost_staging
+    app_name:         challengepost
+    account_name:     challengepostcom
+  production:
+    environment_name: challengepost_production
+    app_name:         challengepost
+    account_name:     challengepostcom
+
+challenges:
+  staging:
+    environment_name: challengepost_staging
+    app_name:         challenges
+    account_name:     challengepostcom
+  production:
+    environment_name: challengepost_production
+    app_name:         challenges
+    account_name:     challengepostcom
+
+home:
+  staging:
+    environment_name: challengepost_staging
+    app_name:         home
+    account_name:     challengepostcom
+  production:
+    environment_name: challengepost_production
+    app_name:         home
+    account_name:     challengepostcom

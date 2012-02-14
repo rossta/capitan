@@ -6,6 +6,9 @@ module Capitan
     # t.string :account
 
     has_many :apps
+    has_many :deploys, :through => :apps
+    has_many :stack_jobs
+    has_many :jobs, :through => :stack_jobs
 
     def sync_last_deploy(environment_key)
       apps.map { |app| app.sync_last_deploy(environment_key) }
