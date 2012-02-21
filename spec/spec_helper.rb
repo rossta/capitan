@@ -9,8 +9,12 @@ ENV["RACK_ENV"] ||= 'test'
 
 require 'capitan'
 
-# Load factories
-require 'factory_girl'
+def app
+  Capitan::Server
+end
+
+require 'factory_girl' # Load factories
+require 'capybara/rspec'
 
 # Load support files
 Dir["#{File.dirname(__FILE__)}/support/**/*.rb"].each { |f| require f }
@@ -35,6 +39,4 @@ end
 
 TestRedis::Server.start!(dir)
 
-def app
-  Capitan::Server
-end
+Capybara.app = app

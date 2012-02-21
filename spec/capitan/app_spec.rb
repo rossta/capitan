@@ -25,10 +25,5 @@ describe Capitan::App do
       end
     end
     
-    describe "display_name" do
-      it "titleizes" do
-        
-      end
-    end
   end
 end

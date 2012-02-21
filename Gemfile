@@ -24,9 +24,10 @@ group :test, :development do
   gem 'rack-test'
   gem 'database_cleaner'
   gem 'factory_girl'
+  gem 'capybara'
 
   gem 'fakeweb'
-  gem 'vcr'
+  gem 'vcr', "2.0.0.rc1"
 
   gem 'ruby-debug19'
 end

@@ -10,5 +10,6 @@ class CreateApps < ActiveRecord::Migration
       t.integer :stack_id
       t.timestamps
     end
+
   end
 end
