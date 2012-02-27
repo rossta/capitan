@@ -1,0 +1,49 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://jenkins:95f8473aca2b06a851472072f1a30b91@ci.berman.challengepost.com/api/json
+    body: ''
+    headers:
+      authorization:
+      - Basic amVua2luczo5NWY4NDczYWNhMmIwNmE4NTE0NzIwNzJmMWEzMGI5MQ==
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+      connection:
+      - close
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx/1.0.5
+      date:
+      - Mon, 27 Feb 2012 04:01:38 GMT
+      content-type:
+      - application/javascript;charset=UTF-8
+      connection:
+      - close
+      content-encoding:
+      - gzip
+      content-length:
+      - '366'
+      x-powered-by:
+      - Servlet/2.5 (Winstone/0.9.10)
+    body: !binary |-
+      H4sIAAAAAAAAAJWTTU/DMAyG/8rkc7Vy4dLbxLigMRBIXNCE0tRrw5K45KNj
+      mvrfcffFEFKlHOP4efwqivcgvFe1xWohStQeivd9v8rAUIVQwPLp5XG2gAws
+      n+fopVNtUGT5KjQ4McIHdJMHtBtl/WRoOvUuhRn44RTN/TfKGMix/TaD6lpj
+      o9YZfFJ5mAz2iMlGaI22Rs+C6DSXmhDaIs+lmpbojLDTS09LPkwlmZwt+S+Z
+      MypJk2O41BGhzy7+CjvlMdV9pMa8DeoWXXLoEzZqJpOcd2DGnBtLW41VjaVI
+      f4w/8NiU4Sfp5Cc5UmPeVouwJmdSzWduzO09pWoZGTMGapX8EPLw6xPV1+z/
+      Gbys1KFjcEGigmLfZ9A6ZYTbvSnccuGcYaZ1ymiOD19RYVC2ntOWl3UttMcM
+      vBYdzmq04ZlcgOKGpR7vXDTDFp+auPLKW+9U2EERXORSx3H+rHlyoFX/A9+W
+      MGWwBAAA
+    http_version: '1.1'
+  recorded_at: Mon, 27 Feb 2012 04:01:38 GMT
+recorded_with: VCR 2.0.0.rc1

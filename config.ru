@@ -1,4 +1,4 @@
-require './app'
+# This file is used by Rack-based servers to start the application.
 
-use Rack::ShowExceptions
-run Capitan::Server.new
+require ::File.expand_path('../config/environment',  __FILE__)
+run Capitan::Application
