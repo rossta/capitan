@@ -5,7 +5,7 @@ describe "Requests", :type => :request do
 
   describe "home page" do
     before(:each) do
-      Factory(:stack, "Our Stack")
+      Factory(:'capitan/stack', title: "Our Stack")
     end
 
     it "displays stacks" do

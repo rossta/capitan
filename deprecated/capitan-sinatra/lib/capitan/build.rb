@@ -12,7 +12,6 @@ module Capitan
     #    }
     # }
     def self.sync_latest(job_name)
-      require 'rubygems'; require 'ruby-debug'; debugger
       builds_json = Capitan::Jenkins::API.get_latest_build(job_name)
       # Capitan::Jenkins::API.get_latest_build(job_name).keys: 
        # ["actions",

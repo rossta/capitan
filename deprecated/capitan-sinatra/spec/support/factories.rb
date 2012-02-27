@@ -8,7 +8,6 @@ FactoryGirl.define do
   end
 
   factory :'capitan/deploy' do
-
   end
 
   factory :'capitan/stack' do
