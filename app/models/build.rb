@@ -4,6 +4,7 @@ class Build < ActiveRecord::Base
   belongs_to :branch
 
   scope :status, includes(:job, :branch).order('job_id DESC, number DESC')
+  scope :ordered_by_number, order('number DESC')
 
   def self.sync(job, build_data)
     job.find_or_initialize_build_by_branch_id_and_number(build_data.branch_id, build_data.build_number).tap do |build|

@@ -1,0 +1,10 @@
+<div id="jobs">
+  <h3>  Jobs</h3>
+  <ul>
+    <% @jobs.each do |job| %>
+      <li>
+        <%= link_to job.display_name, job %>
+      </li>
+    <% end %>
+  </ul>
+</div>

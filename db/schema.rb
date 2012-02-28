@@ -14,11 +14,11 @@
 ActiveRecord::Schema.define(:version => 20120227045557) do
 
   create_table "branches", :force => true do |t|
-    t.string   "name",          :null => false
-    t.integer  "job_id",        :null => false
-    t.text     "build_numbers"
-    t.datetime "created_at",    :null => false
-    t.datetime "updated_at",    :null => false
+    t.string   "name",              :null => false
+    t.integer  "job_id",            :null => false
+    t.integer  "last_build_number"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
   end
 
   add_index "branches", ["job_id"], :name => "index_branches_on_job_id"

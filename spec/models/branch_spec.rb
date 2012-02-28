@@ -39,32 +39,4 @@ describe Branch do
     end
   end
 
-  describe "last_build_number" do
-    let(:branch) { Branch.new(:name => 'origin/master', :job_id => 1) }
-
-    it "returns last build number in array of build numbers" do
-      branch.build_numbers = [1, 2]
-      branch.last_build_number.should == 2
-    end
-
-    it "sets last build number, adds to array of build numbers" do
-      branch.build_numbers = [1, 2]
-      branch.last_build_number = 3
-      branch.last_build_number.should == 3
-      branch.build_numbers.should == [1, 2, 3]
-    end
-
-    it "saves build_numbers" do
-      branch.build_numbers = [1, 2]
-      branch.save
-
-      Branch.last.build_numbers.should == [1, 2]
-    end
-
-    it "does not add duplicates" do
-      branch.build_numbers = [1, 2]
-      branch.last_build_number = 2
-      branch.build_numbers.should == [1, 2]
-    end
-  end
 end

@@ -1,0 +1,42 @@
+<h2><%= @job.display_name %></h2>
+<div id='build_statuses'>
+  <table>
+    <thead>
+      <tr>
+        <th>Number</th>
+        <th>Branch</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <%- @job.branches.order('last_build_number DESC').each do |branch| -%>
+        <%- build = branch.last_build -%>
+        <tr>
+          <td><%= build.number %></td>
+          <td><%= branch.display_name %></td>
+          <td><%= build.result.to_s %></td>
+        </tr>
+      <%- end -%>
+    </tbody>
+  </table>
+</div>
+<div id='build_statuses_2'>
+  <table>
+    <thead>
+      <tr>
+        <th>Number</th>
+        <th>Branch</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <%- @job.builds.includes(:branch).ordered_by_number.each do |build| -%>
+        <tr>
+          <td><%= build.number %></td>
+          <td><%= build.branch.display_name %></td>
+          <td><%= build.result.to_s %></td>
+        </tr>
+      <%- end -%>
+    </tbody>
+  </table>
+</div>

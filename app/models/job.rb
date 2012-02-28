@@ -17,4 +17,8 @@ class Job < ActiveRecord::Base
     builds.find_or_initialize_by_branch_id_and_number(branch_id, build_number)
   end
 
+  def display_name
+    name
+  end
+
 end

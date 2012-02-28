@@ -1,6 +1,4 @@
 class Branch < ActiveRecord::Base
-  serialize :build_numbers, Array
-
   belongs_to :job
   has_many :builds
 
@@ -25,17 +23,16 @@ class Branch < ActiveRecord::Base
     MAX_BUILDS_PER_BRANCH
   end
 
+  def display_name
+    name
+  end
+
   def build_ids_to_preserve
     builds.select('id').order('number DESC').limit(self.class.max_builds_per_branch)
   end
 
-  def last_build_number=(number)
-    return false if build_numbers.include?(number)
-    build_numbers << number
-  end
-
-  def last_build_number
-    build_numbers.last
+  def last_build
+    builds.where(:number => last_build_number).first
   end
 
 end
