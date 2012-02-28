@@ -7,9 +7,11 @@ class Build < ActiveRecord::Base
   scope :ordered_by_number, order('number DESC')
 
   def self.sync(job, build_data)
+    return false unless build_data.branch_id && build_data.build_number
+
     job.find_or_initialize_build_by_branch_id_and_number(build_data.branch_id, build_data.build_number).tap do |build|
       build.building    = build_data.building
-      build.finished_at = build_data.timestamp
+      build.built_at    = build_data.built_at
       build.result_message = build_data.result
       build.save
     end
@@ -23,8 +25,8 @@ class Build < ActiveRecord::Base
     job.name
   end
 
-  def branch_name
-    branch.name
+  def branch_display_name
+    branch.display_name
   end
 
   def result

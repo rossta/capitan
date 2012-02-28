@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(:version => 20120227045557) do
   create_table "builds", :force => true do |t|
     t.integer  "number",         :null => false
     t.boolean  "building"
-    t.datetime "finished_at"
+    t.datetime "built_at"
     t.integer  "branch_id"
     t.integer  "job_id"
     t.string   "result_message"

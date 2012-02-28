@@ -6,35 +6,16 @@
         <th>Number</th>
         <th>Branch</th>
         <th>Status</th>
+        <th>Built at</th>
       </tr>
     </thead>
     <tbody>
-      <%- @job.branches.order('last_build_number DESC').each do |branch| -%>
-        <%- build = branch.last_build -%>
+      <%- @job.branch_builds.each do |build| -%>
         <tr>
           <td><%= build.number %></td>
-          <td><%= branch.display_name %></td>
-          <td><%= build.result.to_s %></td>
-        </tr>
-      <%- end -%>
-    </tbody>
-  </table>
-</div>
-<div id='build_statuses_2'>
-  <table>
-    <thead>
-      <tr>
-        <th>Number</th>
-        <th>Branch</th>
-        <th>Status</th>
-      </tr>
-    </thead>
-    <tbody>
-      <%- @job.builds.includes(:branch).ordered_by_number.each do |build| -%>
-        <tr>
-          <td><%= build.number %></td>
-          <td><%= build.branch.display_name %></td>
-          <td><%= build.result.to_s %></td>
+          <td><%= build.branch_display_name %></td>
+          <td><%= build.display_result %></td>
+          <td><%= build.built_at %></td>
         </tr>
       <%- end -%>
     </tbody>

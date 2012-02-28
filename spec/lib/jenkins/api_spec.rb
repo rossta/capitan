@@ -25,7 +25,7 @@ describe Jenkins::API, :vcr, :record => :new_episodes do
       build_object.job_name.should == 'models'
       build_object.build_number.should == 171
       build_object.result.should == 'SUCCESS'
-      build_object.timestamp.should == 1330028752673
+      build_object.timestamp.should be_a(Time)
       build_object.building.should be_false
       build_object.branch_name.should == 'origin/master'
     end
@@ -53,5 +53,11 @@ describe Jenkins::API, :vcr, :record => :new_episodes do
     end
   end
 
-
+  describe "parse time" do
+    
+    it "translates jenkins time format YYYY-MM-DD_hh-mm-ss into datetime" do
+      expected_time = Time.parse("2012-02-27 18:20:28")
+      api.parse_time_from_build_id("2012-02-27_18-20-28").should == expected_time
+    end
+  end
 end

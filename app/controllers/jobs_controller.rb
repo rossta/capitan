@@ -1,6 +1,6 @@
 class JobsController < ApplicationController
 
   def show
-    @job = Job.find(params[:id])
+    @job = JobDecorator.new(Job.find(params[:id]))
   end
 end
