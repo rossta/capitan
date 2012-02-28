@@ -9,7 +9,6 @@ module Jenkins
 
     def jobs(attributes = {})
       jobs_json = get
-      return nil unless jobs_json.present?
 
       [].tap do |jobs|
         jobs_json["jobs"].each do |job_hash|
@@ -20,7 +19,6 @@ module Jenkins
 
     def branches(job_name, attributes = {})
       all_builds_json = get "/job/#{job_name}/lastBuild"
-      return nil unless all_builds_json.present?
 
       [].tap do |branches|
         all_builds_json["actions"][1]["buildsByBranchName"].each do |branch_name, build_hash|
@@ -32,7 +30,7 @@ module Jenkins
 
     def build(job_name, build_number, attributes = {})
       build_json = get "/job/#{job_name}/#{build_number}"
-      return nil unless build_json.present?
+      return OpenStruct.new unless build_json.present?
 
       branch_name = branch_name_from_build_json(build_json, build_number)
 
