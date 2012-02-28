@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://jenkins:95f8473aca2b06a851472072f1a30b91@ci.berman.challengepost.com/job/models/lastBuild/api/json
+    uri: http://jenkins:95f8473aca2b06a851472072f1a30b91@ci.berman.challengepost.com/job/models/171/api/json
     body: ''
     headers:
       authorization:
@@ -23,7 +23,7 @@ http_interactions:
       server:
       - nginx/1.0.5
       date:
-      - Mon, 27 Feb 2012 03:10:13 GMT
+      - Mon, 27 Feb 2012 23:01:42 GMT
       content-type:
       - application/javascript;charset=UTF-8
       connection:
@@ -69,5 +69,5 @@ http_interactions:
       bxn+yOqaSEKecnCBkOp8f6EnaLRz/fYQLpxr/Q8Pu9Gr8XCkLqvxrCqfo38w
       Wz+Pc/NQV6NWUYjvyyYeBDcGZqjQh/6Yh38l+u8+/gGjqsdJyBUAAA==
     http_version: '1.1'
-  recorded_at: Mon, 27 Feb 2012 03:10:13 GMT
+  recorded_at: Mon, 27 Feb 2012 23:01:42 GMT
 recorded_with: VCR 2.0.0.rc1

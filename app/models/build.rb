@@ -3,21 +3,19 @@ class Build < ActiveRecord::Base
   belongs_to :job
   belongs_to :branch
 
-  def self.sync(job, attributes = {})
-    build_data = attributes[:data]
-    build = job.find_or_initialize_build_by_number(build_data.build_number).tap do |build|
-      build.branch_id   = attributes[:branch_id]
+  scope :status, includes(:job, :branch).order('job_id DESC, number DESC')
+
+  def self.sync(job, build_data)
+    job.find_or_initialize_build_by_branch_id_and_number(build_data.branch_id, build_data.build_number).tap do |build|
       build.building    = build_data.building
       build.finished_at = build_data.timestamp
       build.result_message = build_data.result
+      build.save
     end
-    build.save
   end
 
-  def self.display_results
-    includes(:job, :branch).order('job_id DESC, number DESC').all.each do |build|
-      puts "#{build.job_name} ##{build.number}:\t\t\t#{build.branch_name}\t\t\t#{build.result.to_s}"
-    end
+  def self.trim_by_branch
+    destroy_all(["id NOT IN (?)", Branch.build_ids_to_preserve])
   end
 
   def job_name

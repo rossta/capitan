@@ -13,8 +13,8 @@ class Job < ActiveRecord::Base
     branches.find_or_initialize_by_name(branch_name)
   end
 
-  def find_or_initialize_build_by_number(build_number)
-    builds.find_or_initialize_by_number(build_number)
+  def find_or_initialize_build_by_branch_id_and_number(branch_id, build_number)
+    builds.find_or_initialize_by_branch_id_and_number(branch_id, build_number)
   end
 
 end

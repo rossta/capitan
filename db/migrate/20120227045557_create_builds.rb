@@ -10,7 +10,7 @@ class CreateBuilds < ActiveRecord::Migration
       t.timestamps
     end
 
-    add_index :builds, :branch_id
-    add_index :builds, :job_id
+    # add_index :builds, [:branch_id, :number]
+    # add_index :builds, [:job_id, :number]
   end
 end

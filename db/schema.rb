@@ -34,9 +34,6 @@ ActiveRecord::Schema.define(:version => 20120227045557) do
     t.datetime "updated_at",     :null => false
   end
 
-  add_index "builds", ["branch_id"], :name => "index_builds_on_branch_id"
-  add_index "builds", ["job_id"], :name => "index_builds_on_job_id"
-
   create_table "jobs", :force => true do |t|
     t.string   "name",       :null => false
     t.datetime "created_at", :null => false

@@ -22,6 +22,8 @@ gem 'jquery-rails'
 gem 'faraday', '0.8.0.rc2'
 gem 'faraday_middleware'
 
+gem 'draper'
+
 group :development, :test do
   gem 'ruby-debug19', :require => 'ruby-debug', :platforms => :mri_19
   gem 'ruby-debug',   :platforms => :mri_18
@@ -29,7 +31,8 @@ group :development, :test do
   gem 'rspec-rails'
   gem 'capybara'
   gem 'database_cleaner'
-  gem 'factory_girl'
+  gem 'factory_girl_rails'
+  gem 'steak'
 end
 
 group :test do
