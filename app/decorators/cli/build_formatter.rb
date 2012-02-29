@@ -10,7 +10,7 @@ module CLI
         @builds.each do |build|
           status << "".tap do |output|
             output << "%-21s" % "#{build.job_name} ##{build.number}:"
-            output << "%-42s" % build.branch_name
+            output << "%-42s" % build.branch_display_name
             output << "%-8s" % build.result.to_s
           end
         end

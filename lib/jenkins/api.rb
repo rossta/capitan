@@ -19,9 +19,10 @@ module Jenkins
 
     def branches(job_name, attributes = {})
       all_builds_json = get "/job/#{job_name}/lastBuild"
+      branches_json   = all_builds_json["actions"][1]["buildsByBranchName"] || []
 
       [].tap do |branches|
-        all_builds_json["actions"][1]["buildsByBranchName"].each do |branch_name, build_hash|
+        branches_json.each do |branch_name, build_hash|
           next if exclude_branch?(branch_name)
           branches << OpenStruct.new(attributes.merge(:name => branch_name, :number => build_hash["buildNumber"]))
         end

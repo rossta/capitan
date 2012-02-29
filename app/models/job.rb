@@ -3,6 +3,8 @@ class Job < ActiveRecord::Base
   has_many :branches
   has_many :builds
 
+  scope :enabled, where(enabled: true)
+
   MAX_BRANCHES_PER_JOB = 100
 
   def self.sync(jobs_data)
@@ -33,6 +35,14 @@ class Job < ActiveRecord::Base
 
   def display_name
     name
+  end
+
+  def disable!
+    update_attributes(enabled: false)
+  end
+
+  def enable!
+    update_attributes(enabled: true)
   end
 
 end

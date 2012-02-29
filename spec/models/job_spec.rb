@@ -1,14 +1,14 @@
 require 'spec_helper'
 
 describe Job do
-  
+
   describe "sync_jobs" do
     it "finds or creates jobs by name" do
       Job.should_receive(:find_or_create_by_name).with("models")
       Job.sync [OpenStruct.new(:name => "models")]
     end
   end
-  
+
   describe "self.build_ids_to_preserve" do
     before(:each) do
       Job.stub!(:max_branches_per_job => 2)
@@ -34,5 +34,23 @@ describe Job do
       branch_numbers.should include(3)
     end
   end
-  
+
+  describe "instance methods" do
+    let(:job) { Job.new }
+
+    describe "disable!" do
+      it "should set enabled to false" do
+        job.should_receive(:update_attributes).with(enabled: false)
+        job.disable!
+      end
+    end
+
+    describe "disable!" do
+      it "should set enabled to false" do
+        job.should_receive(:update_attributes).with(enabled: false)
+        job.disable!
+      end
+    end
+  end
+
 end

@@ -12,7 +12,7 @@ class Build < ActiveRecord::Base
     job.find_or_initialize_build_by_branch_id_and_number(build_data.branch_id, build_data.build_number).tap do |build|
       build.building    = build_data.building
       build.built_at    = build_data.built_at
-      build.result_message = build_data.result
+      build.result_message = build_data.result unless build.result_known?
       build.save
     end
   end
@@ -31,6 +31,10 @@ class Build < ActiveRecord::Base
 
   def result
     Jenkins.result_for(result_message) || :unknown
+  end
+
+  def result_known?
+    result != :unknown
   end
 
 end
