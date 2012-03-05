@@ -16,3 +16,5 @@
 /log
 
 .powenv
+
+config/jenkins.yml
