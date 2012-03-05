@@ -13,6 +13,7 @@ class Build < ActiveRecord::Base
       build.building    = build_data.building
       build.built_at    = build_data.built_at
       build.result_message = build_data.result unless build.result_known?
+      build.touch
       build.save
     end
   end

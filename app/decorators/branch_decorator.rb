@@ -1,17 +1,14 @@
-class BuildDecorator < ApplicationDecorator
-  decorates :build
+class BranchDecorator < ApplicationDecorator
+  decorates :branch
 
-  def display_result
-    result.to_s
-  end
-  
-  def built_at
-    h.l build.built_at, :format => :human
+  def builds
+    BuildDecorator.decorate(model.builds)
   end
 
   def synced_at
-    h.l build.updated_at, :format => :human
+    h.l updated_at, :format => :human
   end
+
 
   # Accessing Helpers
   #   You can access any helper via a proxy

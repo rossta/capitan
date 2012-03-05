@@ -33,6 +33,13 @@ class Job < ActiveRecord::Base
     branches.select('id').order('last_build_number DESC').limit(self.class.max_branches_per_job)
   end
 
+  def last_builds_by_branch
+    builds.joins(:branch).
+      includes(:branch).
+      where('builds.number = branches.last_build_number').
+      order('last_build_number DESC')
+  end
+
   def display_name
     name
   end

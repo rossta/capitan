@@ -6,7 +6,9 @@ Capitan::Application.routes.draw do
 
   root to: "home#show"
 
-  resources :jobs, :only => [:show, :index]
+  resources :jobs, :only => [:show, :index] do
+    resources :branches
+  end
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

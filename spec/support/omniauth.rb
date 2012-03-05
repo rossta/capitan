@@ -9,6 +9,7 @@ module OmniauthHelpers
   end
 
   def login_as(user)
+    setup_for_github_login user
     visit '/'
     click_link 'login with github'
   end

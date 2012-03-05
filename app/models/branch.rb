@@ -1,6 +1,6 @@
 class Branch < ActiveRecord::Base
   belongs_to :job
-  has_many :builds
+  has_many :builds, :order => 'number DESC'
 
   delegate :name, :to => :job, :prefix => true
 
@@ -10,6 +10,7 @@ class Branch < ActiveRecord::Base
     branches_data.each do |branch_data|
       job.find_or_initialize_branch_by_name(branch_data.name).tap do |branch|
         branch.last_build_number = branch_data.number
+        branch.touch
         branch.save
       end
     end

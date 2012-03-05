@@ -7,10 +7,7 @@ class JobDecorator < ApplicationDecorator
   end
 
   def last_builds_by_branch
-    job.builds.joins(:branch).
-      includes(:branch).
-      where('builds.number = branches.last_build_number').
-      order('last_build_number DESC')
+    job.last_builds_by_branch
   end
 
   # Accessing Helpers

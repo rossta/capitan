@@ -5,10 +5,6 @@ feature 'Homepage', %q{
 
   let(:user) { FactoryGirl.create(:user) }
 
-  before do
-    setup_for_github_login user
-  end
-
   scenario 'visit home page' do
     Factory(:job, :name => 'models')
     Factory(:job, :name => 'challenges')
@@ -28,6 +24,7 @@ feature 'Homepage', %q{
   end
 
   scenario 'Login with Github' do
+    setup_for_github_login user
     Factory(:job, :name => 'models')
     visit '/'
 
@@ -42,4 +39,5 @@ feature 'Homepage', %q{
     click_link "logout"
     page.should_not have_content('models')
   end
+
 end
