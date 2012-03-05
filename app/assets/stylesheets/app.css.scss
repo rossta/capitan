@@ -1,0 +1,28 @@
+@import "bootstrap";
+
+.navbar { 
+  background-color: #CCC;
+  background-image: -moz-linear-gradient(top, #CCC, #BBB);
+  background-image: -ms-linear-gradient(top, #CCC, #BBB);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#CCC), to(#BBB));
+  background-image: -webkit-linear-gradient(top, #CCC, #BBB);
+  background-image: -o-linear-gradient(top, #CCC, #BBB);
+  background-image: linear-gradient(top, #CCC, #BBB);
+  -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25), inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+}
+header h3 {
+  line-height:36px;
+}
+
+.left { float:left; }
+.right { float:right; }
+
+td.success { background: #5FD537 !important; }
+td.failure { background: red !important; }
+td.aborted { background: yellow !important; }
+
+th.number, td.number { width: 10%; }
+th.status, td.status { width: 15%; }
+th.built_at, td.built_at { width: 15%; }

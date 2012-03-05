@@ -16,6 +16,7 @@ group :assets do
   # gem 'therubyracer'
 
   gem 'uglifier', '>= 1.0.3'
+  gem 'bootstrap-sass', '~> 2.0.1'
 end
 
 gem 'jquery-rails'

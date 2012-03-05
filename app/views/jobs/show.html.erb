@@ -1,23 +1,2 @@
 <h2><%= @job.display_name %></h2>
-<div id='build_statuses'>
-  <table>
-    <thead>
-      <tr>
-        <th>Number</th>
-        <th>Branch</th>
-        <th>Status</th>
-        <th>Built at</th>
-      </tr>
-    </thead>
-    <tbody>
-      <%- @job.branch_builds.each do |build| -%>
-        <tr>
-          <td><%= build.number %></td>
-          <td><%= build.branch_display_name %></td>
-          <td><%= build.display_result %></td>
-          <td><%= build.built_at %></td>
-        </tr>
-      <%- end -%>
-    </tbody>
-  </table>
-</div>
+<%= render 'status', :job => @job %>

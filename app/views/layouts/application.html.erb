@@ -7,19 +7,10 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-<div>
-  <header>
-    <h3><%= link_to 'capitan', root_path %></h3>
-  </header>
-  <nav>
-    <% if signed_in? %>
-      <%= link_to "rossta", current_user.html_url %>
-      <%= link_to "logout", sign_out_path %>
-    <% end %>
-  </nav>
+<%= render 'layouts/navigation' %>
+<div class="container">
+  <%= yield %>
 </div>
-
-<%= yield %>
 
 </body>
 </html>

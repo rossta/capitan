@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
 
   def show
-    @jobs = Job.order(:name)
+    @jobs = JobDecorator.decorate(Job.order(:name))
   end
 
 end
