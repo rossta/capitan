@@ -1,3 +1,7 @@
+require 'faraday'
+require 'faraday_middleware'
+require 'ostruct'
+
 module Jenkins
 
   class API

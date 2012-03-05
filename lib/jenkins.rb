@@ -1,7 +1,3 @@
-require 'faraday'
-require 'faraday_middleware'
-require 'ostruct'
-
 module Jenkins
   extend self
   autoload :Configuration, 'jenkins/configuration'

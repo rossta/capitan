@@ -24,6 +24,9 @@ gem 'faraday_middleware'
 
 gem 'draper'
 
+gem 'warden'
+gem 'omniauth-github', :git => 'git://github.com/intridea/omniauth-github.git'
+
 group :development, :test do
   gem 'ruby-debug19', :require => 'ruby-debug', :platforms => :mri_19
   gem 'ruby-debug',   :platforms => :mri_18

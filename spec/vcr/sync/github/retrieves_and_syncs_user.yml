@@ -1,0 +1,604 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.github.com/orgs/challengepost/members
+    body: ''
+    headers:
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+      connection:
+      - close
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx/1.0.12
+      date:
+      - Mon, 05 Mar 2012 02:05:47 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - 200 OK
+      etag:
+      - ! '"1f4ffb4bea4ba6be847689fd41d8b7e1"'
+      x-ratelimit-limit:
+      - '5000'
+      x-ratelimit-remaining:
+      - '4999'
+      content-encoding:
+      - gzip
+    body: !binary |-
+      H4sIAAAAAAAAA73Wy2rbQBQG4HcxdJfa58x9AqXQRTd9hFLCmZkzjlJJDroE
+      Qsm7V04sW1lJaKGFYUAe9P8fx+P5/W/XN+XufvfYdc/t/eFAz8X+WHSPfdjH
+      U3XoW27aQzyV6akvX3d3O3qhjpqHz5tajn3D+2Pz8fR958fyoCNZz94F7TyK
+      aFQEoSlkEYVI6PF7+nZ9tVBuz3v6SxUV+5q7A7Utd+0kzxfxs6joyO2wGN82
+      XX9FBfvn+jgEHR8/FGmoNxdj2HD+ngGrjb3bladjUQ/brsXf7hZBPZ7K8hXF
+      CicJ7IOX3rPQGjJlp4B1YIHO++jURk5zMS5Oygkr4eY09l7I9BSrviy5WeEk
+      koAEnKL2GC0rLVRKlgUjeQzebOQ0F+PiJMBpmDhdiy+Faqgsi/ZUr5BK4Kzm
+      KNBaC4kT5XcoA9lJq6XeSGouxiiFUpjbQD1diy+U+sUvRf3jVB+p6VZgsXQg
+      ndBgspDZgGQtcnA6Om+AiTfCmotxwUKtzHSsPpVfCFZRU7+21XDUr+CKkDU5
+      woBRK1JJWQwQgnQhy8TZbsQ1F+PCZbz3Vt2Ga1J9KVaR+hVMwnuFVkkCM5xY
+      jiJ6x9nF4cOOOWzENBdjnCrnpJ8cVtW59EKguuiHv+UVREnJFKVRVoUEJLTg
+      5MEmZTTicGhtNUlzMS5Ew3luhLhN0qX2QqSGu76pu6ZfA8WI9nyVAhZBhaiC
+      VEYNh1ZI7JOBuNEszcW4QGkv0U6gJtWXYp3atqMVExUAjSfrstPojQDtkpFS
+      WkqAyqatbghzMcYfHRorbwPVfLReaNT2CWqsViBFwhxQaatR5/P1PKMBz4wa
+      KAna6nIwF2NEkta7idLY++3Pf/gbspjADAAA
+    http_version: '1.1'
+  recorded_at: Mon, 05 Mar 2012 02:05:47 GMT
+- request:
+    method: get
+    uri: https://api.github.com/users/rossta
+    body: ''
+    headers:
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+      connection:
+      - close
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx/1.0.12
+      date:
+      - Mon, 05 Mar 2012 02:05:47 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - 200 OK
+      x-ratelimit-limit:
+      - '5000'
+      etag:
+      - ! '"02a9e36b0e37ea01b06e1e6b98710f9f"'
+      x-ratelimit-remaining:
+      - '4998'
+      content-encoding:
+      - gzip
+    body: !binary |-
+      H4sIAAAAAAAAA4VSTUvEMBD9K0vAW7efu223IAqCF8GD6EEvy7SdpmHTpiSp
+      ZRH/uxNt9+PkLUzem/fezHwxexyQFezNoGYe4xo+wYLei5qKZRilO8jyJt9G
+      uzQOt3mdJkmSQR1Gm6xOidAoKdUkes6KaOcxqbjoiamVMRbofxhLKao9F8Ya
+      gqQemwVGLQnXWjuYIggMVqNGf5H3K9UFf8DgPxN39e3SBeJN7qMPB+hA+D3a
+      AIxBa3wubDuWrutN/Cg64GjosahdvtfRJvQHinOyrnFQZD3JPFZSvNk0eZ6m
+      yXc5D9A0rjVRpKrACuUm8IzT6l3pw+pB2CN9EWCA/nhNr1qQEnvuJOzcoxUa
+      oZS0lAakQY9dTwoGcREnGGlvJjiNu7Wd3F8TztnPsIokLNZ7sOQnDsN8HW7X
+      cfYa5UWc0ZY+yHAPnTuMF0q4eqKI2Jeo+e+VII3XbW9Jf89dYfZfCsWKfpTS
+      Y+6IoijNkuVOyCtVwu8fm98843cCAAA=
+    http_version: '1.1'
+  recorded_at: Mon, 05 Mar 2012 02:05:47 GMT
+- request:
+    method: get
+    uri: https://api.github.com/users/sud0n1m
+    body: ''
+    headers:
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+      connection:
+      - close
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx/1.0.12
+      date:
+      - Mon, 05 Mar 2012 02:05:47 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - 200 OK
+      x-ratelimit-limit:
+      - '5000'
+      etag:
+      - ! '"d9ec344bfb2470472c8d26c2925974eb"'
+      x-ratelimit-remaining:
+      - '4997'
+      content-encoding:
+      - gzip
+    body: !binary |-
+      H4sIAAAAAAAAA4WST2uDQBDFv4os9GbU1dioUHooFHrJqT2kFxl1NEv2j+yu
+      DaH0u3dMIklPBQ/LOm/m/d7ONxunRoq2tjgax6o0CZk/jcgq9uHQspANFr7A
+      g61FR5ct8L7h63yT87zHsmh6/piUiDxPoEshJ0FvpDRHoQfqloZs75WsJytJ
+      vPd+dFUcD8LvpyZqjYrd1CWaK5JJMwhNRbebq7NBOE/O+NxLWIRGkrsepMNZ
+      1IIXZtZt8RjsjD2EwXZH7RphWKUnKUNGc0bQJ6p5C0AF2vgAgtEaIlPqzHgl
+      /OvSYTtZjBb+s91LYfxfCs/d08IK6bqIMIIDKBCRRh+Dc+hddAvhIX0VCgZ0
+      dFim3Z9XfJ1EI+VJVJTSNUjKUYAiGLihzB6p6i8HjOJuWDzRs7q73FuK1GNX
+      g6fGaZKUK57Q986LimdVln9SQw1q3ogXI4UOttihPRhjNf1BoqKnvQQ9bwjP
+      NmWRLVtAo1i1+fkFfk3B7mYCAAA=
+    http_version: '1.1'
+  recorded_at: Mon, 05 Mar 2012 02:05:47 GMT
+- request:
+    method: get
+    uri: https://api.github.com/users/KevinBongart
+    body: ''
+    headers:
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+      connection:
+      - close
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx/1.0.12
+      date:
+      - Mon, 05 Mar 2012 02:05:47 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - 200 OK
+      x-ratelimit-limit:
+      - '5000'
+      etag:
+      - ! '"0a7c2ebeb910124bbf6c6de45167f304"'
+      x-ratelimit-remaining:
+      - '4996'
+      content-encoding:
+      - gzip
+    body: !binary |-
+      H4sIAAAAAAAAA4WS30vDMBDH/xUJ+La1abrWriCKgi+C+KAP+lKu3bULS5OS
+      pBtD/N+97AduQ/Atgc/lPvfNfbFhrJVsKouDcazMJsxvB2Qle3do2YTVynR0
+      W3o/lHG8wrXUtdEdWB9p9AS0RimzkZooPmFES038cwAf9iBBS2kRakXvtqAc
+      Bq4BL01AX3Bz9WHsirCDSyedJxcxYY3pB9Bboh6XoBTqDl+NC21raVipR6Xo
+      cd+rarTqoOnIs5N+OdYRlccXJuccDDI6YUea2V1WdBbW4MFWckEdMC14WoiM
+      561I25ynmIm2LrKmmOccAUmtoVk9LirwxAvO59MkmSY3b0KUWV4m/JMYDX0I
+      eSd39ZsT9iDDHI3RHhp//0feB5nzORw2o8XoqLobfA/G/wnfLW7D54bUQMyK
+      CCNYAWmE743BOfTuJKJr8SR76NDR4djt9DxNZjwaaBmOi0GBsjKhtQrpJdks
+      5/z7B8X+3Fh1AgAA
+    http_version: '1.1'
+  recorded_at: Mon, 05 Mar 2012 02:05:47 GMT
+- request:
+    method: get
+    uri: https://api.github.com/users/midu
+    body: ''
+    headers:
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+      connection:
+      - close
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx/1.0.12
+      date:
+      - Mon, 05 Mar 2012 02:05:47 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - 200 OK
+      x-ratelimit-limit:
+      - '5000'
+      etag:
+      - ! '"8d48b695ca2e659d00f3e07625371c05"'
+      x-ratelimit-remaining:
+      - '4995'
+      content-encoding:
+      - gzip
+    body: !binary |-
+      H4sIAAAAAAAAA4VSy2rDMBD8lSDozZGfTWVDKbTQYyi0PaQXs7bXtogsGUlu
+      CKX/3nUT0+TUg0GsZjQzO/5i/jgiK9i7Q8sC1ln4BA+2lA0NkzzP4rsshWiD
+      TS2gjnOBrajpQ4FYEaE1SpmD1B0rUhGw3g+qnKwicu/96Iow7KTvp4rXZggH
+      2UzEOUtcwxzWk0W+GPjFn4DhfzYemvtFDJJMcOSwhwEk1+hDcA69438ubpJn
+      OUCHjg6L2uV5HWcRHylQwJTppKYoZ9+9tAiVonW1oBwGrCIAK/Sk1IytwUsz
+      w7d4WO2M3Qer7Y5eGadKybq0OBrHimQTMMo2gj4S9KkHpVB3+GKcnzMTvpKG
+      bv6InXSeiGkUsOuVwSgvcoUTVeiWHddk1WNTgp97jOJoHcXrJH2LN8VtXGTJ
+      B72vYZirf/XYgjarR04zpL1Re6dM808QC5HmJH0qmhRolH7/AOF4TeM4AgAA
+    http_version: '1.1'
+  recorded_at: Mon, 05 Mar 2012 02:05:48 GMT
+- request:
+    method: get
+    uri: https://api.github.com/users/jcmuller
+    body: ''
+    headers:
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+      connection:
+      - close
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx/1.0.12
+      date:
+      - Mon, 05 Mar 2012 02:05:48 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - 200 OK
+      x-ratelimit-limit:
+      - '5000'
+      etag:
+      - ! '"9031c3320252d1304054d7879f9990b1"'
+      x-ratelimit-remaining:
+      - '4994'
+      content-encoding:
+      - gzip
+    body: !binary |-
+      H4sIAAAAAAAAA4VS227TQBD9lZElJFAdX5akbSwhBJFQVQVqCDzASzS2J/am
+      611rL2ktxL8zbhORPvE2e2Zmz8yc8zsaQqVkvbU0GBcVYh5HfhwoKqIfjmwU
+      R63FA3q0W9kwKBqRNRk19WKZ11c0X4h501yRoByXebW85IadUco8SN1GxeJt
+      HHW+V9tgFTd33g+uSNNW+i5USW36dF/3QaknImVaqbnqDDrO1krnp9n4M2kJ
+      K8Xj7VA5mppq9NJMfV9+rviXShqOS2t25BwnUEFDB1JmIAsPTAzKeAdmB/TI
+      kCRdE0gNJVkVwy3vuqmtHPxzHMPm6xpeH9BKExzsFB6MdW9i+PhhcxNDeVPG
+      8C1UI4ej74yOYXVxEcNdtV8lsDYHgrXU4RFQN3C32UxELWmyyFwT5u3IhwJv
+      oJVcXGF9D72xNCG+I+AT9UFLPya8Gj8G1COvt+qQj6ZbKo3znDkq9PLKjupg
+      KTnp93Tu58L0fyq+b96dtEIxv04owXvsUSaafIrOkXfJPxFfiU+yx5YcBye2
+      83iWz7NkYD+wOizy0Qjsg31AfdR/mo7zLzfAQZ7RpIEN6c4dU7MZPDVb9JMz
+      szybZWImxPf8sshFsRC/+EeN/WTmW6YC1uTzyW3E67AnNb/jaLK2yK4XWXay
+      LzMxJP78Bb8OGgIgAwAA
+    http_version: '1.1'
+  recorded_at: Mon, 05 Mar 2012 02:05:48 GMT
+- request:
+    method: get
+    uri: https://api.github.com/users/niuage
+    body: ''
+    headers:
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+      connection:
+      - close
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx/1.0.12
+      date:
+      - Mon, 05 Mar 2012 02:05:50 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - 200 OK
+      x-ratelimit-limit:
+      - '5000'
+      etag:
+      - ! '"00dd2a7cab09be6d9ffda645b1924ded"'
+      x-ratelimit-remaining:
+      - '4993'
+      content-encoding:
+      - gzip
+    body: !binary |-
+      H4sIAAAAAAAAA4WSy07DMBBFfwVZYpfm4SRNawmxQGIHYgEL2ESTeJpYOHZk
+      O0QV4t+ZqC1tV+z8uHPn3LG/2Tg1WrV1p3zwTJQRC/sRmWBvHh2LWOfgCwK4
+      Wkk6lEUu23xdVEUjU+AlR7lNK1msyyyTKCsqOPo5HC35VRHbWa3trEzHRJ5H
+      TNtOGbIyaoIOqaChE9r3IYwiSeZ5jnukCmcbZeLWDiQ5IkxOH4WelB7byWF8
+      AlykyUGY/Id5L++WdosL8GITYwyfMICKDYYEvMfg406FfmoW11v+qAZi9bQ4
+      dbtcr7IijUfKt4RrISi75HsC00MIYKKb53e66pVDaDSNdgfaY8TIeQSzJ+lD
+      D1qj6fDF+rBMRFkmzKR1xK4jw6guuJKJnsgnf4Psw6Dr64JziLOsJY6AsoZA
+      rXmapauUrzh/zTaiLERZfRCBgYFADwhIg6G5HzbLL+DpZs356WEJgYntzy+6
+      QCYDSQIAAA==
+    http_version: '1.1'
+  recorded_at: Mon, 05 Mar 2012 02:05:50 GMT
+- request:
+    method: get
+    uri: https://api.github.com/users/jrallison
+    body: ''
+    headers:
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+      connection:
+      - close
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx/1.0.12
+      date:
+      - Mon, 05 Mar 2012 02:05:50 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - 200 OK
+      x-ratelimit-limit:
+      - '5000'
+      etag:
+      - ! '"a5a7f90e25700b7fc4f5285eb3bc1b2d"'
+      x-ratelimit-remaining:
+      - '4992'
+      content-encoding:
+      - gzip
+    body: !binary |-
+      H4sIAAAAAAAAA4VSPU/DMBD9K5UltjRxnLaJIiFgYWDoBENZomtySUwdO7Id
+      qgrx3zlDA+2E5OF0unf3PvzBxmmvZF1ZHI1jZSoi5k8jspK9OLQsYp2Fd/Bg
+      K9lQs+FFvsZapHme8wYbaJsmR7HhbZHl62xNgNYoZY5Sd6wUPGK9H1Q1WUXg
+      3vvRlUnSSd9P+7g2Q/JmQSnpjCagMp3UNHbZO7PrpPOBXdgnLcJeEcMWlMMA
+      q8FL2lCyLR4XO2MP0WK7o4V7aVipJ6UiRrdG0CeaqXu6iLoLen3gQINnhdcs
+      HdaTxXjW/033ZzD5z4W75nbWCmJVxBjDAQaQsUafgHPoXfxnwo14lAN06KiY
+      r13Wy3TF45H8JEXkEWmg6porjPJiYTJRdO7K25pM89hU4AkuOC+W9AR/FlmZ
+      rUqRvdJKDUPI/cn0evHwmwoS7xDebyr3XeicnQufQqSZ2My502HqiM8vjRMa
+      kFkCAAA=
+    http_version: '1.1'
+  recorded_at: Mon, 05 Mar 2012 02:05:50 GMT
+- request:
+    method: get
+    uri: https://api.github.com/users/holly12
+    body: ''
+    headers:
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+      connection:
+      - close
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx/1.0.12
+      date:
+      - Mon, 05 Mar 2012 02:05:50 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - 200 OK
+      x-ratelimit-limit:
+      - '5000'
+      etag:
+      - ! '"7b1ffbbe174dca379a7656dbb28eb32f"'
+      x-ratelimit-remaining:
+      - '4991'
+      content-encoding:
+      - gzip
+    body: !binary |-
+      H4sIAAAAAAAAA4VRy06EQBD8l0m8LfMCIkNivPkFevFCGmjYicMjM4NmY/x3
+      GxGXPXnr1FRVV9d8sniZkZXsJaBnJ9Z7eIcIvrItgalEU5vUGNR5Ljvoikxi
+      XqNWhTFNkZGgm5ybPuzYs1KemJt6O5LwTOhFaXqfl9rZpuptiOGH8uu/eLfy
+      YpxDKUTAZvHI9+28mQaxEcV/GR7bh90FdFZw5PAGA1g+YhQQAsbAexvPS726
+      3uknO0CPgYZ923FOVCb5TNf8Jfc4T1vy28gw24OvWKi/IK53n+PgqlvFNcWB
+      13iEiG0FkerQUslEqUTlz8qUSpZ5+kpJ1r/ICn2fUn1b37SLoK9vxibFSb4B
+      AAA=
+    http_version: '1.1'
+  recorded_at: Mon, 05 Mar 2012 02:05:50 GMT
+- request:
+    method: get
+    uri: https://api.github.com/users/returntrue
+    body: ''
+    headers:
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+      connection:
+      - close
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx/1.0.12
+      date:
+      - Mon, 05 Mar 2012 02:05:50 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - 200 OK
+      x-ratelimit-limit:
+      - '5000'
+      etag:
+      - ! '"f044764fcd30bb39990b90e806ce925b"'
+      x-ratelimit-remaining:
+      - '4990'
+      content-encoding:
+      - gzip
+    body: !binary |-
+      H4sIAAAAAAAAA4WRTU7EMAyF7xKJXZsmTWc6jYTYcQLYsKnc1LQR6Y8SB4QQ
+      dycwU6ldsXuy7M9+z1+MPldkmj0H9Cxjg4d3IPCt7VMRpayhblBg2VWdqTpV
+      nauLUF2PTX8WJg2ssXPWtB7XJTAtMva6OLd82HlgWmZspMm10bsEG4nWoIti
+      sDTGjptlKjxS9DP5iInklsHOqe9QvOEHG+iKP7JgtXzHi8lEOFKNRyDsW6CE
+      LoWUuZC5kk+y1uqklXhJm2+Wj+iAJnrkWyB/914bi/9ieejvN7NQVheOHN5g
+      AstnpAJCQAq7q+/KRzvBgCGJbdte57ISfE15Zuz3KadGybrcck5+mVbfP2+u
+      e7jHAQAA
+    http_version: '1.1'
+  recorded_at: Mon, 05 Mar 2012 02:05:50 GMT
+- request:
+    method: get
+    uri: https://api.github.com/users/coldjuly
+    body: ''
+    headers:
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+      connection:
+      - close
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx/1.0.12
+      date:
+      - Mon, 05 Mar 2012 02:05:50 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - 200 OK
+      x-ratelimit-limit:
+      - '5000'
+      etag:
+      - ! '"68dda9dfc50773250d7fee5e1adf0285"'
+      x-ratelimit-remaining:
+      - '4989'
+      content-encoding:
+      - gzip
+    body: !binary |-
+      H4sIAAAAAAAAA4VRTU+EMBD9L028sdA2wEIT480/oF68kGmZhWqhhBbNxvjf
+      nV0kohdv0+l7mffxweJ5QqbYU8CZJayb4Q0izI1taVkYONZYV7qoaiFNmRsu
+      C9AnaaRsRS2IcPLO+Xc7dkzxhPVxcM0yO+L2MU5BZVlnY7/o1PghM961L4s7
+      E+37ym9oQLPMmG4arpwVmP2n5K693Q6CzKsUU3iFAWw6YswgBIwh/VFyI+/t
+      AB0GGrZr+/kgcp5O5Clhznd2JDs77b2dEbSj1E7gAiZME4ipcXHugjcQrSfK
+      +p4W7axpZpx8uEZEpiYYz9u/tv4PtLMhrtDf6cBkdxayhQoL+0gNqYrYNhBJ
+      ruRCHLg88OpRclXkSpTP5GaE4VL2A0Uzxh5ogxQS1bWKvZRe8mNRHrdi6QZT
+      8vML1gGjXScCAAA=
+    http_version: '1.1'
+  recorded_at: Mon, 05 Mar 2012 02:05:51 GMT
+- request:
+    method: get
+    uri: https://api.github.com/users/marnysmith
+    body: ''
+    headers:
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+      connection:
+      - close
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx/1.0.12
+      date:
+      - Mon, 05 Mar 2012 02:05:51 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - 200 OK
+      x-ratelimit-limit:
+      - '5000'
+      etag:
+      - ! '"32ba2fee887bcc79a7a06c97dced34f0"'
+      x-ratelimit-remaining:
+      - '4988'
+      content-encoding:
+      - gzip
+    body: !binary |-
+      H4sIAAAAAAAAA4WRzW6EIBSF34WkO0VQrErSdNcnaDfdmItekYw/BLDNpOm7
+      l86M6bjq7ubknsN3D1/EbmoyXevQrp5IlpBwtkgkefPoSEK0gw8I4FrTR7Fj
+      Qwk1cMW7UoDoRcUVU6qo1VD0OFTRMKzTtH6aRV/CxjBP7eam6B1DsF5mmTZh
+      3BTt1jmbwS1nP0chGqdVmyXuHcQbnTY+XOluNMdIj93mkO6sl+zrYvYf8XP/
+      tINBLmqKFE4wg6ELhgy8x+DpH/FD/mJm0OjjsL92P6dcMGrj7Qk5EoI1dzHZ
+      Fsv1x/M7hxCwbyHEDnLGecqKtGCvvJZlLYV4j5m/f/DYNE0l9p5jDJH8+weQ
+      NuwuxwEAAA==
+    http_version: '1.1'
+  recorded_at: Mon, 05 Mar 2012 02:05:51 GMT
+recorded_with: VCR 2.0.0.rc1
