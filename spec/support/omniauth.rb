@@ -10,7 +10,7 @@ module OmniauthHelpers
 
   def login_as(user)
     visit '/'
-    click_link 'Login with Github'
+    click_link 'login with github'
   end
 end
 

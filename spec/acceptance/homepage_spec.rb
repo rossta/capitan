@@ -28,11 +28,18 @@ feature 'Homepage', %q{
   end
 
   scenario 'Login with Github' do
+    Factory(:job, :name => 'models')
     visit '/'
 
-    click_link "Login with Github"
+    page.should_not have_content('models')
+
+    click_link "login with github"
 
     page.should have_content user.name
-    page.should have_content("Log out")
+    page.should have_content("logout")
+    page.should have_content('models')
+
+    click_link "logout"
+    page.should_not have_content('models')
   end
 end

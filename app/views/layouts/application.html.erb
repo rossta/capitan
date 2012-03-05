@@ -14,7 +14,7 @@
   <nav>
     <% if signed_in? %>
       <%= link_to "rossta", current_user.html_url %>
-      <%= link_to "Log out", sign_out_path %>
+      <%= link_to "logout", sign_out_path %>
     <% end %>
   </nav>
 </div>
