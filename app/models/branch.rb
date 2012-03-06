@@ -24,6 +24,10 @@ class Branch < ActiveRecord::Base
     MAX_BUILDS_PER_BRANCH
   end
 
+  def find_or_initialize_build_by_number(build_number)
+    builds.find_or_initialize_by_number(build_number)
+  end
+
   def display_name
     name
   end

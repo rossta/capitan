@@ -16,18 +16,18 @@ describe Build do
 
     it "finds or creates build by job, number" do
       stub_build = stub_model(Build, :result_known? => false)
-      stub_job = stub_model(Job)
-      stub_job.should_receive(:find_or_initialize_build_by_branch_id_and_number).with(2, 171).and_return(stub_build)
+      stub_branch = stub_model(Branch)
+      stub_branch.should_receive(:find_or_initialize_build_by_number).with(171).and_return(stub_build)
       stub_build.should_receive(:save).and_return(true)
-      Build.sync(stub_job, build_data)
+      Build.sync(stub_branch, build_data)
     end
 
     it "doesn't update result if previously known" do
       stub_build = stub_model(Build, :result_known? => true)
-      stub_job = stub_model(Job)
-      stub_job.should_receive(:find_or_initialize_build_by_branch_id_and_number).with(2, 171).and_return(stub_build)
+      stub_branch = stub_model(Branch)
+      stub_branch.should_receive(:find_or_initialize_build_by_number).with(171).and_return(stub_build)
       stub_build.should_not_receive(:result_message=)
-      Build.sync(stub_job, build_data)
+      Build.sync(stub_branch, build_data)
     end
 
   end

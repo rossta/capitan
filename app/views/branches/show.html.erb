@@ -7,16 +7,20 @@
     <thead>
       <tr>
         <th class="number">Number</th>
+        <th class="revision">Revision</th>
         <th class="status">Status</th>
         <th class="built_at">Built at</th>
+        <th class="synced_at">Synced at</th>
       </tr>
     </thead>
     <tbody>
       <%- @branch.builds.each do |build| -%>
         <tr>
           <td class="number"><%= build.number %></td>
+          <td class="revision"><%= build.display_revision %></td>
           <td class="status <%= build.display_result %>"><%= build.display_result %></td>
           <td class="built_at"><%= build.built_at %></td>
+          <td class="synced_at"><%= build.synced_at %></td>
         </tr>
       <%- end -%>
     </tbody>

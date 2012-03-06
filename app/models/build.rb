@@ -6,13 +6,18 @@ class Build < ActiveRecord::Base
   scope :status, includes(:job, :branch).order('job_id DESC, number DESC')
   scope :ordered_by_number, order('number DESC')
 
-  def self.sync(job, build_data)
-    return false unless build_data.branch_id && build_data.build_number
+  after_create :denormalize_job_id
 
-    job.find_or_initialize_build_by_branch_id_and_number(build_data.branch_id, build_data.build_number).tap do |build|
-      build.building    = build_data.building
-      build.built_at    = build_data.built_at
-      build.result_message = build_data.result unless build.result_known?
+  def self.sync(branch, build_data)
+    return false unless build_data.build_number
+
+    branch.find_or_initialize_build_by_number(build_data.build_number).tap do |build|
+      unless build.result_known?
+        build.building    = build_data.building
+        build.built_at    = build_data.built_at
+        build.result_message = build_data.result
+      end
+      build.sha         = build_data.sha
       build.touch
       build.save
     end
@@ -36,6 +41,10 @@ class Build < ActiveRecord::Base
 
   def result_known?
     result != :unknown
+  end
+
+  def denormalize_job_id
+    update_attribute(:job_id, branch.job_id)
   end
 
 end

@@ -4,6 +4,7 @@
       <tr>
         <th class="number">Number</th>
         <th class="branch">Branch</th>
+        <th class="revision">Revision</th>
         <th class="status">Status</th>
         <th class="built_at">Built at</th>
         <th class="synced_at">Synced at</th>
@@ -14,6 +15,7 @@
         <tr>
           <td class="number"><%= build.number %></td>
           <td class="branch"><%= link_to build.branch_display_name, [job, build.branch] %></td>
+          <td class="revision"><%= build.display_revision %></td>
           <td class="status <%= build.display_result %>"><%= build.display_result %></td>
           <td class="built_at"><%= build.built_at %></td>
           <td class="synced_at"><%= build.synced_at %></td>

@@ -18,7 +18,7 @@ module Sync
     def self.retrieve_and_sync_builds
       Job.includes(:branches).enabled.each do |job|
         job.branches.each do |branch|
-          Build.sync(job, ci.get_build(job.name, branch.last_build_number, :branch_id => branch.id))
+          Build.sync(branch, ci.get_build(job.name, branch.last_build_number, :branch_id => branch.id))
         end
       end
     end

@@ -28,6 +28,7 @@ describe Jenkins::API, :vcr, :record => :new_episodes do
       build_object.built_at.should be_a(Time)
       build_object.building.should be_false
       build_object.branch_name.should == 'origin/master'
+      build_object.sha.should =~ /^3686f8ce745/
     end
 
     it "merges additional attributes" do

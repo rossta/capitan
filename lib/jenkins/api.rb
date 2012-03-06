@@ -37,7 +37,7 @@ module Jenkins
       build_json = get "/job/#{job_name}/#{build_number}"
       return OpenStruct.new unless build_json.present?
 
-      branch_name = branch_name_from_build_json(build_json, build_number)
+      branch_name, sha = branch_name_from_build_json(build_json, build_number)
 
       OpenStruct.new(attributes).tap do |build|
         build.job_name      = 'models'
@@ -46,6 +46,7 @@ module Jenkins
         build.built_at      = parse_time_from_build_id(build_json["id"])
         build.building      = build_json["building"]
         build.branch_name   = branch_name
+        build.sha           = sha
       end
     end
 
@@ -85,12 +86,16 @@ module Jenkins
       return nil unless actions_json.any?
       actions_metadata_json = actions_json[1]
       return nil unless actions_metadata_json.any?
-      branch_json = actions_metadata_json["buildsByBranchName"]
-      return nil unless branch_json.any?
-
-      branch_json.select {|branch_name,hash|
+      branches_json = actions_metadata_json["buildsByBranchName"]
+      return nil unless branches_json.any?
+      
+      branch_json = branches_json.select {|branch_name,hash|
         hash["buildNumber"] == build_number && !exclude_branch?(branch_name)
-      }.keys.first
+      }
+      
+      branch_name = branch_json.keys.first
+      sha = branch_json[branch_name]["revision"]["SHA1"]
+      [branch_name, sha]
     end
 
     def exclude_branch?(branch_name)

@@ -25,10 +25,6 @@ class Job < ActiveRecord::Base
     branches.find_or_initialize_by_name(branch_name)
   end
 
-  def find_or_initialize_build_by_branch_id_and_number(branch_id, build_number)
-    builds.find_or_initialize_by_branch_id_and_number(branch_id, build_number)
-  end
-
   def branch_ids_to_preserve
     branches.select('id').order('last_build_number DESC').limit(self.class.max_branches_per_job)
   end

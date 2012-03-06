@@ -4,6 +4,10 @@ class BuildDecorator < ApplicationDecorator
   def display_result
     result.to_s
   end
+
+  def display_revision
+    build.sha[0..8]
+  end
   
   def built_at
     h.l build.built_at, :format => :human

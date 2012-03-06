@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120304224941) do
+ActiveRecord::Schema.define(:version => 20120306132642) do
 
   create_table "branches", :force => true do |t|
     t.string   "name",              :null => false
@@ -24,15 +24,18 @@ ActiveRecord::Schema.define(:version => 20120304224941) do
   add_index "branches", ["job_id"], :name => "index_branches_on_job_id"
 
   create_table "builds", :force => true do |t|
-    t.integer  "number",         :null => false
+    t.integer  "number",                         :null => false
     t.boolean  "building"
     t.datetime "built_at"
     t.integer  "branch_id"
     t.integer  "job_id"
     t.string   "result_message"
-    t.datetime "created_at",     :null => false
-    t.datetime "updated_at",     :null => false
+    t.datetime "created_at",                     :null => false
+    t.datetime "updated_at",                     :null => false
+    t.string   "sha",            :default => "", :null => false
   end
+
+  add_index "builds", ["sha"], :name => "index_builds_on_sha"
 
   create_table "jobs", :force => true do |t|
     t.string   "name",                         :null => false
