@@ -2,7 +2,7 @@ module Sync
   class Github
 
     def self.api
-      ::Github
+      ::Github.api
     end
 
     def self.retrieve_and_sync_users

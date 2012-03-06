@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Sync::Github, :vcr, :record => :new_episodes do
+describe Sync::Github, :vcr, :record => :all do
 
   it "retrieves and syncs user" do
     Sync::Github.retrieve_and_sync_users
