@@ -10,6 +10,12 @@ class JobDecorator < ApplicationDecorator
     job.last_builds_by_branch
   end
 
+  def as_json(options = {})
+    super.tap do |json|
+      json[:builds] = branch_builds.map(&:as_json)
+    end
+  end
+
   # Accessing Helpers
   #   You can access any helper via a proxy
   #

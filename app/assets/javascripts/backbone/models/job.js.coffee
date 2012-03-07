@@ -6,13 +6,8 @@ class Capitan.Models.Job extends Backbone.Model
     enabled: null
 
   builds: ->
-    relatedBuilds = Capitan.Collections.Builds.select((build) => 
-      @id == build.get("job_id")
-    )
-    buildCollection = new Capitan.Collections.BuildsCollection
-    buildCollection.add(relatedBuilds)
-    buildCollection
-
+    @buildCollection ||= (new Capitan.Collections.BuildsCollection).add(@get("builds"))
+    @buildCollection
 
 class Capitan.Collections.JobsCollection extends Backbone.Collection
   model: Capitan.Models.Job

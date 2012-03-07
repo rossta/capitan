@@ -26,8 +26,5 @@
   </table>
 </div>
 <% else %>
-  <% content_for :json do %>
-    Capitan.Collections.Jobs.add(<%= raw job.to_json %>);
-    Capitan.Collections.Builds.add(<%= raw job.branch_builds.to_json %>);
-  <% end %>
+  <!--  -->
 <% end %>

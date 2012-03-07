@@ -15,8 +15,8 @@ class Capitan.Views.Jobs.JobView extends Backbone.View
     return false
 
   render: ->
-    $(@el).html(@template(@model.toJSON() ))
+    $(@el).html(@template(@model.toJSON()))
     buildIndex = new Capitan.Views.Builds.IndexView({ builds: @model.builds() })
-    @$(".builds").append(buildIndex.el)
+    @$(".builds").html(buildIndex.el)
 
     return this
