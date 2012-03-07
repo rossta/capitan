@@ -16,12 +16,12 @@ class Capitan.Views.Jobs.IndexView extends Backbone.View
   addOne: (job) =>
     view = new Capitan.Views.Jobs.JobView({ model: job })
     @$("ul").append(view.render().el)
- 
+
   fetch: () =>
     @jobs.fetch()
 
     return false
-  
+
   render: =>
     $(@el).html(@template(time: @formatCurrentTime()))
     @addAll()

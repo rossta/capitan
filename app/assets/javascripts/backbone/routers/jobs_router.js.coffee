@@ -7,7 +7,7 @@ class Capitan.Routers.JobsRouter extends Backbone.Router
     "/new"      : "newJob"
     "/index"    : "index"
     "/:id/edit" : "edit"
-    "/:id"      : "show"
+    "/jobs/:id"      : "show"
     ".*"        : "index"
 
   # newJob: ->
@@ -18,11 +18,11 @@ class Capitan.Routers.JobsRouter extends Backbone.Router
     @view = new Capitan.Views.Jobs.IndexView(jobs: @jobs)
     $("#jobs").html(@view.render().el)
 
-  # show: (id) ->
-  #   job = @jobs.get(id)
+  show: (id) ->
+    job = @jobs.get(id)
 
-  #   @view = new Capitan.Views.Jobs.ShowView(model: job)
-  #   $("#jobs").html(@view.render().el)
+    @view = new Capitan.Views.Jobs.IndexView(jobs: new Capitan.Collections.JobsCollection([job]))
+    $("#jobs").html(@view.render().el)
 
   # edit: (id) ->
   #   job = @jobs.get(id)

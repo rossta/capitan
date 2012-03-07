@@ -3,7 +3,7 @@
     <%= render 'jobs' %>
   </div>
 <% else %>
-  
+
   <% content_for :javascript do %>
     <script type="text/javascript">
       window.router = new Capitan.Routers.JobsRouter({jobs: <%= raw @jobs.to_json %>});
