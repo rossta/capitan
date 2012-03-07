@@ -17,7 +17,7 @@ class Capitan.Views.Jobs.IndexView extends Backbone.View
     view = new Capitan.Views.Jobs.JobView({ model: job })
     @$("ul").append(view.render().el)
  
-  fetch: () ->
+  fetch: () =>
     @jobs.fetch()
 
     return false
@@ -25,5 +25,6 @@ class Capitan.Views.Jobs.IndexView extends Backbone.View
   render: =>
     $(@el).html(@template(time: new Date()))
     @addAll()
+    setTimeout(@fetch, 60000)
 
     return this

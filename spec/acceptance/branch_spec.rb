@@ -23,7 +23,7 @@ feature 'Branch', %q{
       :result_message => "SUCCESS",
       :sha => "a1b2c3d4"
 
-    visit '/'
+    visit '/?html=1'
 
     click_link branch.name
 

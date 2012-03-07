@@ -5,13 +5,13 @@ feature 'Homepage', %q{
 
   let(:user) { FactoryGirl.create(:user) }
 
-  scenario 'visit home page' do
+  scenario 'visit home page', :js => true do
     Factory(:job, :name => 'models')
     Factory(:job, :name => 'challenges')
 
     login_as user
 
-    visit '/'
+    visit '/?html=1'
 
     page.should have_content('models')
     page.should have_content('challenges')
