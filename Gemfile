@@ -13,21 +13,28 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer'
+  gem 'therubyracer'
 
   gem 'uglifier', '>= 1.0.3'
   gem 'bootstrap-sass', '~> 2.0.1'
 end
 
+# Assets
 gem 'jquery-rails'
+gem "rails-backbone"
+
+# APIs
 gem 'faraday', '0.8.0.rc2'
 gem 'faraday_middleware'
 
+# Views
 gem 'draper'
 
+# Auth
 gem 'warden'
 gem 'omniauth-github', :git => 'git://github.com/intridea/omniauth-github.git'
 
+# Utils
 gem 'whenever'
 
 group :development, :test do

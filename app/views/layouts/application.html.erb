@@ -16,6 +16,9 @@
 <div class="container">
   <%= yield %>
 </div>
-
+<script type="text/javascript">
+  <%= yield :json %>
+</script>
+<%= yield :javascript %>
 </body>
 </html>

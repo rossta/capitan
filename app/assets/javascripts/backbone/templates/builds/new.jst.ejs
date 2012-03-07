@@ -1,0 +1,30 @@
+<h1>New build</h1>
+
+<form id="new-build" name="build">
+  <div class="field">
+    <label for="number"> number:</label>
+    <input type="text" name="number" id="number" value="<%= number %>" >
+  </div>
+
+  <div class="field">
+    <label for="sha"> sha:</label>
+    <input type="text" name="sha" id="sha" value="<%= sha %>" >
+  </div>
+
+  <div class="field">
+    <label for="built_at"> built_at:</label>
+    <input type="text" name="built_at" id="built_at" value="<%= built_at %>" >
+  </div>
+
+  <div class="field">
+    <label for="result"> result:</label>
+    <input type="text" name="result" id="result" value="<%= result %>" >
+  </div>
+
+  <div class="actions">
+    <input type="submit" value="Create Build" />
+  </div>
+
+</form>
+
+<a href="#/index">Back</a>

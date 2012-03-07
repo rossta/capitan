@@ -17,6 +17,25 @@ class BuildDecorator < ApplicationDecorator
     h.l build.updated_at, :format => :human
   end
 
+  def as_json(options = {})
+    {
+      number: number,
+      job_branch_path: h.job_branch_path(job, branch),
+      branch_display_name: branch_display_name,
+      display_revision: display_revision,
+      display_result: display_result,
+      built_at:   built_at,
+      synced_at:  synced_at,
+      id:         id,
+      branch_id:  branch_id,
+      building:   building,
+      job_id:     job_id,
+      result:     result,
+      result_message: result_message,
+      sha:        sha
+    }
+  end
+
   # Accessing Helpers
   #   You can access any helper via a proxy
   #

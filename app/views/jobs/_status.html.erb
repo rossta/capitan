@@ -1,4 +1,5 @@
-<div class='build_statuses'>
+<% if params[:html] %>
+  <div class='build_statuses'>
   <table class="table table-striped table-bordered table-condensed">
     <thead>
       <tr>
@@ -24,3 +25,9 @@
     </tbody>
   </table>
 </div>
+<% else %>
+  <% content_for :json do %>
+    Capitan.Collections.Jobs.add(<%= raw job.to_json %>);
+    Capitan.Collections.Builds.add(<%= raw job.branch_builds.to_json %>);
+  <% end %>
+<% end %>
