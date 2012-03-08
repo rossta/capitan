@@ -19,6 +19,10 @@ module Jenkins
     RESULT_MESSAGES[result_message]
   end
 
+  def finished_result?(result_message)
+    RESULT_MESSAGES[result_message].present?
+  end
+
   def configuration
     @_configuration ||= Configuration.new
   end

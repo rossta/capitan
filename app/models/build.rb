@@ -12,7 +12,7 @@ class Build < ActiveRecord::Base
     return false unless build_data.build_number
 
     branch.find_or_initialize_build_by_number(build_data.build_number).tap do |build|
-      unless build.result_known?
+      unless build.finished?
         build.building    = build_data.building
         build.built_at    = build_data.built_at
         build.result_message = build_data.result
@@ -36,11 +36,11 @@ class Build < ActiveRecord::Base
   end
 
   def result
-    Jenkins.result_for(result_message) || :unknown
+    Jenkins.result_for(result_message) || result_message
   end
 
-  def result_known?
-    result != :unknown
+  def finished?
+    Jenkins.finished_result?(result_message)
   end
 
   def denormalize_job_id

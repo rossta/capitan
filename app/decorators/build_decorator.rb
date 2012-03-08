@@ -8,7 +8,7 @@ class BuildDecorator < ApplicationDecorator
   def display_revision
     build.sha[0..8]
   end
-  
+
   def built_at
     h.l build.built_at, :format => :human
   end
@@ -30,7 +30,6 @@ class BuildDecorator < ApplicationDecorator
       branch_id:  branch_id,
       building:   building,
       job_id:     job_id,
-      result:     result,
       result_message: result_message,
       sha:        sha
     }

@@ -15,7 +15,7 @@ describe Build do
     }
 
     it "finds or creates build by job, number" do
-      stub_build = stub_model(Build, :result_known? => false)
+      stub_build = stub_model(Build, :finished? => false)
       stub_branch = stub_model(Branch)
       stub_branch.should_receive(:find_or_initialize_build_by_number).with(171).and_return(stub_build)
       stub_build.should_receive(:save).and_return(true)
@@ -23,7 +23,7 @@ describe Build do
     end
 
     it "doesn't update result if previously known" do
-      stub_build = stub_model(Build, :result_known? => true)
+      stub_build = stub_model(Build, :finished? => true)
       stub_branch = stub_model(Branch)
       stub_branch.should_receive(:find_or_initialize_build_by_number).with(171).and_return(stub_build)
       stub_build.should_not_receive(:result_message=)
@@ -48,7 +48,7 @@ describe Build do
 
     it "from nil result message" do
       build.result_message = nil
-      build.result.should == :unknown
+      build.result.should be_blank
     end
 
     it "from SUCCESS result message" do
@@ -68,22 +68,25 @@ describe Build do
 
   end
 
-  describe "result_known?" do
+  describe "finished?" do
     let(:build) { Build.new }
 
-    it "is false if result is nil" do
-      build.result_message = nil
-      build.result_known?.should be_false
-    end
-
-    it "is false if result is blank" do
+    it "is false for Jenkins unfinished/unknown result message" do
       build.result_message = ""
-      build.result_known?.should be_false
+      Jenkins.should_receive(:finished_result?).with("").and_return(false)
+      build.finished?.should be_false
     end
 
-    it "is true otherwise (success, failure)" do
+    it "is false for Jenkins unfinished/unknown result message" do
+      build.result_message = "UNKNOWN"
+      Jenkins.should_receive(:finished_result?).with("UNKNOWN").and_return(false)
+      build.finished?.should be_false
+    end
+
+    it "is true for Jenkins finished result message" do
       build.result_message = "SUCCESS"
-      build.result_known?.should be_true
+      Jenkins.should_receive(:finished_result?).with("SUCCESS").and_return(true)
+      build.finished?.should be_true
     end
   end
 end
