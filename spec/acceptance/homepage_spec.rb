@@ -5,7 +5,7 @@ feature 'Homepage', %q{
 
   let(:user) { FactoryGirl.create(:user) }
 
-  scenario 'visit home page', :js => true do
+  scenario 'visit home page' do
     Factory(:job, :name => 'models')
     Factory(:job, :name => 'challenges')
 
