@@ -1,4 +1,3 @@
-require 'faraday'
 require 'faraday_middleware'
 require 'ostruct'
 
@@ -66,11 +65,25 @@ module Jenkins
       end
     end
 
+    def connection
+      puts [@configuration.user_name, @configuration.token].inspect
+      @connection = Faraday.new(url: @configuration.host, port: 80) do |conn|
+        # conn.request :basic_auth, @configuration.user_name, @configuration.token
+        conn.request :json
+
+        conn.response :json, :content_type => /\bjson|javascript$/
+        conn.response :logger unless Rails.env.test?
+
+        conn.use :instrumentation
+        conn.adapter Faraday.default_adapter
+      end
+    end
+
     protected
 
     def connection
-      @connection = Faraday.new(url: @configuration.host, port: 8080) do |conn|
-        conn.request :basic_auth, @configuration.user_name, @configuration.token
+      @connection = Faraday.new(url: @configuration.host, port: 80) do |conn|
+        # conn.request :basic_auth, @configuration.user_name, @configuration.token
         conn.request :json
 
         conn.response :json, :content_type => /\bjson|javascript$/
@@ -88,11 +101,11 @@ module Jenkins
       return nil unless actions_metadata_json.any?
       branches_json = actions_metadata_json["buildsByBranchName"]
       return nil unless branches_json.any?
-      
+
       branch_json = branches_json.select {|branch_name,hash|
         hash["buildNumber"] == build_number && !exclude_branch?(branch_name)
       }
-      
+
       branch_name = branch_json.keys.first
       sha = branch_json[branch_name]["revision"]["SHA1"]
       [branch_name, sha]

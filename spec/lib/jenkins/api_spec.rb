@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Jenkins::API, :vcr, :record => :new_episodes do
   let(:api) { Jenkins::API.new(configuration) }
-  let(:configuration) { load_jenkins_config_yml; Jenkins.configuration }
+  let(:configuration) { Jenkins.configure_for_environment }
 
   describe "jobs" do
     it "retrieves all jobs" do

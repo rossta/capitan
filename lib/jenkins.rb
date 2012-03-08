@@ -28,6 +28,14 @@ module Jenkins
     @_api = nil
   end
 
+  def configure_for_environment
+    configure do |config|
+      config.host      = ENV['JENKINS_HOST']
+      config.user_name = ENV['JENKINS_USER']
+      config.token     = ENV['JENKINS_TOKEN']
+    end
+  end
+
   def api
     @_api ||= API.new(configuration)
   end

@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
 
   def new
   end
-  
+
 	def create
 		warden.authenticate!
 		redirect_to root_url, notice: "Welcome!"

@@ -7,6 +7,7 @@ module Jenkins
 
     def configure
       yield self
+      self
     end
   end
 end
