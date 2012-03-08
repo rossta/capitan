@@ -2,6 +2,7 @@
 #
 # It's helpful, but not entirely necessary to understand cron before proceeding.
 # http://en.wikipedia.org/wiki/Cron
+# */3 * * * * /bin/bash -l -c 'cd /web/capitan && source .powenv && RAILS_ENV=development bundle exec rake sync --silent >> /web/capitan/log/cron.log 2>&1'
 
 # Example:
 #
