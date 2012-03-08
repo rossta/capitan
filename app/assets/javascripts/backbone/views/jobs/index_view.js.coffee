@@ -23,19 +23,12 @@ class Capitan.Views.Jobs.IndexView extends Backbone.View
     return false
 
   render: =>
-    $(@el).html(@template(time: @formatCurrentTime()))
+    $(@el).html(@template(@timeStampsToJSON()))
     @addAll()
     setTimeout(@fetch, 60000)
 
     return this
 
-  formatCurrentTime: ->
-    d = new Date()
-    day = d.getDay()
-    dayDate = d.getDate()
-    month = d.getMonth() + 1
-    year = "#{d.getFullYear()}".replace(/^\d\d/, "")
-    hours = d.getHours()
-    minutes = d.getMinutes()
-    seconds = if "#{d.getSeconds()}".length == 1 then "0#{d.getSeconds()}" else d.getSeconds()
-    "#{hours}:#{minutes}:#{seconds} #{month}/#{dayDate}/#{year}"
+  timeStampsToJSON: ->
+    date = (new Date)
+    { today: date.format("fullDate"), time: date.format("mediumTime") }
