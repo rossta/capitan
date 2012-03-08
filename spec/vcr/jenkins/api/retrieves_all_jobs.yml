@@ -80,4 +80,48 @@ http_interactions:
       Bad Gateway</h1></center>\r\n<hr><center>nginx/1.0.5</center>\r\n</body>\r\n</html>\r\n"
     http_version: '1.1'
   recorded_at: Thu, 08 Mar 2012 00:32:46 GMT
+- request:
+    method: get
+    uri: http://ci.berman.challengepost.com/api/json
+    body: ''
+    headers:
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+      connection:
+      - close
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx/1.0.5
+      date:
+      - Thu, 08 Mar 2012 15:22:30 GMT
+      content-type:
+      - application/javascript;charset=UTF-8
+      connection:
+      - close
+      content-encoding:
+      - gzip
+      content-length:
+      - '374'
+      x-powered-by:
+      - Servlet/2.5 (Winstone/0.9.10)
+    body: !binary |-
+      H4sIAAAAAAAAAJWTTU/DMAyG/8rkc7Vy4dLbxLigMRBIXNCE0tRrw5K45GNj
+      mvrfcfdFd6mUYxw/j19F8QGE96q2WC1EidpD8XnoVhkYqhAKWL68Pc8WkIHl
+      8xy9dKoNiixfhQYnRviAbvKEdqOsn/RN596lMD3fn6J5/EUZAzm232dQDTU2
+      ap3BN5XHyWBPmGyE1mhr9CyITnOpCaEt8lyqaYnOCDu99rTkw1SSydmS/5M5
+      o5I0OYZLHRG67OqvcKs8prpP1Ji3Qd2iSw59xkbNZJLz9syYc2Npp7GqsRTp
+      j3EDj03pf5JOfpITNeZttQhrcibVfOGGblGSC1gN9d5TqpmRscCBWiW/hDx+
+      /ET1kB3OcH1oXlfaomNuQaKC4tBl0DplhNt/KNxx4RJhpnXKZE4PP1FhULae
+      047XdS20xwy8Fluc1WjDKz8cFHcs9fjgoun3+NzElXfee6fCHorgIpe2HOdm
+      0ZMDrbo/7j7UFbIEAAA=
+    http_version: '1.1'
+  recorded_at: Thu, 08 Mar 2012 15:22:30 GMT
 recorded_with: VCR 2.0.0.rc1
