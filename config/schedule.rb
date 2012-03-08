@@ -5,7 +5,7 @@
 
 # Example:
 #
-# set :output, "/web/topic_action/cron_log.log"
+set :output, "/web/capitan/log/cron.log"
 #
 # every 2.hours do
 #   command "/usr/bin/some_great_command"
@@ -18,7 +18,7 @@
 # end
 
 every 1.minutes do
-  rake "sync"                 
+  rake "sync"
 end
 
 # Learn more: http://github.com/javan/whenever
