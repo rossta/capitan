@@ -1,6 +1,15 @@
 <td class="number"><%= number %></td>
 <td class="branch"><a href="<%= job_branch_path %>"><%= branch_display_name %></a></td>
 <td class="revision"><%= display_revision %></td>
-<td class="status <%= display_result %>"><%= display_result %>, <%= result_message %></td>
+<td class="status <%= display_result %>">
+  <div>
+    <% if (!finished) { %>
+      <div class="spin-target">&nbsp;</div>
+      <span style="padding-left:30px"><%= result_message %></span>
+    <% } else { %>
+      <%= result_message %>
+    <% } %>
+  </div>
+</td>
 <td class="built_at"><%= built_at %></td>
 <td class="synced_at"><%= synced_at %></td>

@@ -18,4 +18,5 @@
 //= require backbone_datalink
 //= require backbone/capitan
 //= require date_format
+//= require spin
 //= require_tree .

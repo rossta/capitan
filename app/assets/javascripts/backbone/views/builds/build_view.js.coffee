@@ -16,4 +16,14 @@ class Capitan.Views.Builds.BuildView extends Backbone.View
 
   render: ->
     $(@el).html(@template(@model.toJSON()))
+    spinTarget = @$(".spin-target")[0]
+    new Spinner(@spinnerOpts).spin(spinTarget)
     return this
+
+  spinnerOpts:
+    lines: 9
+    width: 2,
+    length: 4,
+    radius: 3,
+    top: 1,
+    left: 2

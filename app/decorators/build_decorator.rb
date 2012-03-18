@@ -31,7 +31,8 @@ class BuildDecorator < ApplicationDecorator
       building:   building,
       job_id:     job_id,
       result_message: result_message,
-      sha:        sha
+      sha:        sha,
+      finished:   finished?
     }
   end
 
