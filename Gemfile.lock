@@ -6,6 +6,12 @@ GIT
       omniauth (~> 1.0)
       omniauth-oauth2 (~> 1.0)
 
+PATH
+  remote: ../omniauth-challengepost
+  specs:
+    omniauth-challengepost (0.0.1)
+      omniauth-oauth2 (~> 1.0)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -228,6 +234,7 @@ DEPENDENCIES
   faraday_middleware
   jquery-rails
   launchy
+  omniauth-challengepost!
   omniauth-github!
   rails (= 3.2.1)
   rails-backbone

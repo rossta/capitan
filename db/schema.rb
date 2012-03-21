@@ -11,7 +11,20 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120306132642) do
+ActiveRecord::Schema.define(:version => 20120318162551) do
+
+  create_table "authentications", :force => true do |t|
+    t.string   "provider"
+    t.string   "uid"
+    t.string   "name"
+    t.string   "email"
+    t.string   "html_url"
+    t.string   "provider_url"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  add_index "authentications", ["provider", "uid"], :name => "index_users_on_provider_and_uid"
 
   create_table "branches", :force => true do |t|
     t.string   "name",              :null => false
@@ -43,18 +56,5 @@ ActiveRecord::Schema.define(:version => 20120306132642) do
     t.datetime "updated_at",                   :null => false
     t.boolean  "enabled",    :default => true
   end
-
-  create_table "users", :force => true do |t|
-    t.string   "provider"
-    t.string   "uid"
-    t.string   "name"
-    t.string   "email"
-    t.string   "html_url"
-    t.string   "provider_url"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
-  end
-
-  add_index "users", ["provider", "uid"], :name => "index_users_on_provider_and_uid"
 
 end

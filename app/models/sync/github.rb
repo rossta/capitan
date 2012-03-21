@@ -6,11 +6,11 @@ module Sync
     end
 
     def self.retrieve_and_sync_users
-      User.sync('github', api.team_members)
+      Authentication.sync('github', api.team_members)
     end
 
     def self.retrieve_and_sync_user_info
-      User.provider('github').each do |user|
+      Authentication.provider('github').each do |user|
         user.sync(api.get(user.provider_url))
       end
     end

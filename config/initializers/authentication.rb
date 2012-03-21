@@ -1,4 +1,5 @@
 Rails.application.config.middleware.use OmniAuth::Builder do
+  provider :challengepost, ENV['CHALLENGEPOST_APP_ID'], ENV['CHALLENGEPOST_APP_SECRET']
   provider :github, ENV['CAPITAN_GITHUB_KEY'], ENV['CAPITAN_GITHUB_SECRET']
 end
 
@@ -12,7 +13,7 @@ Warden::Manager.serialize_into_session do |user|
 end
 
 Warden::Manager.serialize_from_session do |id|
-  User.find(id)
+  Authentication.find(id)
 end
 
 Warden::Strategies.add(:omniauth) do
@@ -21,9 +22,8 @@ Warden::Strategies.add(:omniauth) do
   end
 
   def authenticate!
-    user = User.find_by_provider_and_uid(omniauth["provider"], omniauth["uid"])
-    if user
-      success! user
+    if authentication = Authentication.find_by_provider_and_uid(omniauth["provider"], omniauth["uid"])
+      success! authentication
     else
       fail 'Authentication'
     end

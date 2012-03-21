@@ -1,4 +1,4 @@
-namespace :users do
+namespace :authentications do
 
   desc "Sync jenkins job data"
   task :sync_github => :environment do

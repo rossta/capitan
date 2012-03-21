@@ -33,6 +33,7 @@ gem 'draper'
 # Auth
 gem 'warden'
 gem 'omniauth-github', :git => 'git://github.com/intridea/omniauth-github.git'
+gem 'omniauth-challengepost', :path => '../omniauth-challengepost'
 
 # Utils
 gem 'whenever'

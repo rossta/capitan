@@ -4,11 +4,11 @@ feature 'Branch', %q{
   View branches
 } do
 
-  let(:user) { FactoryGirl.create(:user) }
+  let(:authentication) { FactoryGirl.create(:authentication) }
   let(:job) { FactoryGirl.create(:job) }
 
   before do
-    login_as user
+    login_as authentication
   end
 
   scenario 'branches' do

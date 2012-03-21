@@ -1,9 +1,9 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
-  before_filter :authenticate_user!
+  before_filter :authenticate!
 
-  def authenticate_user!
+  def authenticate!
     redirect_to sign_in_path unless signed_in?
   end
 
