@@ -17,4 +17,7 @@ class Authentication < ActiveRecord::Base
     update_attributes(:email => authentication_attributes['email'], :html_url => authentication_attributes['html_url'])
   end
 
+  def url
+    html_url
+  end
 end

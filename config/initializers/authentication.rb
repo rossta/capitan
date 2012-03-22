@@ -4,35 +4,68 @@ Rails.application.config.middleware.use OmniAuth::Builder do
 end
 
 Rails.application.config.middleware.use Warden::Manager do |manager|
-  manager.default_strategies :omniauth
+  manager.default_scope = :team_member
+  manager.scope_defaults :team_member, :strategies => [:github_omniauth, :general_omniauth]
   manager.failure_app = lambda { |env| HomeController.action(:show).call(env) }
 end
+
+require 'github'
+$organization = Github::Organization.new('challengepost')
 
 Warden::Manager.serialize_into_session do |user|
   user.id
 end
 
 Warden::Manager.serialize_from_session do |id|
-  Authentication.find(id)
+  if team_member = $organization.team_members.find(id)
+    team_member
+  else authentication = Authentication.find_by_id(id)
+    authentication
+  end
 end
 
-Warden::Strategies.add(:omniauth) do
-  def valid?
-    omniauth.present?
-  end
+module AuthStrategies
+  class GithubOmniauth < ::Warden::Strategies::Base
 
-  def authenticate!
-    if authentication = Authentication.find_by_provider_and_uid(omniauth["provider"], omniauth["uid"])
-      success! authentication
-    else
-      fail 'Authentication'
+    def valid?
+      omniauth.present? && omniauth["provider"] == "github"
+    end
+
+    def authenticate!
+      if team_member = $organization.team_members.find(omniauth["uid"])
+        success! team_member
+      else
+        fail 'Authentication'
+      end
+    end
+
+    def omniauth
+      request.env['omniauth.auth']
     end
   end
 
-  def omniauth
-    request.env['omniauth.auth']
+  class GeneralOmniauth < ::Warden::Strategies::Base
+    def valid?
+      omniauth.present?
+    end
+
+    def authenticate!
+      if authentication = Authentication.find_by_provider_and_uid(omniauth["provider"], omniauth["uid"])
+        success! authentication
+      else
+        fail 'Authentication'
+      end
+    end
+
+    def omniauth
+      request.env['omniauth.auth']
+    end
   end
 end
+
+Warden::Strategies.add(:github_omniauth, AuthStrategies::GithubOmniauth)
+Warden::Strategies.add(:general_omniauth, AuthStrategies::GeneralOmniauth)
+
 
 # ---
 # :key: 1346369889ab8afc05ac

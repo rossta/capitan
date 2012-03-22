@@ -6,7 +6,7 @@ module Sync
     end
 
     def self.retrieve_and_sync_users
-      Authentication.sync('github', api.team_members)
+      Authentication.sync('github', $organization.team_member_attributes)
     end
 
     def self.retrieve_and_sync_user_info

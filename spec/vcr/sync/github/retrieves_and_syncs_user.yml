@@ -601,4 +601,102 @@ http_interactions:
       OccBAAA=
     http_version: '1.1'
   recorded_at: Thu, 08 Mar 2012 22:53:37 GMT
+- request:
+    method: get
+    uri: https://api.github.com/users/bkoles
+    body: ''
+    headers:
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+      connection:
+      - close
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx/1.0.13
+      date:
+      - Thu, 22 Mar 2012 03:31:03 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - 200 OK
+      x-ratelimit-limit:
+      - '5000'
+      etag:
+      - ! '"8d6bb3e40c1269babe3df27028f68918"'
+      x-ratelimit-remaining:
+      - '4997'
+      content-encoding:
+      - gzip
+    body: !binary |-
+      H4sIAAAAAAAAA4VQSU7EMBD8iyVuibd4skkjbrwALlwib8lY48SW7YAQ4u94
+      VjInbl3qququ+gbpy2vQg7eoAyjAGmwGh5R87BHi3sDJpMMqoHQzWjMnInF0
+      VsfM9auwRg5BexdBj4ssm+3w6LBR33UyaJ60GnjKpygmtMRVibtXUveM9lXz
+      /uc9mZgu3lPgHzzxMBiVVe0oRDt2O9lWnVLNKBWvGWuZINUoakWzw5X++E7U
+      cg0a3szOqS5E9J/ls9rfa6GshRryI5+5gYtOiMeoU9x09URfzMwnHfNwu7ad
+      S8Iw9MuUHx2dte4zN3vu8IJM3pzQKSzZUdyQpgDWTWbJ4a9F/vwCL5ugLrwB
+      AAA=
+    http_version: '1.1'
+  recorded_at: Thu, 22 Mar 2012 03:31:03 GMT
+- request:
+    method: get
+    uri: https://api.github.com/users/bkessler
+    body: ''
+    headers:
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+      connection:
+      - close
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx/1.0.13
+      date:
+      - Thu, 22 Mar 2012 03:31:03 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - 200 OK
+      x-ratelimit-limit:
+      - '5000'
+      etag:
+      - ! '"1a30d57e5b8e1f30276ee8201ede4587"'
+      x-ratelimit-remaining:
+      - '4996'
+      content-encoding:
+      - gzip
+    body: !binary |-
+      H4sIAAAAAAAAA4WSQYvbMBCF/4oR9ObIspyQ2LAsNDSX0rSU9pBewlie2CKy
+      ZCS5y1L2v+84wcHtpbfRPPTmexr9YcNYG63OHgcXWCVSFl8HZBX7GdCzdJZb
+      HeJdrrUjdf/pawK2SS5utA36NNl3YAzaFr+5EHlymPtfMISp7ZPvqJxvAidT
+      4xRE7SwZHfElOTl/TZPjiZTRG2p2MQ6hyjIYNG917MaaK9dnIyGFrL6SpbnB
+      UXMA+zrxLMeTAr8hgj//bRdQjR556+/qzfNeZhchSik2sCvLBqSU651SIOrt
+      VgKqUpXPzdMDikSOHK7Qg+YWYwYUMYYF6Qd50D20GKiYpy3rVb4WfLAtgXax
+      N/9gLhIvs3qEiM0ZIsWVIpcrUazy4ke+rQpRbYpfZIZERO9nR2NSVhvXzvUM
+      cdYN3f5fWHKy0E+f4KOnJTubfH48+cUZ415oD6ySKbufNCWZfs5knm+KYrsm
+      iabracGLCJ2mDLUh4wuYgG/vqtsjoH0CAAA=
+    http_version: '1.1'
+  recorded_at: Thu, 22 Mar 2012 03:31:03 GMT
 recorded_with: VCR 2.0.0.rc1

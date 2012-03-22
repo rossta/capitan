@@ -3,22 +3,11 @@ require 'faraday_middleware'
 require 'ostruct'
 
 module Github
+
   class API
 
     def initialize(configuration)
       @configuration = configuration
-    end
-
-    def team_members
-      get @configuration.team_members_path
-    end
-
-    def team_member_ids
-      team_members.map { |m| m['id'] }.compact
-    end
-
-    def team_member?(team_member_id)
-      team_member_ids.include?(team_member_id)
     end
 
     def get(path = nil)
@@ -45,3 +34,9 @@ module Github
     end
   end
 end
+
+# organization = Github::Organization.new('challengepost')
+# organization.team_members
+# organization.team_member?(id)
+# Github::Organization.new('challengepost').team_members.find(id)
+# organization.team_members.find(id)

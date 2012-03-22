@@ -4,6 +4,10 @@ module Github
   autoload :Configuration, 'github/configuration'
   autoload :API, 'github/api'
   autoload :Raw, 'github/raw'
+  autoload :Base, 'github/base'
+  autoload :Collection, 'github/collection'
+  autoload :Organization, 'github/organization'
+  autoload :TeamMember, 'github/team_member'
 
   delegate :configure, :to => :configuration
   delegate :team_members, :team_member_ids, :team_member?, :to => :api

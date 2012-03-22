@@ -19,10 +19,6 @@ module Github
       self.config.raw_host || RAW_HOST
     end
 
-    def team_members_path
-      raise "Organization not configured" unless config.org.present?
-      "/orgs/#{org}/members"
-    end
   end
 
 

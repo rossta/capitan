@@ -1,0 +1,160 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api.github.com/
+    body: ''
+    headers:
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+      connection:
+      - close
+  response:
+    status:
+      code: 302
+      message: Found
+    headers:
+      server:
+      - nginx/1.0.13
+      date:
+      - Thu, 22 Mar 2012 02:28:17 GMT
+      content-type:
+      - text/html;charset=utf-8
+      connection:
+      - close
+      status:
+      - 302 Found
+      x-ratelimit-limit:
+      - '5000'
+      etag:
+      - ! '"d41d8cd98f00b204e9800998ecf8427e"'
+      location:
+      - http://developer.github.com
+      x-ratelimit-remaining:
+      - '4999'
+      content-length:
+      - '0'
+    body: ''
+    http_version: '1.1'
+  recorded_at: Thu, 22 Mar 2012 02:28:17 GMT
+- request:
+    method: get
+    uri: https://api.github.com/orgs/challengepost/members
+    body: ''
+    headers:
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+      connection:
+      - close
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx/1.0.13
+      date:
+      - Thu, 22 Mar 2012 02:30:30 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - 200 OK
+      x-ratelimit-remaining:
+      - '4997'
+      x-ratelimit-limit:
+      - '5000'
+      etag:
+      - ! '"af2ad5fb9cb771e3ee4414fa02e1f0ec"'
+      content-encoding:
+      - gzip
+    body: !binary |-
+      H4sIAAAAAAAAA72XzarcOBCF36Uhu0x3Vek/MAzMYjbzCCGEklTq68Ttvvgn
+      cAl591F35ya+s7HxwguDQBY+5+PoUP74/TD17eHD4Wkcn4cPpxM/N8dzMz5N
+      8Ziul9M0SD+c4lcZhlb6w/sDf+OR+89vDw2Spl6O5/6xez/5WJ4KQCAw7EPI
+      TETap8QQnSOWFFL4K//569N18yhH/soXbo6djCceBhmHmZ539E9z4bMMdfH6
+      tfn6D9RwfO7OVejr9ucmV3tLMuqB9npuuvrqzOztKBqlnKYf71eSurYybODk
+      S4y+BJO8Cjm7kjJbrb2OqEq0mXbitCTjDaefVh+UCBy6lZTStc1fpvZlAyeT
+      2AUJPhofkJLVCchwLJSIMgbcidOSjBmnmdkbKQvO2LWgnq5t+4K0gZMCCTGo
+      EISMgcLFaxAThbDexOT1TpyWZMw4/fZ6w6Q9OQUr8/QlXaZ2Wz9RJsggOZmA
+      yYk2pOv1ExLkgDHYnTgtyZhxmpm9gSLwBlaD6rltm+HabUhUBu+MJELnHGTJ
+      XO6gLBSvnFFmJ1JLMuakZm7vqFCRXRmpf+Vb0/197c7cjxtgifKgPBmwhVSx
+      oMRQib7We7AgLDvBWpIxg/U/w49S13Z1tC7cdy/DpY4OG3AlKHVEYIyYjGad
+      tcMIMSofi8pS3E64lmTMcL2xe+/1EILTK9N1afK0AROFoNFpxWBrY3lOGLwU
+      n+ojXiTuhGlJxhzTw+g9Tb6ONmuLqmumOuZtQJS1yklZ7XTMwGRIcgCXtTWI
+      tbT2StKSjBmiX1Z/trmltcNmL+PUd2M/bQEliO42SoFQ1DHpqLTVtbRilpAt
+      pJ2ytCRjBuqN3RssExS61bCuwzDyhkRFQBvY+eINBlv/ZXy2qv4TcAbULu81
+      ISzJmIN6tXq/dmidWllLw5Shw8sGSImxRNTGGTTlNp4XtBBE0ABn4r2GgyUZ
+      M0i/vd4pKRe8+vHpP+rjTCIQDwAA
+    http_version: '1.1'
+  recorded_at: Thu, 22 Mar 2012 02:30:30 GMT
+- request:
+    method: get
+    uri: https://api.github.com/orgs/challengepost/members
+    body: ''
+    headers:
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+      connection:
+      - close
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx/1.0.13
+      date:
+      - Thu, 22 Mar 2012 02:30:32 GMT
+      content-type:
+      - application/json; charset=utf-8
+      transfer-encoding:
+      - chunked
+      connection:
+      - close
+      status:
+      - 200 OK
+      x-ratelimit-limit:
+      - '5000'
+      etag:
+      - ! '"18b133598ab32db98be73ba96ec29d75"'
+      x-ratelimit-remaining:
+      - '4996'
+      content-encoding:
+      - gzip
+    body: !binary |-
+      H4sIAAAAAAAAA72Xy2rcQBBF/2UgO2emqvptCIEsssknhGD6UT2Wo9EYPQIm
+      +N/TtkczykpCCy0EDa2i7z3cLqp//t0Nbb273z32/XN3fzj452p/rPrHIezj
+      +XQYOm67Q/jNXVdzu7vb+T++9+3D/0Udx6Hl/bH92H2v/FgeMoAjUN46lzwR
+      SRujh2AMeY4uuq/py/Xosrnnvf/tT77aN9wffNdx3030fKLv1ckfuSuL8bTp
+      +jNK2D83xyJ03H6oUrE3J6MUvP2HSggj6W5Xn49VU+quzl/vFpI619yt4GRz
+      CDY7Fa1wKZkck9dSWhlQ5KATbcRpTsaVE4FBM+X07nshpXiu09NQv6zgpKI3
+      jp0NyjqkqGUEUj5kikQJHW7EaU7GhZMGo/QE09X4QlCP57p+QVrBSQC74IRz
+      TEpB9tlKYBWYsNzEaOVGnOZkXDhJS0bALU6j74WYnuJpqNf1J0oECThF5TAa
+      lopkuX5MjN5hcHojTnMyLpwIrIIJp6vxpaBaX9dVd25WJCqBNYojoTEGEief
+      30FpyFYYJdRGpOZkjKRQkL4F6ulqfCGpH/ynar6dm6Nv+xWwWFgQlhToTCJr
+      EKwoB1vau9PAnjeCNSfjAguV1NNY/Wd+IbCTb5uX7lRGhxW4IuQyIngMGJX0
+      MkmDAUIQNmSROJuNcM3JuODSzjkjb+GaWF8Kq0rDCkzknEQjhQddOpb1EZ3l
+      bGP52DKHjTDNyRhTZcssM2lWpzfTCwE11VDGvBWIkhQpCi2NDAk8KeLkwCSp
+      FWJpWlslaU7G2KXAaqJbki62F0JquR/apm+HNaAY0byNUsAUZIgyCKllaVoh
+      sUsa4kZZmpNxAaWcQDMBNbG+FNa563q/IlEBUDtvbLYKnS5vGZu0KM8EnwCl
+      SVtNCHMyxkuH2ohboNoP1wsZdUOCBk8rIEWPOaBURqHKb+N5Rg2OGRX4RH6r
+      4WBOxghJGGcnlEbfr7/+ASDnGJgQDwAA
+    http_version: '1.1'
+  recorded_at: Thu, 22 Mar 2012 02:30:32 GMT
+recorded_with: VCR 2.0.0.rc1
