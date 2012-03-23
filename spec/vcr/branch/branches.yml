@@ -2,47 +2,6 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.github.com/
-    body: ''
-    headers:
-      accept-encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      accept:
-      - ! '*/*'
-      user-agent:
-      - Ruby
-      connection:
-      - close
-  response:
-    status:
-      code: 302
-      message: Found
-    headers:
-      server:
-      - nginx/1.0.13
-      date:
-      - Thu, 22 Mar 2012 02:28:17 GMT
-      content-type:
-      - text/html;charset=utf-8
-      connection:
-      - close
-      status:
-      - 302 Found
-      x-ratelimit-limit:
-      - '5000'
-      etag:
-      - ! '"d41d8cd98f00b204e9800998ecf8427e"'
-      location:
-      - http://developer.github.com
-      x-ratelimit-remaining:
-      - '4998'
-      content-length:
-      - '0'
-    body: ''
-    http_version: '1.1'
-  recorded_at: Thu, 22 Mar 2012 02:28:17 GMT
-- request:
-    method: get
     uri: https://api.github.com/orgs/challengepost/members
     body: ''
     headers:
@@ -62,7 +21,7 @@ http_interactions:
       server:
       - nginx/1.0.13
       date:
-      - Thu, 22 Mar 2012 02:30:33 GMT
+      - Fri, 23 Mar 2012 17:52:34 GMT
       content-type:
       - application/json; charset=utf-8
       transfer-encoding:
@@ -76,7 +35,7 @@ http_interactions:
       etag:
       - ! '"18b133598ab32db98be73ba96ec29d75"'
       x-ratelimit-remaining:
-      - '4995'
+      - '4992'
       content-encoding:
       - gzip
     body: !binary |-
@@ -98,5 +57,5 @@ http_interactions:
       SVtNCHMyxkuH2ohboNoP1wsZdUOCBk8rIEWPOaBURqHKb+N5Rg2OGRX4RH6r
       4WBOxghJGGcnlEbfr7/+ASDnGJgQDwAA
     http_version: '1.1'
-  recorded_at: Thu, 22 Mar 2012 02:30:33 GMT
+  recorded_at: Fri, 23 Mar 2012 17:52:34 GMT
 recorded_with: VCR 2.0.0.rc1

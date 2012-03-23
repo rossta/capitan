@@ -1,16 +1,19 @@
 GIT
-  remote: git://github.com/intridea/omniauth-github.git
-  revision: 717fdca849ad1f0dcbd7f3edaeb3370bca95db9d
-  specs:
-    omniauth-github (1.0.1)
-      omniauth (~> 1.0)
-      omniauth-oauth2 (~> 1.0)
-
-PATH
-  remote: ../omniauth-challengepost
+  remote: git://github.com/challengepost/omniauth-challengepost.git
+  revision: b748aed0ca3843a129e2f7066aa2427313bc5378
   specs:
     omniauth-challengepost (0.0.1)
       omniauth-oauth2 (~> 1.0)
+
+GIT
+  remote: git://github.com/rossta/garden_wall.git
+  revision: de626994c3795e3aa3b9b25e1b0da1cda66cd57a
+  specs:
+    garden_wall (0.0.1)
+      faraday (= 0.8.0.rc2)
+      faraday_middleware
+      omniauth-github
+      warden
 
 GEM
   remote: http://rubygems.org/
@@ -84,7 +87,7 @@ GEM
     fakeweb (1.3.0)
     faraday (0.8.0.rc2)
       multipart-post (~> 1.1)
-    faraday_middleware (0.8.4)
+    faraday_middleware (0.8.6)
       faraday (>= 0.7.4, < 0.9)
     ffi (1.0.11)
     hashie (1.2.0)
@@ -114,9 +117,12 @@ GEM
     oauth2 (0.5.2)
       faraday (~> 0.7)
       multi_json (~> 1.0)
-    omniauth (1.0.2)
+    omniauth (1.0.3)
       hashie (~> 1.2)
       rack
+    omniauth-github (1.0.1)
+      omniauth (~> 1.0)
+      omniauth-oauth2 (~> 1.0)
     omniauth-oauth2 (1.0.0)
       oauth2 (~> 0.5.0)
       omniauth (~> 1.0)
@@ -232,10 +238,10 @@ DEPENDENCIES
   fakeweb
   faraday (= 0.8.0.rc2)
   faraday_middleware
+  garden_wall!
   jquery-rails
   launchy
   omniauth-challengepost!
-  omniauth-github!
   rails (= 3.2.1)
   rails-backbone
   rspec-rails
@@ -247,5 +253,4 @@ DEPENDENCIES
   therubyracer
   uglifier (>= 1.0.3)
   vcr (= 2.0.0.rc1)
-  warden
   whenever

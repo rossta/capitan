@@ -4,14 +4,13 @@ feature 'Branch', %q{
   View branches
 } do
 
-  let(:authentication) { FactoryGirl.create(:authentication) }
   let(:job) { FactoryGirl.create(:job) }
 
   before do
-    login_as authentication
+    login_with_github
   end
 
-  scenario 'branches' do
+  scenario 'branches', :vcr, :record => :new_episodes do
     branch  = FactoryGirl.create :branch, \
       :job => job, 
       :name => 'origin/test_branch', 

@@ -31,9 +31,9 @@ gem 'faraday_middleware'
 gem 'draper'
 
 # Auth
-gem 'warden'
-gem 'omniauth-github', :git => 'git://github.com/intridea/omniauth-github.git'
-gem 'omniauth-challengepost', :path => '../omniauth-challengepost'
+# gem 'garden_wall', :path => '../garden_wall'
+gem 'garden_wall', :git => 'git://github.com/rossta/garden_wall.git'
+gem 'omniauth-challengepost', :git => 'git://github.com/challengepost/omniauth-challengepost.git'
 
 # Utils
 gem 'whenever'

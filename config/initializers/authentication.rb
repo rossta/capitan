@@ -1,49 +1,23 @@
+require 'garden_wall'
+require 'omniauth-github'
+
+GardenWall.configure do |c|
+  c.organization = 'challengepost'
+end
+
 Rails.application.config.middleware.use OmniAuth::Builder do
   provider :challengepost, ENV['CHALLENGEPOST_APP_ID'], ENV['CHALLENGEPOST_APP_SECRET']
-  provider :github, ENV['CAPITAN_GITHUB_KEY'], ENV['CAPITAN_GITHUB_SECRET']
+  provider :github, 'cce56092ee558c6c5111', '4dfc8490623bb7fd6a6b8957b5216f091ba50c8d'
+  # provider :github, ENV['CAPITAN_GITHUB_KEY'], ENV['CAPITAN_GITHUB_SECRET']
 end
 
 Rails.application.config.middleware.use Warden::Manager do |manager|
   manager.default_scope = :team_member
-  manager.scope_defaults :team_member, :strategies => [:github_omniauth, :general_omniauth]
+  manager.scope_defaults :team_member, :strategies => [:github_team_member]
   manager.failure_app = lambda { |env| HomeController.action(:show).call(env) }
 end
 
-require 'github'
-$organization = Github::Organization.new('challengepost')
-
-Warden::Manager.serialize_into_session do |user|
-  user.id
-end
-
-Warden::Manager.serialize_from_session do |id|
-  if team_member = $organization.team_members.find(id)
-    team_member
-  else authentication = Authentication.find_by_id(id)
-    authentication
-  end
-end
-
 module AuthStrategies
-  class GithubOmniauth < ::Warden::Strategies::Base
-
-    def valid?
-      omniauth.present? && omniauth["provider"] == "github"
-    end
-
-    def authenticate!
-      if team_member = $organization.team_members.find(omniauth["uid"])
-        success! team_member
-      else
-        fail 'Authentication'
-      end
-    end
-
-    def omniauth
-      request.env['omniauth.auth']
-    end
-  end
-
   class GeneralOmniauth < ::Warden::Strategies::Base
     def valid?
       omniauth.present?
@@ -62,8 +36,6 @@ module AuthStrategies
     end
   end
 end
-
-Warden::Strategies.add(:github_omniauth, AuthStrategies::GithubOmniauth)
 Warden::Strategies.add(:general_omniauth, AuthStrategies::GeneralOmniauth)
 
 

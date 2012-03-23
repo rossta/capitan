@@ -2,11 +2,11 @@ module Sync
   class Github
 
     def self.api
-      ::Github.api
+      GardenWall::Github.api
     end
 
     def self.retrieve_and_sync_users
-      Authentication.sync('github', $organization.team_member_attributes)
+      Authentication.sync('github', GardenWall.organization.team_member_attributes)
     end
 
     def self.retrieve_and_sync_user_info

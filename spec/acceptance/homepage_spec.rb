@@ -1,15 +1,13 @@
 require 'acceptance/acceptance_helper'
 
 feature 'Homepage', %q{
-} do
-
-  let(:authentication) { FactoryGirl.create(:authentication) }
+}, :vcr, :record => :new_episodes do
 
   scenario 'visit home page' do
     Factory(:job, :name => 'models')
     Factory(:job, :name => 'challenges')
 
-    login_as authentication
+    login_with_github
 
     visit '/?html=1'
 
@@ -24,7 +22,7 @@ feature 'Homepage', %q{
   end
 
   scenario 'Login with Github' do
-    setup_for_github_login authentication
+    team_member = setup_for_github_login
     Factory(:job, :name => 'models')
     visit '/'
 
@@ -32,7 +30,7 @@ feature 'Homepage', %q{
 
     click_link "login with github"
 
-    page.should have_content authentication.name
+    page.should have_content team_member.login
     page.should have_content("logout")
     page.should have_content('models')
 

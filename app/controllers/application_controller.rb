@@ -12,7 +12,7 @@ class ApplicationController < ActionController::Base
   end
 
   def current_user
-    warden.user
+    warden.user(:scope => :team_member)
   end
   helper_method :current_user
 
