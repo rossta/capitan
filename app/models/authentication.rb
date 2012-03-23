@@ -4,7 +4,7 @@ class Authentication < ActiveRecord::Base
 
   def self.sync(provider, authentication_data = [])
     authentication_data.each do |authentication_hash|
-      authentication = find_or_initialize_by_provider_and_uid(provider.to_s, authentication_hash['id'])
+      authentication = find_or_initialize_by_provider_and_uid(provider.to_s, authentication_hash['id'].to_s)
       # github specifics
       authentication.name         = authentication_hash['login']
       authentication.provider_url = authentication_hash['url']

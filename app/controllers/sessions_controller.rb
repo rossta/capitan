@@ -6,12 +6,14 @@ class SessionsController < ApplicationController
 
 	def create
 		warden.authenticate!
-		redirect_to root_url, notice: "Welcome!"
+    flash[:success] = "Welcome!"
+		redirect_to root_url
 	end
 
 	def destroy
 		warden.logout
-  	redirect_to root_url, notice: "Logged out!"
+    flash[:notice] = "Logged out!"
+  	redirect_to root_url
 	end
 
   def failure
