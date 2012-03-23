@@ -17,4 +17,5 @@ namespace :jenkins do
 
   desc "Sync current job, branch, and build data"
   task :sync => [:sync_jobs, :sync_branches, :sync_builds]
+
 end

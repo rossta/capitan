@@ -1,0 +1,26 @@
+#!/usr/bin/env ruby
+
+require 'net/http'
+require 'uri'
+
+job_name = "topic_action"
+body = {  "name" => job_name, 
+          "url" => "JobUrl", 
+          "build" => {
+            "number" => 1, 
+            "phase" => "STARTED", 
+            "status" => "FAILED", 
+            "url" => "job/project/5", 
+            "fullUrl" => "http://ci.jenkins.org/job/project/5",
+            "parameters" => {
+              "branch" => "master"
+            }
+        }}
+
+uri = URI.parse('http://localhost:3123/notifications/jenkins')
+http = Net::HTTP.new(uri.host, uri.port)
+request = Net::HTTP::Post.new(uri.request_uri)
+request.set_form_data(body)
+response = http.request(request)
+
+puts response

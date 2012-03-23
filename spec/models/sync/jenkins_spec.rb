@@ -9,4 +9,8 @@ describe Sync::Jenkins, :vcr, :record => :new_episodes do
     Sync::Jenkins.retrieve_and_sync_branches
     Sync::Jenkins.retrieve_and_sync_builds
   end
+
+  it "syncs job by name" do
+    Sync::Jenkins.job_by_name('topic_action')
+  end
 end

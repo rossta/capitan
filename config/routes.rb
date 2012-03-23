@@ -5,6 +5,8 @@ Capitan::Application.routes.draw do
   match '/login', :to => 'sessions#new', :as => :sign_in
   match '/logout', :to => 'sessions#destroy', :as => :sign_out
 
+  match '/notifications/:id', :to => 'notifications#create', :via => [:get, :post]
+
   root to: "home#show"
 
   resources :jobs, :only => [:show, :index] do
