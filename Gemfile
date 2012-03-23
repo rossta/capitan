@@ -39,6 +39,9 @@ gem 'omniauth-challengepost', :git => 'git://github.com/challengepost/omniauth-c
 # Utils
 gem 'whenever'
 
+# Deployment
+gem 'heroku'
+
 group :development, :test do
   gem 'ruby-debug19', :require => 'ruby-debug', :platforms => :mri_19
   gem 'ruby-debug',   :platforms => :mri_18
