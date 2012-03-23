@@ -7,7 +7,7 @@ end
 
 Rails.application.config.middleware.use OmniAuth::Builder do
   provider :challengepost, ENV['CHALLENGEPOST_APP_ID'], ENV['CHALLENGEPOST_APP_SECRET']
-  # provider :github, ENV['CAPITAN_GITHUB_KEY'], ENV['CAPITAN_GITHUB_SECRET']
+  provider :github, ENV['CAPITAN_GITHUB_KEY'], ENV['CAPITAN_GITHUB_SECRET']
 end
 
 Rails.application.config.middleware.use Warden::Manager do |manager|
