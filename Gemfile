@@ -41,6 +41,7 @@ gem 'whenever'
 
 # Deployment
 gem 'heroku'
+gem 'foreman'
 
 group :development, :test do
   gem 'ruby-debug19', :require => 'ruby-debug', :platforms => :mri_19
