@@ -29,7 +29,28 @@ class Notification
   #
   # Returns nil
   def process!
-    Sync::Jenkins.job_by_name(parsed_params["name"])
+    Sync::Jenkins.job_by_name(payload["name"])
+  end
+
+  # Public: Parses the given param data as json
+  #
+  # Examples
+  #
+  #   notification.payload
+  #   # => { 
+  #           "name": "topic_action",
+  #           "url": "job/topic_action/", 
+  #           "build": { 
+  #             "full_url": "http://ci.berman.challengepost.com/job/topic_action/364/",
+  #             "number": 364,
+  #             "phase": "STARTED",
+  #             "url": "job/topic_action/364/"
+  #           }
+  #         }
+  #
+  # Returns hash of notification payload.
+  def payload
+    @payload ||= JSON.parse(@params.keys.grep(/job/).first)
   end
 
   private
@@ -37,6 +58,7 @@ class Notification
   # Rails intreprets Jenkins payload as a string params key with
   # a nil value. Choose key by matching /job/ and parse as json 
   def parsed_params
-    JSON.parse(@params.keys.grep(/job/).first)
+    
   end
+
 end
