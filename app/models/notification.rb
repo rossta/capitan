@@ -1,20 +1,11 @@
+require 'json'
+
 class Notification
 
   # Public: Create a new notification with params (likely via controller).
   #
   # hash  - params from controller
-  #         { "name" => "JobName", 
-  #           "url" => "JobUrl", 
-  #           "build" => {
-  #             "number" => 1, 
-  #             "phase" => "STARTED", 
-  #             "status" => "FAILED", 
-  #             "url" => "job/project/5", 
-  #             "fullUrl" => "http://ci.jenkins.org/job/project/5"
-  #             "parameters" => {
-  #               "branch" => "master"
-  #             }
-  #         }} 
+  #         {"{\"name\":\"topic_action\",\"url\":\"job/topic_action/\",\"build\":{\"full_url\":\"http://ci.berman.challengepost.com/job/topic_action/364/\",\"number\":364,\"phase\":\"FINISHED\",\"status\":\"SUCCESS\",\"url\":\"job/topic_action/364/\"}}"=>nil, "controller"=>"notifications", "action"=>"create", "id"=>"jenkins"} 
   #
   # Examples
   #
@@ -38,7 +29,14 @@ class Notification
   #
   # Returns nil
   def process!
-    name = @params[:name]
-    Sync::Jenkins.job_by_name(name)
+    Sync::Jenkins.job_by_name(parsed_params["name"])
+  end
+
+  private
+
+  # Rails intreprets Jenkins payload as a string params key with
+  # a nil value. Choose key by matching /job/ and parse as json 
+  def parsed_params
+    JSON.parse(@params.keys.grep(/job/).first)
   end
 end

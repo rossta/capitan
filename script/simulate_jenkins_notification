@@ -25,3 +25,9 @@ request.set_form_data(body)
 response = http.request(request)
 
 puts response
+
+
+# {"{\"name\":\"topic_action\",\"url\":\"job/topic_action/\",\"build\":{\"full_url\":\"http://ci.berman.challengepost.com/job/topic_action/364/\",\"number\":364,\"phase\":\"STARTED\",\"url\":\"job/topic_action/364/\"}}"=>nil, "controller"=>"notifications", "action"=>"create", "id"=>"jenkins"}
+# {"{\"name\":\"topic_action\",\"url\":\"job/topic_action/\",\"build\":{\"full_url\":\"http://ci.berman.challengepost.com/job/topic_action/364/\",\"number\":364,\"phase\":\"COMPLETED\",\"status\":\"SUCCESS\",\"url\":\"job/topic_action/364/\"}}"=>nil, "controller"=>"notifications", "action"=>"create", "id"=>"jenkins"}
+# {"{\"name\":\"topic_action\",\"url\":\"job/topic_action/\",\"build\":{\"full_url\":\"http://ci.berman.challengepost.com/job/topic_action/364/\",\"number\":364,\"phase\":\"FINISHED\",\"status\":\"SUCCESS\",\"url\":\"job/topic_action/364/\"}}"=>nil, "controller"=>"notifications", "action"=>"create", "id"=>"jenkins"}
+# {"name"=>"topic_action", "url"=>"JobUrl", "build"=>"[\"parameters\", {\"branch\"=>\"master\"}]", "controller"=>"notifications", "action"=>"create", "id"=>"jenkins"}
