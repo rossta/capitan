@@ -1,20 +1,3 @@
-require 'garden_wall'
-
-GardenWall.configure do |c|
-  c.organization = 'challengepost'
-end
-
-Rails.application.config.middleware.use OmniAuth::Builder do
-  provider :challengepost, ENV['CHALLENGEPOST_APP_ID'], ENV['CHALLENGEPOST_APP_SECRET']
-  provider :github, ENV['CAPITAN_GITHUB_KEY'], ENV['CAPITAN_GITHUB_SECRET']
-end
-
-Rails.application.config.middleware.use Warden::Manager do |manager|
-  manager.default_scope = :team_member
-  manager.scope_defaults :team_member, :strategies => [:github_team_member]
-  manager.failure_app = lambda { |env| HomeController.action(:show).call(env) }
-end
-
 module AuthStrategies
   class GeneralOmniauth < ::Warden::Strategies::Base
     def valid?
@@ -34,9 +17,10 @@ module AuthStrategies
     end
   end
 end
+
 Warden::Strategies.add(:general_omniauth, AuthStrategies::GeneralOmniauth)
 
-
+# Sample Github Omniauth response
 # ---
 # :key: 1346369889ab8afc05ac
 # :secret: 0fbb9fac12fc1139301331656f0289eecc410087
