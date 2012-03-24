@@ -17,7 +17,8 @@ body = {  "name" => job_name,
             }
         }}
 
-uri = URI.parse('http://localhost:3123/notifications/jenkins')
+uri = URI.parse('http://capitan-challengepost.herokuapp.com/notifications/jenkins')
+# uri = URI.parse('http://localhost:3123/notifications/jenkins')
 http = Net::HTTP.new(uri.host, uri.port)
 request = Net::HTTP::Post.new(uri.request_uri)
 request.set_form_data(body)

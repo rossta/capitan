@@ -7,6 +7,8 @@ class NotificationsController < ApplicationController
   end
 
   def create
+    Rails.logger.warn "[[[[JENKINS NOTIFICATION]]]]"
+    Rails.logger.warn params.inspect
     @notification = Notification.new(params)
     @notification.process!
     head :ok    
