@@ -1,5 +1,4 @@
 require 'garden_wall'
-require 'omniauth-github'
 
 GardenWall.configure do |c|
   c.organization = 'challengepost'
