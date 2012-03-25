@@ -9,14 +9,10 @@
 <body>
 <%= render 'layouts/navigation' %>
 <div class="container">
-  <% flash.each do |type, message| %>
-    <div class="alert alert-<%= type %> <%= type %>" data-role="flash-<%= type %>">
-      <%= message %>
-    </div>
-  <% end %>
-</div>
-<div class="container">
-  <%= yield %>
+  <div class="inner-container">
+    <%= render 'layouts/flash', flash: flash %>
+    <%= yield %>
+  </div>
 </div>
 <script type="text/javascript">
   <%= yield :json %>

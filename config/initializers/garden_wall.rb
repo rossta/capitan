@@ -1,4 +1,4 @@
-require 'garden_wall'
+require 'gardenwall'
 
 GardenWall.configure do |c|
   c.organization = 'challengepost'

@@ -1,6 +1,6 @@
 @import "bootstrap";
 
-.navbar { 
+.navbar {
   background-color: #CCC;
   background-image: -moz-linear-gradient(top, #CCC, #BBB);
   background-image: -ms-linear-gradient(top, #CCC, #BBB);
@@ -14,6 +14,11 @@
 }
 header h3 {
   line-height:36px;
+}
+
+.navbar .nav > li > a {
+  color:white;
+  &:hover { color: #006633; text-shadow:none;}
 }
 
 .left { float:left; }

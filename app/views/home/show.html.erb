@@ -1,5 +1,5 @@
 <% if params[:html] %>
-  <div class="span12" style="margin-left:0px;">
+  <div class="span11" style="margin-left:0px;">
     <%= render 'jobs' %>
   </div>
 <% else %>
@@ -11,7 +11,7 @@
     </script>
   <% end %>
 
-  <div id="jobs" class="span12" style="margin-left:0px;">
+  <div id="jobs" class="span11" style="margin-left:0px;">
     <%= render partial: 'jobs/status', collection: @jobs, as: :job %>
   </div>
 
