@@ -7,7 +7,7 @@ GIT
 
 GIT
   remote: git://github.com/rossta/garden_wall.git
-  revision: 71cf5d50a94ef666958821c8173a6b3c097ed44a
+  revision: 8ea8e6a1791695741fa5a944f5d3e484a701284d
   specs:
     garden_wall (0.0.1)
       faraday (= 0.8.0.rc2)

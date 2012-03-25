@@ -1,10 +1,10 @@
 class ApplicationController < ActionController::Base
   protect_from_forgery
 
-  before_filter :authenticate!
+  before_filter :authenticate_team_member!
 
-  def authenticate!
-    redirect_to sign_in_path unless signed_in?
+  def authenticate_team_member!
+    warden.authenticate!(:scope => :team_member)
   end
 
   def warden

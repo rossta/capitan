@@ -12,5 +12,5 @@ end
 Rails.application.config.middleware.use Warden::Manager do |manager|
   manager.default_scope = :team_member
   manager.scope_defaults :team_member, :strategies => [:github_team_member]
-  manager.failure_app = lambda { |env| HomeController.action(:show).call(env) }
+  manager.failure_app = lambda { |env| SessionsController.action(:new).call(env) }
 end
