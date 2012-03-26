@@ -32,7 +32,7 @@ gem 'faraday_middleware'
 gem 'draper'
 
 # Auth
-gem 'gardenwall-challengepost', :path => '../gardenwall-challengepost'
+gem 'opensesame'
 gem 'omniauth-challengepost', :git => 'git://github.com/challengepost/omniauth-challengepost.git'
 
 # Utils

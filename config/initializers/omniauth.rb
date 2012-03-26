@@ -1,6 +1,6 @@
-require 'gardenwall_challengepost'
+require 'opensesame'
 
-GardenwallChallengepost.configure do |config|
+OpenSesame.configure do |config|
   config.github       ENV['CAPITAN_GITHUB_KEY'], ENV['CAPITAN_GITHUB_SECRET']
   config.organization 'challengepost'
   config.mounted_at   '/welcome'
