@@ -28,7 +28,7 @@ feature 'Homepage', %q{
 
     page.should_not have_content('models')
 
-    click_link "login with github"
+    click_link "github"
 
     page.should have_content team_member.login
     page.should have_content("logout")
