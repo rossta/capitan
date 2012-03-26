@@ -1,3 +1,11 @@
+require 'gardenwall_challengepost'
+
+GardenwallChallengepost.configure do |config|
+  config.organization 'challengepost'
+  config.mounted_at   '/welcome'
+  config.github       ENV['CAPITAN_GITHUB_KEY'], ENV['CAPITAN_GITHUB_SECRET']
+end
+
 module AuthStrategies
   class GeneralOmniauth < ::Warden::Strategies::Base
     def valid?
