@@ -55,7 +55,7 @@ Warden::Strategies.add(:general_omniauth, AuthStrategies::GeneralOmniauth)
 #       login: rossta
 #       private_gists: 3
 #       blog: http://www.rosskaff.com
-#       bio: !!null 
+#       bio: !!null
 #       total_private_repos: 4
 #       plan:
 #         collaborators: 1

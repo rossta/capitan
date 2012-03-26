@@ -34,6 +34,7 @@ gem 'draper'
 # Auth
 # gem 'gardenwall', :path => '../gardenwall'
 gem 'gardenwall', :git => 'git://github.com/rossta/gardenwall.git'
+gem 'gardenwall-challengepost', :path => '../gardenwall-challengepost'
 gem 'omniauth-challengepost', :git => 'git://github.com/challengepost/omniauth-challengepost.git'
 
 # Utils

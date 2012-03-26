@@ -1,3 +1,5 @@
+require 'gardenwall'
+
 module Sync
   class Github
 

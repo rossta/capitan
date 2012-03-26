@@ -65,5 +65,10 @@ module Capitan
 
     # Custom settings
     config.enable_challengepost_authentication = false
+
+    config.github_client = {
+      id: ENV['CAPITAN_GITHUB_KEY'],
+      secret: ENV['CAPITAN_GITHUB_SECRET']
+    }
   end
 end
