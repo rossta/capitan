@@ -5,20 +5,12 @@ GIT
     omniauth-challengepost (0.0.1)
       omniauth-oauth2 (~> 1.0)
 
-GIT
-  remote: git://github.com/rossta/gardenwall.git
-  revision: d65816f8678d16bdab7e208d27b225defe9440df
-  specs:
-    gardenwall (0.0.1)
-      faraday (= 0.8.0.rc2)
-      faraday_middleware
-      omniauth-github
-      warden
-
 PATH
   remote: ../gardenwall-challengepost
   specs:
     gardenwall-challengepost (0.0.1)
+      bootstrap-sass (~> 2.0.1)
+      opensesame-github
       rails (~> 3.1)
 
 GEM
@@ -142,6 +134,11 @@ GEM
     omniauth-oauth2 (1.0.0)
       oauth2 (~> 0.5.0)
       omniauth (~> 1.0)
+    opensesame-github (0.0.1)
+      faraday (= 0.8.0.rc2)
+      faraday_middleware
+      omniauth-github
+      warden
     pg (0.13.2)
     polyglot (0.3.3)
     rack (1.4.1)
@@ -261,7 +258,6 @@ DEPENDENCIES
   faraday (= 0.8.0.rc2)
   faraday_middleware
   foreman
-  gardenwall!
   gardenwall-challengepost!
   heroku
   jquery-rails

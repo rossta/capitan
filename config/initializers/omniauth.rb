@@ -1,32 +1,32 @@
 require 'gardenwall_challengepost'
 
 GardenwallChallengepost.configure do |config|
+  config.github       ENV['CAPITAN_GITHUB_KEY'], ENV['CAPITAN_GITHUB_SECRET']
   config.organization 'challengepost'
   config.mounted_at   '/welcome'
-  config.github       ENV['CAPITAN_GITHUB_KEY'], ENV['CAPITAN_GITHUB_SECRET']
 end
 
-module AuthStrategies
-  class GeneralOmniauth < ::Warden::Strategies::Base
-    def valid?
-      omniauth.present?
-    end
+# module AuthStrategies
+#   class GeneralOmniauth < ::Warden::Strategies::Base
+#     def valid?
+#       omniauth.present?
+#     end
 
-    def authenticate!
-      if authentication = Authentication.find_by_provider_and_uid(omniauth["provider"], omniauth["uid"])
-        success! authentication
-      else
-        fail 'Authentication'
-      end
-    end
+#     def authenticate!
+#       if authentication = Authentication.find_by_provider_and_uid(omniauth["provider"], omniauth["uid"])
+#         success! authentication
+#       else
+#         fail 'Authentication'
+#       end
+#     end
 
-    def omniauth
-      request.env['omniauth.auth']
-    end
-  end
-end
+#     def omniauth
+#       request.env['omniauth.auth']
+#     end
+#   end
+# end
 
-Warden::Strategies.add(:general_omniauth, AuthStrategies::GeneralOmniauth)
+# Warden::Strategies.add(:general_omniauth, AuthStrategies::GeneralOmniauth)
 
 # Sample Github Omniauth response
 # ---
