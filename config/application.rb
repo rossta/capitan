@@ -65,5 +65,6 @@ module Capitan
 
     # Custom settings
     config.enable_challengepost_authentication = false
+
   end
 end
