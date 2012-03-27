@@ -1,24 +1,32 @@
-module AuthStrategies
-  class GeneralOmniauth < ::Warden::Strategies::Base
-    def valid?
-      omniauth.present?
-    end
+require 'opensesame'
 
-    def authenticate!
-      if authentication = Authentication.find_by_provider_and_uid(omniauth["provider"], omniauth["uid"])
-        success! authentication
-      else
-        fail 'Authentication'
-      end
-    end
-
-    def omniauth
-      request.env['omniauth.auth']
-    end
-  end
+OpenSesame.configure do |config|
+  config.github       ENV['CAPITAN_GITHUB_KEY'], ENV['CAPITAN_GITHUB_SECRET']
+  config.organization 'challengepost'
+  config.mounted_at   '/welcome'
 end
 
-Warden::Strategies.add(:general_omniauth, AuthStrategies::GeneralOmniauth)
+# module AuthStrategies
+#   class GeneralOmniauth < ::Warden::Strategies::Base
+#     def valid?
+#       omniauth.present?
+#     end
+
+#     def authenticate!
+#       if authentication = Authentication.find_by_provider_and_uid(omniauth["provider"], omniauth["uid"])
+#         success! authentication
+#       else
+#         fail 'Authentication'
+#       end
+#     end
+
+#     def omniauth
+#       request.env['omniauth.auth']
+#     end
+#   end
+# end
+
+# Warden::Strategies.add(:general_omniauth, AuthStrategies::GeneralOmniauth)
 
 # Sample Github Omniauth response
 # ---
@@ -55,7 +63,7 @@ Warden::Strategies.add(:general_omniauth, AuthStrategies::GeneralOmniauth)
 #       login: rossta
 #       private_gists: 3
 #       blog: http://www.rosskaff.com
-#       bio: !!null 
+#       bio: !!null
 #       total_private_repos: 4
 #       plan:
 #         collaborators: 1
