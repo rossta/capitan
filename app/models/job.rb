@@ -33,7 +33,7 @@ class Job < ActiveRecord::Base
     builds.joins(:branch).
       includes(:branch).
       where('builds.number = branches.last_build_number').
-      order('last_build_number DESC')
+      order('last_build_number DESC').limit(7)
   end
 
   def display_name
