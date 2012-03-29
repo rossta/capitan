@@ -11,6 +11,10 @@ class Job < ActiveRecord::Base
     jobs_data.each do |job_data|
       find_or_create_by_name(job_data.name)
     end
+    job_names = jobs_data.map(&:name)
+    Job.all.each do |job|
+      job.update_attribute(:enabled, job_names.include?(job.name))
+    end
   end
 
   def self.max_branches_per_job

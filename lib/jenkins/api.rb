@@ -22,6 +22,8 @@ module Jenkins
 
     def branches(job_name, attributes = {})
       all_builds_json = get "/job/#{job_name}/lastBuild"
+      return OpenStruct.new unless all_builds_json.present?
+
       branches_json   = all_builds_json["actions"][1]["buildsByBranchName"] || []
 
       [].tap do |branches|
