@@ -8,19 +8,19 @@ feature 'Homepage', %q{
   end
 
   scenario 'visit home page', :js => true do
-    pending
-    Factory(:job, :name => 'models')
-    Factory(:job, :name => 'challenges')
+    stack   = create(:stack, :name => 'topic_action')
+    job     = stack.jobs.create(attributes_for(:job, :name => 'topic_action'))
+    branch  = job.branches.create(attributes_for(:branch, :name => 'origin/master'))
+    build   = branch.builds.create(attributes_for(:build))
 
-    visit '/?html=1'
-    page.should have_content('models')
-    page.should have_content('challenges')
+    visit root_path
 
-    within("#jobs") do
-      click_link 'models'
+    within("#stacks") do
+      page.should have_content('Status')
+      page.should have_content('Topic Action')
+      page.should have_content('Green')
     end
 
-    page.should have_content('models')
   end
 
 end

@@ -10,6 +10,10 @@ class JobDecorator < ApplicationDecorator
     job.last_builds_by_branch
   end
 
+  def display_result
+    result.to_s
+  end
+
   def as_json(options = {})
     super.tap do |json|
       json[:builds] = branch_builds.map(&:as_json)

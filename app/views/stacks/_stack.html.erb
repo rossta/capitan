@@ -1,0 +1,14 @@
+<div class='job_statuses'>
+  <table class="table table-striped table-bordered table-condensed">
+    <tbody>
+      <tr>
+        <td class="status <%= stack.display_result %>"><strong>Status</strong>: <%= stack.result_description %></td>
+      </tr>
+      <%- stack.jobs.each do |job| -%>
+        <tr>
+          <td class="status <%= job.display_result %>"><%= job.display_name %></td>
+        </tr>
+      <%- end -%>
+    </tbody>
+  </table>
+</div>

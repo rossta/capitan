@@ -1,0 +1,11 @@
+<div id="stacks">
+  <%= page_header("Current Status") %>
+  <ul class="unstyled">
+    <% @stacks.each do |stack| %>
+      <li>
+        <h2><%= link_to stack.display_name, stack %></h2>
+        <%= render stack %>
+      </li>
+    <% end %>
+  </ul>
+</div>

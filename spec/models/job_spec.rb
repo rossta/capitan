@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'ostruct'
 
 describe Job do
 
@@ -15,8 +16,8 @@ describe Job do
     end
 
     it "returns up to max build ids per branch, ordered by build number" do
-      job_1 = Factory(:job)
-      job_2 = Factory(:job)
+      job_1 = FactoryGirl.create(:job)
+      job_2 = FactoryGirl.create(:job)
 
       3.times do |i|
         number = i + 1
@@ -49,6 +50,22 @@ describe Job do
       it "should set enabled to false" do
         job.should_receive(:update_attributes).with(enabled: false)
         job.disable!
+      end
+    end
+
+    describe "success?" do
+      let(:job) { build(:job) }
+      let(:branch) { stub_model(Branch, :success? => false) }
+
+      it "is true if most recent build on origin/master is passing" do
+        job.master_branch = branch
+        branch.stub!(:success? => true)
+        job.should be_success
+      end
+
+      it "is false if most recent build on origin/master is failing" do
+        branch.stub!(:success? => false)
+        job.should_not be_success
       end
     end
   end

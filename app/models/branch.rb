@@ -37,7 +37,26 @@ class Branch < ActiveRecord::Base
   end
 
   def last_build
-    builds.where(:number => last_build_number).first
+    conditions = {}.tap do |conditions| 
+       conditions[:number] = last_build_number if last_build_number.present?
+    end
+    builds.where(conditions).first
+  end
+
+  def result
+    last_build.try(:result)
+  end
+
+  def success?
+    last_build.try(:success?)
+  end
+
+  def failure?
+    last_build.try(:failure?)
+  end
+
+  def unknown_status?
+    !last_build.finished?
   end
 
 end

@@ -8,6 +8,8 @@ class Build < ActiveRecord::Base
 
   after_create :denormalize_job_id
 
+  attr_accessor :result
+
   def self.sync(branch, build_data)
     return false unless build_data.build_number
 
@@ -36,7 +38,15 @@ class Build < ActiveRecord::Base
   end
 
   def result
-    Jenkins.result_for(result_message) || result_message
+    @result || Jenkins.result_for(result_message) || result_message
+  end
+
+  def success?
+    result == :success
+  end
+
+  def failure?
+    result == :failure
   end
 
   def finished?

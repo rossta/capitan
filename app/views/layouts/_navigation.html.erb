@@ -5,7 +5,8 @@
     </header>
     <nav class="right">
       <ul class="nav">
-        <li><%= link_to "jobs", root_path %></li>
+        <li><%= link_to "home", root_path %></li>
+        <li><%= link_to "jobs", jobs_path %></li>
 
         <% if signed_in? %>
           <li><%= link_to current_user.login, current_user.url %></li>

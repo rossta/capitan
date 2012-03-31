@@ -1,18 +1,4 @@
-<% if params[:html] %>
-  <div class="span11" style="margin-left:0px;">
-    <%= render 'jobs' %>
-  </div>
-<% else %>
+<%= render 'stacks/index' if @stacks.any? %>
 
-  <% content_for :javascript do %>
-    <script type="text/javascript">
-      window.router = new Capitan.Routers.JobsRouter({jobs: <%= raw @jobs.to_json %>});
-      Backbone.history.start();
-    </script>
-  <% end %>
-
-  <div id="jobs" class="span11" style="margin-left:0px;">
-    <%= render partial: 'jobs/status', collection: @jobs, as: :job %>
-  </div>
-
-<% end %>
+<!-- jobs -->
+<%= render 'jobs/index' %>

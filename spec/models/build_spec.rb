@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'ostruct'
 
 describe Build do
 
@@ -87,6 +88,28 @@ describe Build do
       build.result_message = "SUCCESS"
       Jenkins.should_receive(:finished_result?).with("SUCCESS").and_return(true)
       build.finished?.should be_true
+    end
+  end
+
+  describe "success?" do
+    let(:build) { Build.new }
+
+    it "is true if result is :success" do
+      build.result = :success
+      build.should be_success
+    end
+
+    it "is true if result_message is SUCCESS" do
+      build.result_message = Jenkins::SUCCESS
+      build.should be_success
+    end
+
+    it "is false otherwise" do
+      build.result = :failure
+      build.should_not be_success
+      build.result = nil
+      build.result_message = Jenkins::FAILURE
+      build.should_not be_success
     end
   end
 end

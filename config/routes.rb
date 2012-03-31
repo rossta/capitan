@@ -10,6 +10,8 @@ Capitan::Application.routes.draw do
     resources :branches
   end
 
+  resources :stacks
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

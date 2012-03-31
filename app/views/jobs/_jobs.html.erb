@@ -1,10 +1,10 @@
 <div id="jobs">
-  <h3 class="right">Jobs</h3>
+  <%= page_header("Jobs") %>
   <ul class="unstyled">
     <% @jobs.each do |job| %>
       <li>
         <h2><%= link_to job.display_name, job %></h2>
-        <%= render 'jobs/status', :job => job %>
+        <%= render job %>
       </li>
     <% end %>
   </ul>

@@ -1,4 +1,5 @@
 require 'spec_helper'
+require 'ostruct'
 
 describe Branch do
 
@@ -19,8 +20,8 @@ describe Branch do
 
     it "returns up to max build ids per branch, ordered by build number" do
       job = stub_model(Job)
-      branch_1 = Factory(:branch, :job_id => job)
-      branch_2 = Factory(:branch, :job_id => job)
+      branch_1 = FactoryGirl.create(:branch, :job_id => job)
+      branch_2 = FactoryGirl.create(:branch, :job_id => job)
 
       3.times do |i|
         number = i + 1
@@ -39,4 +40,23 @@ describe Branch do
     end
   end
 
+  describe "success?" do
+    let(:branch) { build(:branch) }
+
+    it "is true if most recent build is a success" do
+      branch.save!
+      branch.builds.create(:number => 1, :result_message => Jenkins::FAILURE)
+      branch.builds.create(:number => 2, :result_message => Jenkins::SUCCESS)
+      branch.should be_success
+    end
+
+    it "is false if most recent build is not a success" do
+      branch.builds.build(:number => 1, :result_message => Jenkins::FAILURE)
+      branch.should_not be_success
+    end
+
+    it "is false if no builds" do
+      branch.should_not be_success
+    end
+  end
 end

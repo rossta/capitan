@@ -2,8 +2,11 @@ class Job < ActiveRecord::Base
 
   has_many :branches
   has_many :builds
+  belongs_to :stack
 
   scope :enabled, where(enabled: true)
+
+  attr_accessor :master_branch
 
   MAX_BRANCHES_PER_JOB = 100
 
@@ -42,6 +45,31 @@ class Job < ActiveRecord::Base
 
   def display_name
     name
+  end
+
+  def result
+    master_branch.try(:result)
+  end
+
+  def success?
+    master_branch.try(:success?)
+  end
+
+  def failure?
+    master_branch.try(:failure?)
+  end
+
+
+  def unknown_status?
+    master_branch.unknown_status?
+  end
+
+  def master_branch
+    @master_branch ||= branches.where(:name => master_branch_name).first
+  end
+
+  def master_branch_name
+    'origin/master'
   end
 
   def disable!
