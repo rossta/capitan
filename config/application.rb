@@ -64,6 +64,7 @@ module Capitan
     config.assets.version = '1.0'
 
     # Custom settings
+    config.enable_github_authentication = true
     config.enable_challengepost_authentication = false
 
   end
