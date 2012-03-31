@@ -5,4 +5,5 @@ class StackDecorator < ApplicationDecorator
   def display_result
     result.to_s
   end
+
 end

@@ -1,5 +1,6 @@
 class Job < ActiveRecord::Base
-
+  default_scope where(:enabled => true)
+  
   has_many :branches
   has_many :builds
   belongs_to :stack

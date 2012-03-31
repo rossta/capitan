@@ -81,4 +81,73 @@ http_interactions:
     body: '70268967450960'
     http_version: '1.1'
   recorded_at: Sat, 31 Mar 2012 22:38:32 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:58237/__identify__
+    body: ''
+    headers:
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      connection:
+      - close
+      server:
+      - thin 1.3.1 codename Triple Espresso
+    body: '70359588089800'
+    http_version: '1.1'
+  recorded_at: Sat, 31 Mar 2012 22:49:00 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:58279/__identify__
+    body: ''
+    headers:
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      connection:
+      - close
+      server:
+      - thin 1.3.1 codename Triple Espresso
+    body: '70325223206160'
+    http_version: '1.1'
+  recorded_at: Sat, 31 Mar 2012 22:51:44 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:58402/__identify__
+    body: ''
+    headers:
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      connection:
+      - close
+      server:
+      - thin 1.3.1 codename Triple Espresso
+    body: '70351921081900'
+    http_version: '1.1'
+  recorded_at: Sat, 31 Mar 2012 22:53:07 GMT
 recorded_with: VCR 2.0.0.rc1
