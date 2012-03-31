@@ -10,7 +10,7 @@ feature 'Branch', %q{
     login_with_github
   end
 
-  scenario 'branches', :vcr, :record => :new_episodes do
+  scenario 'branches', :vcr, :record => :new_episodes, :js => true do
     branch  = FactoryGirl.create :branch, \
       :job => job, 
       :name => 'origin/test_branch', 
@@ -22,7 +22,7 @@ feature 'Branch', %q{
       :result_message => "SUCCESS",
       :sha => "a1b2c3d4"
 
-    visit '/?html=1'
+    visit jobs_path
 
     click_link branch.name
 

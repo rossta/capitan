@@ -9,7 +9,6 @@ feature 'Login', %q{
 
   scenario 'Login with Github' do
     team_member = setup_for_github_login
-    FactoryGirl.create(:job, :name => 'models')
     visit root_path
 
     page.should_not have_content('models')
@@ -18,10 +17,10 @@ feature 'Login', %q{
 
     page.should have_content team_member.login
     page.should have_content("logout")
-    page.should have_content('models')
+    page.should have_content('Stacks')
 
     click_link "logout"
-    page.should_not have_content('models')
+    page.should_not have_content('Stacks')
   end
 
 end

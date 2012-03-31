@@ -1,0 +1,11 @@
+<%= form_for @stack do |f| %>
+  <%= f.label :name %><%= f.text_field :name %>
+
+  <h3>Jobs</h3>
+  <div>
+    <%= f.select :job_ids, Job.all.map { |job| [job.name, job.id]}, 
+      { :prompt => "Please select"},
+      { :multiple => true, :size => Job.count } %>
+  </div>
+  <%= f.button "Save" %>
+<% end %>

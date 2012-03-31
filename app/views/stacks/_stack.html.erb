@@ -6,7 +6,7 @@
       </tr>
       <%- stack.jobs.each do |job| -%>
         <tr>
-          <td class="status <%= job.display_result %>"><%= job.display_name %></td>
+          <td class="status <%= job.display_result %>"><%= link_to job.display_name, job %></td>
         </tr>
       <%- end -%>
     </tbody>

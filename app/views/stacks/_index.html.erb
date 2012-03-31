@@ -1,11 +1,17 @@
 <div id="stacks">
-  <%= page_header("Current Status") %>
-  <ul class="unstyled">
-    <% @stacks.each do |stack| %>
-      <li>
-        <h2><%= link_to stack.display_name, stack %></h2>
-        <%= render stack %>
-      </li>
-    <% end %>
-  </ul>
+  <div class="right">
+    <%= link_to 'jobs', jobs_path %> &middot; 
+    <%= link_to 'new stack', new_stack_path %>
+  </div>
+  <%= page_header("Stacks") %>
+  <div class="row">
+    <ul class="unstyled">
+      <% @stacks.each do |stack| %>
+        <li class="span5">
+          <h2><%= link_to stack.display_name, stack %></h2>
+          <%= render stack %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
 </div>

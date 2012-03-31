@@ -15,6 +15,8 @@ feature 'Homepage', %q{
 
     visit root_path
 
+    page.should have_content('Stacks')
+
     within("#stacks") do
       page.should have_content('Status')
       page.should have_content('Topic Action')

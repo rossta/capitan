@@ -1,6 +1,9 @@
 class Stack < ActiveRecord::Base
   has_many :jobs
 
+  attr_accessible :job_ids, :name
+  accepts_nested_attributes_for :jobs
+
   def display_name
     name.titleize
   end

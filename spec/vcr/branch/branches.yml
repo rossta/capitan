@@ -58,4 +58,27 @@ http_interactions:
       4WBOxghJGGcnlEbfr7/+ASDnGJgQDwAA
     http_version: '1.1'
   recorded_at: Fri, 23 Mar 2012 17:52:34 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:56966/__identify__
+    body: ''
+    headers:
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      connection:
+      - close
+      server:
+      - thin 1.3.1 codename Triple Espresso
+    body: '70268967450960'
+    http_version: '1.1'
+  recorded_at: Sat, 31 Mar 2012 22:38:32 GMT
 recorded_with: VCR 2.0.0.rc1
