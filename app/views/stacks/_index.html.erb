@@ -1,17 +1,26 @@
-<div id="stacks">
-  <div class="right">
-    <%= link_to 'jobs', jobs_path %> &middot; 
-    <%= link_to 'new stack', new_stack_path %>
-  </div>
-  <%= page_header("Stacks") %>
-  <div class="row">
-    <ul class="unstyled">
-      <% @stacks.each do |stack| %>
-        <li class="span5">
-          <h2><%= link_to stack.display_name, stack %></h2>
-          <%= render stack %>
-        </li>
-      <% end %>
-    </ul>
-  </div>
+<div id="stacks" class="span11" style="margin-left:0px;">
+  <% if params[:html] %>
+    <div class="right">
+      <%= link_to 'jobs', jobs_path %> &middot; 
+      <%= link_to 'new stack', new_stack_path %>
+    </div>
+    <%= page_header("Stacks") %>
+    <div class="row">
+      <ul class="unstyled">
+        <% @stacks.each do |stack| %>
+          <li class="span5">
+            <h2><%= link_to stack.display_name, stack %></h2>
+            <%= render stack %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+  <% else %>
+    <% content_for :javascript do %>
+      <script type="text/javascript">
+        window.router = new Capitan.Routers.StacksRouter({stacks: <%= raw @stacks.to_json %>});
+        Backbone.history.start();
+      </script>
+    <% end %>
+  <% end %>
 </div>

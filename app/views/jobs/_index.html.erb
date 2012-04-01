@@ -1,8 +1,14 @@
 <div id="jobs" class="span11" style="margin-left:0px;">
   <% if params[:html] %>
-    <div class="span11" style="margin-left:0px;">
-      <%= render 'jobs/jobs' %>
-    </div>
+    <%= page_header("Jobs") %>
+    <ul class="unstyled">
+      <% @jobs.each do |job| %>
+        <li>
+          <h2><%= link_to job.display_name, job %></h2>
+          <%= render job %>
+        </li>
+      <% end %>
+    </ul>
   <% else %>
     <% content_for :javascript do %>
       <script type="text/javascript">

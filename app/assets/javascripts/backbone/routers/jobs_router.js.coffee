@@ -10,9 +10,6 @@ class Capitan.Routers.JobsRouter extends Backbone.Router
     "/jobs/:id"      : "show"
     ".*"        : "index"
 
-  # newJob: ->
-  #   @view = new Capitan.Views.Jobs.NewView(collection: @jobs)
-  #   $("#jobs").html(@view.render().el)
 
   index: ->
     @view = new Capitan.Views.Jobs.IndexView(jobs: @jobs)
@@ -23,6 +20,10 @@ class Capitan.Routers.JobsRouter extends Backbone.Router
 
     @view = new Capitan.Views.Jobs.IndexView(jobs: new Capitan.Collections.JobsCollection([job]))
     $("#jobs").html(@view.render().el)
+
+  # newJob: ->
+  #   @view = new Capitan.Views.Jobs.NewView(collection: @jobs)
+  #   $("#jobs").html(@view.render().el)
 
   # edit: (id) ->
   #   job = @jobs.get(id)

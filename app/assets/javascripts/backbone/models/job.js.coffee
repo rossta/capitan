@@ -2,8 +2,8 @@ class Capitan.Models.Job extends Backbone.Model
   paramRoot: 'job'
 
   defaults:
-    name: null
-    enabled: null
+    name: "Job"
+    enabled: true
 
   builds: ->
     @buildCollection ||= (new Capitan.Collections.BuildsCollection).add(@get("builds"))
