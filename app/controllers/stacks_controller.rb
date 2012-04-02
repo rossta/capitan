@@ -1,13 +1,15 @@
 class StacksController < ApplicationController
 
-  respond_to :html, :js
+  respond_to :html, :json
 
   def index
-    @stacks = StackDecorator.decorate(Stack.all)    
+    @stacks = StackDecorator.decorate(Stack.all)
+    respond_with(@stacks)
   end
 
   def show
     @stack = StackDecorator.new(Stack.find(params[:id]))
+    respond_with(@stack)
   end
 
   def new
