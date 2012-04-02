@@ -26,6 +26,7 @@ header h3 {
 
 td.success { background: #5FD537 !important; }
 td.failure { background: red !important; }
+td.unknown,
 td.aborted { background: yellow !important; }
 
 th.number, td.number { width: 10%; }
