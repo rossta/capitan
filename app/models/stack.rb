@@ -15,9 +15,9 @@ class Stack < ActiveRecord::Base
   end
 
   def result_description
-    success? ? "Build stack passing, app is deploy ready" :
-      failure? ? "Build failing, don't deploy" :
-        "Build status unknown, don't deploy"
+    success? ? "Green - Build stack passing, app is deploy ready" :
+      failure? ? "Red - Build failing, don't deploy" :
+        "Yellow - Build status unknown, don't deploy"
   end
 
   def success?
