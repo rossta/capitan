@@ -59,4 +59,8 @@ class Branch < ActiveRecord::Base
     !last_build.finished?
   end
 
+  def sha
+    last_build.sha
+  end
+
 end

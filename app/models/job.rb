@@ -60,9 +60,12 @@ class Job < ActiveRecord::Base
     master_branch.try(:failure?)
   end
 
-
   def unknown_status?
     master_branch.unknown_status?
+  end
+
+  def sha
+    master_branch.sha
   end
 
   def master_branch

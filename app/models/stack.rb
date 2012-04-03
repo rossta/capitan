@@ -21,7 +21,7 @@ class Stack < ActiveRecord::Base
   end
 
   def success?
-    jobs.all? { |job| job.success? }
+    jobs.all? { |job| job.success? } && jobs.map(&:sha).uniq.size == 1
   end
 
   def failure?
