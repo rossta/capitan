@@ -22,11 +22,13 @@ class StackDecorator < ApplicationDecorator
       {
         :id => job.id,
         :name => job.name,
-        :display_result => job.display_result,
+        :display_result => display_revision(job),
         :sha => job.sha
       }
     end
   end
 
-
+  def display_revision(job)
+    job.sha[0..8]
+  end
 end
