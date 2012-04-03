@@ -22,7 +22,8 @@ class StackDecorator < ApplicationDecorator
       {
         :id => job.id,
         :name => job.name,
-        :display_result => job.display_result
+        :display_result => job.display_result,
+        :sha => job.sha
       }
     end
   end
