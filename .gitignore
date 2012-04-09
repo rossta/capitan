@@ -16,5 +16,7 @@
 /log
 
 .powenv
+.env
 
 config/jenkins.yml
+config/database.yml
