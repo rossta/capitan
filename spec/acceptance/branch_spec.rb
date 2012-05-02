@@ -7,7 +7,8 @@ feature 'Branch', %q{
   let(:job) { FactoryGirl.create(:job) }
 
   before do
-    login_with_github
+    setup_for_github_login
+    # login_with_github
   end
 
   scenario 'branches', :vcr, :record => :new_episodes, :js => true do
@@ -22,6 +23,7 @@ feature 'Branch', %q{
       :result_message => "SUCCESS",
       :sha => "a1b2c3d4"
 
+    visit root_path
     visit jobs_path
 
     click_link branch.name

@@ -11,9 +11,9 @@ feature 'Login', %q{
     team_member = setup_for_github_login
     visit root_path
 
-    page.should_not have_content('models')
+    # page.should_not have_content('models')
 
-    click_link "github"
+    # click_link "github"
 
     page.should have_content team_member.login
     page.should have_content("logout")

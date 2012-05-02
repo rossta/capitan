@@ -495,4 +495,188 @@ http_interactions:
     body: '70158913734540'
     http_version: '1.1'
   recorded_at: Mon, 09 Apr 2012 00:38:23 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:55468/__identify__
+    body: ''
+    headers:
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      connection:
+      - close
+      server:
+      - thin 1.3.1 codename Triple Espresso
+    body: '70244609148340'
+    http_version: '1.1'
+  recorded_at: Wed, 02 May 2012 13:57:49 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:55521/__identify__
+    body: ''
+    headers:
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      connection:
+      - close
+      server:
+      - thin 1.3.1 codename Triple Espresso
+    body: '70293481170200'
+    http_version: '1.1'
+  recorded_at: Wed, 02 May 2012 14:01:10 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:55539/__identify__
+    body: ''
+    headers:
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      connection:
+      - close
+      server:
+      - thin 1.3.1 codename Triple Espresso
+    body: '70166028383900'
+    http_version: '1.1'
+  recorded_at: Wed, 02 May 2012 14:02:10 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:55556/__identify__
+    body: ''
+    headers:
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      connection:
+      - close
+      server:
+      - thin 1.3.1 codename Triple Espresso
+    body: '70245958594820'
+    http_version: '1.1'
+  recorded_at: Wed, 02 May 2012 14:03:18 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:55579/__identify__
+    body: ''
+    headers:
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      connection:
+      - close
+      server:
+      - thin 1.3.1 codename Triple Espresso
+    body: '70267958755000'
+    http_version: '1.1'
+  recorded_at: Wed, 02 May 2012 14:03:52 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:55599/__identify__
+    body: ''
+    headers:
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      connection:
+      - close
+      server:
+      - thin 1.3.1 codename Triple Espresso
+    body: '70332739524540'
+    http_version: '1.1'
+  recorded_at: Wed, 02 May 2012 14:04:25 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:55673/__identify__
+    body: ''
+    headers:
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      connection:
+      - close
+      server:
+      - thin 1.3.1 codename Triple Espresso
+    body: '70197534250180'
+    http_version: '1.1'
+  recorded_at: Wed, 02 May 2012 14:06:08 GMT
+- request:
+    method: get
+    uri: http://127.0.0.1:55683/__identify__
+    body: ''
+    headers:
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      connection:
+      - close
+      server:
+      - thin 1.3.1 codename Triple Espresso
+    body: '70092409747900'
+    http_version: '1.1'
+  recorded_at: Wed, 02 May 2012 14:07:11 GMT
 recorded_with: VCR 2.0.0.rc1

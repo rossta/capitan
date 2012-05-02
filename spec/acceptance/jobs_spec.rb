@@ -8,7 +8,8 @@ feature 'Jobs', %q{
     FactoryGirl.create(:job, :name => 'models')
     FactoryGirl.create(:job, :name => 'challenges')
 
-    login_with_github
+    setup_for_github_login
+    # login_with_github
 
     visit jobs_path
 
@@ -26,7 +27,8 @@ feature 'Jobs', %q{
     FactoryGirl.create(:job, :name => 'models')
     FactoryGirl.create(:job, :name => 'challenges')
 
-    login_with_github
+    setup_for_github_login
+    # login_with_github
 
     visit jobs_path(:html => 1)
 
