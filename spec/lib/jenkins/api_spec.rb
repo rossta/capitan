@@ -7,7 +7,7 @@ describe Jenkins::API, :vcr, :record => :new_episodes do
   describe "jobs" do
     it "retrieves all jobs" do
       job_objects = api.jobs
-      job_objects.map(&:name).should include("models")
+      job_objects.map(&:name).should include("platform-master")
     end
 
     it "merges additional attributes" do
@@ -20,19 +20,19 @@ describe Jenkins::API, :vcr, :record => :new_episodes do
   describe "build" do
 
     it "display build attributes for job, build number" do
-      build_object = api.build('models', 171)
+      build_object = api.build('platform-master', 250)
 
-      build_object.job_name.should == 'models'
-      build_object.build_number.should == 171
+      build_object.job_name.should == 'platform-master'
+      build_object.build_number.should == 250
       build_object.result.should == 'SUCCESS'
       build_object.built_at.should be_a(Time)
       build_object.building.should be_false
       build_object.branch_name.should == 'origin/master'
-      build_object.sha.should =~ /^3686f8ce745/
+      build_object.sha.should =~ /^9145d9ec04/
     end
 
     it "merges additional attributes" do
-      build_object = api.build('models', 171, :foo => 'bar')
+      build_object = api.build('platform-master', 250, :foo => 'bar')
       build_object.foo.should == 'bar'
     end
 
@@ -41,14 +41,14 @@ describe Jenkins::API, :vcr, :record => :new_episodes do
   describe "branches" do
 
     it "displays all build numbers for branches" do
-      branch_objects = api.branches('models')
+      branch_objects = api.branches('platform-master')
       branch_objects.map(&:name).should include("origin/master")
       branch = branch_objects.detect { |branch| branch.name == "origin/master" }
       branch.number.to_s.should =~ /\d+/
     end
 
     it "merges additional attributes" do
-      branch_objects = api.branches('models', :foo => 'bar')
+      branch_objects = api.branches('platform-master', :foo => 'bar')
       branch_object = branch_objects.first
       branch_object.foo.should == 'bar'
     end

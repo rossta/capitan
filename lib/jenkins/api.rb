@@ -41,7 +41,7 @@ module Jenkins
       branch_name, sha = branch_name_from_build_json(build_json, build_number)
 
       OpenStruct.new(attributes).tap do |build|
-        build.job_name      = 'models'
+        build.job_name      = job_name
         build.build_number  = build_number.to_i
         build.result        = build_json["result"]
         build.built_at      = parse_time_from_build_id(build_json["id"])

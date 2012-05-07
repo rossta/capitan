@@ -32,7 +32,7 @@ gem 'faraday_middleware'
 gem 'draper'
 
 # Auth
-gem 'opensesame'
+gem 'opensesame', :git => 'git://github.com/rossta/opensesame.git'
 gem 'omniauth-challengepost', :git => 'git://github.com/challengepost/omniauth-challengepost.git'
 
 # Utils

@@ -1,6 +1,6 @@
 Capitan::Application.routes.draw do
 
-  mount OpenSesame::Engine => "/welcome", :as => "gardenwall"
+  mount OpenSesame::Engine => "/welcome", :as => "opensesame"
 
   match '/notifications/:id', :to => 'notifications#create', :via => [:get, :post]
 

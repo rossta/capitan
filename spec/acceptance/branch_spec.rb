@@ -6,17 +6,14 @@ feature 'Branch', %q{
 
   let(:job) { FactoryGirl.create(:job) }
 
-  before do
-    setup_for_github_login
-    # login_with_github
-  end
+  before { auto_login! }
 
-  scenario 'branches', :vcr, :record => :new_episodes, :js => true do
+  scenario 'branches', :js => true do
     branch  = FactoryGirl.create :branch, \
-      :job => job, 
-      :name => 'origin/test_branch', 
+      :job => job,
+      :name => 'origin/test_branch',
       :last_build_number => 123
-      
+
     build   = FactoryGirl.create :build, \
       :branch => branch,
       :number => 123,

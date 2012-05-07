@@ -2,111 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://jenkins:95f8473aca2b06a851472072f1a30b91@ci.berman.challengepost.com/job/models/lastBuild/api/json
-    body: ''
-    headers:
-      authorization:
-      - Basic amVua2luczo5NWY4NDczYWNhMmIwNmE4NTE0NzIwNzJmMWEzMGI5MQ==
-      accept-encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      accept:
-      - ! '*/*'
-      user-agent:
-      - Ruby
-      connection:
-      - close
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      server:
-      - nginx/1.0.5
-      date:
-      - Mon, 27 Feb 2012 23:01:42 GMT
-      content-type:
-      - application/javascript;charset=UTF-8
-      connection:
-      - close
-      content-encoding:
-      - gzip
-      content-length:
-      - '1476'
-      x-powered-by:
-      - Servlet/2.5 (Winstone/0.9.10)
-    body: !binary |-
-      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
-    http_version: '1.1'
-  recorded_at: Mon, 27 Feb 2012 23:01:42 GMT
-- request:
-    method: get
-    uri: http://rossta:fc9e77643e65bffa9b68a2769e9fc193@ci.berman.challengepost.com/job/models/lastBuild/api/json
-    body: ''
-    headers:
-      authorization:
-      - Basic cm9zc3RhOmZjOWU3NzY0M2U2NWJmZmE5YjY4YTI3NjllOWZjMTkz
-      accept-encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      accept:
-      - ! '*/*'
-      user-agent:
-      - Ruby
-      connection:
-      - close
-  response:
-    status:
-      code: 502
-      message: Bad Gateway
-    headers:
-      server:
-      - nginx/1.0.5
-      date:
-      - Thu, 08 Mar 2012 00:32:50 GMT
-      content-type:
-      - text/html
-      content-length:
-      - '172'
-      connection:
-      - close
-    body: ! "<html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body bgcolor=\"white\">\r\n<center><h1>502
-      Bad Gateway</h1></center>\r\n<hr><center>nginx/1.0.5</center>\r\n</body>\r\n</html>\r\n"
-    http_version: '1.1'
-  recorded_at: Thu, 08 Mar 2012 00:32:50 GMT
-- request:
-    method: get
-    uri: http://ci.berman.challengepost.com/job/models/lastBuild/api/json
+    uri: http://ci.berman.challengepost.com/job/platform-master/lastBuild/api/json
     body: ''
     headers:
       accept-encoding:
@@ -125,7 +21,7 @@ http_interactions:
       server:
       - nginx/1.0.5
       date:
-      - Thu, 08 Mar 2012 15:22:30 GMT
+      - Mon, 07 May 2012 21:04:07 GMT
       content-type:
       - application/javascript;charset=UTF-8
       connection:
@@ -133,44 +29,36 @@ http_interactions:
       content-encoding:
       - gzip
       content-length:
-      - '1509'
+      - '1138'
       x-powered-by:
       - Servlet/2.5 (Winstone/0.9.10)
     body: !binary |-
-      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
-      4CGIfVE3ebfn9V9j8+bhTwp+Edc8FgAA
+      H4sIAAAAAAAAAM2X227jNhCGX0Vgb+2YJ5Gi7zZIgS1QbBe73asmEHgYxtro
+      BJEqGgR591J2so1ipbXRAwr4QqJnyP+bGZKjB6RtrLo2oO0vD8jqMcDhMey6
+      IV5BsEPVTwZoiz5HPURwmbnPxj7EAXST9UP3FWzMrlFf6+i7oVk3OkQY1tDG
+      4f4aZWasape1Y2NgyBRDK/TsfDn9g7aK/TH08TBdWmxxuhfOX4Y6WX3tzGbR
+      coMebx5XD2i/eri8vxx0a3cfdANo+4C6obqt2o3d6bqG9hb6LsRS930Zu/J5
+      uslu7/1hLx1tKV4dBj5BGOuksR3reoUG+LUK+wA9oM/v35GkihDvrPbSAuNY
+      E5tbRwtvNacKGy+dtpQLbWjCMXtd+4if79zucU6jSeF4XD2bhtE0VZhUh9Lp
+      sDOdHlw5QN1pB+6InIiTybn0gvtCF1oyA5pKyY12yiQYWihgVJGcOr1Mfrrz
+      nPwvcGbog67qwAgr4cD2GpWfiiqUBuEY4zk3kDMsgVJKjPcMNHMYtMUJgsMi
+      6hnOc9RX8udZ7cGWvvqtam+PueSpXEz6guMcEyFzzyhY7gnXTAlLBGbaK8WU
+      KpRf5DrD+VUKX2ifQR029fFmzE+uSU1pwYiBAkuPvcGpoqjykhSWiYKIopBE
+      CiLUItAZznOgJ90zlhpSUfbdcXLIqSxcKgYFV8yJXFnpFBFaSZ+Oi0ITrI0t
+      cNpABV5kOcN5zvKse15tEbxuu1CaobuDtjysV9JjuuJUOqc1AYxJrjkHJzhT
+      WilRUKVyRzHGLj3zAvgi3RnOr0rvLZAZrg73rS370dRV2JUvTpxj3vxUXk+s
+      YNZ7Sxy3YJSRFFJ5OV0QmbO84NJiIMIs8p7hPOd9m2QG/P77d1dHbOLkY0R6
+      Y5XjwDkmIHMFQEwupPWQ57QgOD0wq3O7yHaG85xtL3q69//uRG9v3/Q7Cgs7
+      OeXG0JQUwakBr4o8F0xJcJ5Qm0vtucXeSkHx8ul6hvPSBp6UT0CJqE54U/sV
+      P/3/zssVCrY5dGpoyuX0u1mh1HtWPjWrU3t68xTu/U0XhxFWyL1sVQ/hd+Og
+      D++pc4MQq0an9vXq2yhhjIqpon0yv6pC6pXun9Z91VNm36X7JkmuUm+EKCZ0
+      jfM1liWRa8zWZDpT7gD6H7skx+s6JD3ty4tqmJVFEpLU6KbfS0jp5LniWCW7
+      cd/U7mLst5uNrS7SDI1uL2ad3YXtms1C37tJK23QITDxp6lfTy/JM7l9hjjl
+      t4rQHJp77X3qssF91HE3jaDp+t00nYM6bG6HbuzLaeRiMGiK/BjTx8A0gzah
+      q8cIX07VmT4nhs3QhXCXlkSHSD+F+NtoSngybar4gzuvgJqQwo1CHE3WQJLo
+      sqrN9uqzST1aijQVMt0F/xVT+hT5M4XXbXJ3qShnVZURsc3llstsjTnGz2X3
+      jwamf0r8AwJXxZ/v+0nC9DjxVPX09nZJpD2aquKuat2hoifYse6HKj5V178S
+      0ZvH3wEMV2dUrA4AAA==
     http_version: '1.1'
-  recorded_at: Thu, 08 Mar 2012 15:22:30 GMT
+  recorded_at: Mon, 07 May 2012 21:04:07 GMT
 recorded_with: VCR 2.0.0.rc1

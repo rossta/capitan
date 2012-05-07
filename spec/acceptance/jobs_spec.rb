@@ -4,12 +4,11 @@ feature 'Jobs', %q{
   View current jobs
 } do
 
+  before { auto_login! }
+
   scenario 'visit jobs', :js => true do
     FactoryGirl.create(:job, :name => 'models')
     FactoryGirl.create(:job, :name => 'challenges')
-
-    setup_for_github_login
-    # login_with_github
 
     visit jobs_path
 
@@ -26,9 +25,6 @@ feature 'Jobs', %q{
   scenario 'visit jobs, non-js' do
     FactoryGirl.create(:job, :name => 'models')
     FactoryGirl.create(:job, :name => 'challenges')
-
-    setup_for_github_login
-    # login_with_github
 
     visit jobs_path(:html => 1)
 

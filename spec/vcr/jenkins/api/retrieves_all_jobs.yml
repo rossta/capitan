@@ -2,86 +2,6 @@
 http_interactions:
 - request:
     method: get
-    uri: http://jenkins:95f8473aca2b06a851472072f1a30b91@ci.berman.challengepost.com/api/json
-    body: ''
-    headers:
-      authorization:
-      - Basic amVua2luczo5NWY4NDczYWNhMmIwNmE4NTE0NzIwNzJmMWEzMGI5MQ==
-      accept-encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      accept:
-      - ! '*/*'
-      user-agent:
-      - Ruby
-      connection:
-      - close
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      server:
-      - nginx/1.0.5
-      date:
-      - Mon, 27 Feb 2012 23:01:42 GMT
-      content-type:
-      - application/javascript;charset=UTF-8
-      connection:
-      - close
-      content-encoding:
-      - gzip
-      content-length:
-      - '366'
-      x-powered-by:
-      - Servlet/2.5 (Winstone/0.9.10)
-    body: !binary |-
-      H4sIAAAAAAAAAJWTTU/DMAyG/8rkc7Vy4dLbxLigMRBIXNCE0tRrw5K45KNj
-      mvrfcffFEFKlHOP4efwqivcgvFe1xWohStQeivd9v8rAUIVQwPLp5XG2gAws
-      n+fopVNtUGT5KjQ4McIHdJMHtBtl/WRoOvUuhRn44RTN/TfKGMix/TaD6lpj
-      o9YZfFJ5mAz2iMlGaI22Rs+C6DSXmhDaIs+lmpbojLDTS09LPkwlmZwt+S+Z
-      MypJk2O41BGhzy7+CjvlMdV9pMa8DeoWXXLoEzZqJpOcd2DGnBtLW41VjaVI
-      f4w/8NiU4Sfp5Cc5UmPeVouwJmdSzWduzO09pWoZGTMGapX8EPLw6xPV1+z/
-      Gbys1KFjcEGigmLfZ9A6ZYTbvSnccuGcYaZ1ymiOD19RYVC2ntOWl3UttMcM
-      vBYdzmq04ZlcgOKGpR7vXDTDFp+auPLKW+9U2EERXORSx3H+rHlyoFX/A9+W
-      MGWwBAAA
-    http_version: '1.1'
-  recorded_at: Mon, 27 Feb 2012 23:01:42 GMT
-- request:
-    method: get
-    uri: http://rossta:fc9e77643e65bffa9b68a2769e9fc193@ci.berman.challengepost.com/api/json
-    body: ''
-    headers:
-      authorization:
-      - Basic cm9zc3RhOmZjOWU3NzY0M2U2NWJmZmE5YjY4YTI3NjllOWZjMTkz
-      accept-encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      accept:
-      - ! '*/*'
-      user-agent:
-      - Ruby
-      connection:
-      - close
-  response:
-    status:
-      code: 502
-      message: Bad Gateway
-    headers:
-      server:
-      - nginx/1.0.5
-      date:
-      - Thu, 08 Mar 2012 00:32:46 GMT
-      content-type:
-      - text/html
-      content-length:
-      - '172'
-      connection:
-      - close
-    body: ! "<html>\r\n<head><title>502 Bad Gateway</title></head>\r\n<body bgcolor=\"white\">\r\n<center><h1>502
-      Bad Gateway</h1></center>\r\n<hr><center>nginx/1.0.5</center>\r\n</body>\r\n</html>\r\n"
-    http_version: '1.1'
-  recorded_at: Thu, 08 Mar 2012 00:32:46 GMT
-- request:
-    method: get
     uri: http://ci.berman.challengepost.com/api/json
     body: ''
     headers:
@@ -101,7 +21,7 @@ http_interactions:
       server:
       - nginx/1.0.5
       date:
-      - Thu, 08 Mar 2012 15:22:30 GMT
+      - Mon, 07 May 2012 21:04:07 GMT
       content-type:
       - application/javascript;charset=UTF-8
       connection:
@@ -109,19 +29,25 @@ http_interactions:
       content-encoding:
       - gzip
       content-length:
-      - '374'
+      - '657'
       x-powered-by:
       - Servlet/2.5 (Winstone/0.9.10)
     body: !binary |-
-      H4sIAAAAAAAAAJWTTU/DMAyG/8rkc7Vy4dLbxLigMRBIXNCE0tRrw5K45GNj
-      mvrfcfdFd6mUYxw/j19F8QGE96q2WC1EidpD8XnoVhkYqhAKWL68Pc8WkIHl
-      8xy9dKoNiixfhQYnRviAbvKEdqOsn/RN596lMD3fn6J5/EUZAzm232dQDTU2
-      ap3BN5XHyWBPmGyE1mhr9CyITnOpCaEt8lyqaYnOCDu99rTkw1SSydmS/5M5
-      o5I0OYZLHRG67OqvcKs8prpP1Ji3Qd2iSw59xkbNZJLz9syYc2Npp7GqsRTp
-      j3EDj03pf5JOfpITNeZttQhrcibVfOGGblGSC1gN9d5TqpmRscCBWiW/hDx+
-      /ET1kB3OcH1oXlfaomNuQaKC4tBl0DplhNt/KNxx4RJhpnXKZE4PP1FhULae
-      047XdS20xwy8Fluc1WjDKz8cFHcs9fjgoun3+NzElXfee6fCHorgIpe2HOdm
-      0ZMDrbo/7j7UFbIEAAA=
+      H4sIAAAAAAAAAK2WT4+bMBDFvwqy1BsJq54qblHTS5XsRk3VS7WKDMwSd41N
+      bZM0ivLdOyQkAsISDNz4935vPDzDHAnVmsUCogUNgGvi/z6eXl2SyAiIT55f
+      fixnC+ISgedz0KFiqWFS4C2zBSeh2oByvoN4Z0I7+UPFs880yfX5WZZ8+wdh
+      ZqRC+heXRGWMyDh3yR8ZnJ2JuMiCjPFoow01md5oUDtQSMoUx3tbY1Lf80I2
+      DUAlVEzDLeUcRAyp1GYaysRDnNeA8JARSi5V7sAzICf35hjm4knI2eSyJlu7
+      ur7N613IPYcohoBqsDWqiNtcUk7Nm1TJJIIdcJkmIIytWROj7Kkg2lDBkofG
+      kxtfj1FDCWfbgvyY2be9BWVdQaxklo7ThwvKuoKtTMbpQA7q5N5vV9Xk3aN3
+      eX6M1N2RykXQQCrTpZCBoatQ6v1+7I5vSh2Gmp8h1m9gYNYrlF6dHxT1EsOi
+      6/jTiZmIe7sW+lqv26zGCPo9qtPGvsoGJryKsXIelu4KxablA5NdxVgteFCk
+      y5A2V62lrQdK2ohGpizc0DAf/DYDhpKPOJ29+/2LGhCdHXt+EZoYdxHFYV3i
+      cIv6haQR8Y8nl6SKJVQdfjHY44VrSTPObSrA1ZC/GQODrnO5x2H9jXINLtGc
+      7mAWY8tX+BEm/hNCNXxVWZJP8cVDeGWNU79i5kB8ozK8tMNyKmO+fUE36Zzq
+      bSCpimwAeQHeTVnhrYr9YY27ChtpzrxfzCvkT5+f5uWUN/ksrSNdt1gWif6Y
+      7qxYCpwJcM65GuyFB1ciHubMZve1/eapG66ve6eFP97yCuCD9f3MN7czO29u
+      a7ezGKkXeYXLXtbWONQg4/X0Hwuc+ccOEAAA
     http_version: '1.1'
-  recorded_at: Thu, 08 Mar 2012 15:22:30 GMT
+  recorded_at: Mon, 07 May 2012 21:04:07 GMT
 recorded_with: VCR 2.0.0.rc1

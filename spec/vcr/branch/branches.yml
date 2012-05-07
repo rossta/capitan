@@ -2,65 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api.github.com/orgs/challengepost/members
-    body: ''
-    headers:
-      accept-encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      accept:
-      - ! '*/*'
-      user-agent:
-      - Ruby
-      connection:
-      - close
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      server:
-      - nginx/1.0.13
-      date:
-      - Fri, 23 Mar 2012 17:52:34 GMT
-      content-type:
-      - application/json; charset=utf-8
-      transfer-encoding:
-      - chunked
-      connection:
-      - close
-      status:
-      - 200 OK
-      x-ratelimit-limit:
-      - '5000'
-      etag:
-      - ! '"18b133598ab32db98be73ba96ec29d75"'
-      x-ratelimit-remaining:
-      - '4992'
-      content-encoding:
-      - gzip
-    body: !binary |-
-      H4sIAAAAAAAAA72Xy2rcQBBF/2UgO2emqvptCIEsssknhGD6UT2Wo9EYPQIm
-      +N/TtkczykpCCy0EDa2i7z3cLqp//t0Nbb273z32/XN3fzj452p/rPrHIezj
-      +XQYOm67Q/jNXVdzu7vb+T++9+3D/0Udx6Hl/bH92H2v/FgeMoAjUN46lzwR
-      SRujh2AMeY4uuq/py/Xosrnnvf/tT77aN9wffNdx3030fKLv1ckfuSuL8bTp
-      +jNK2D83xyJ03H6oUrE3J6MUvP2HSggj6W5Xn49VU+quzl/vFpI619yt4GRz
-      CDY7Fa1wKZkck9dSWhlQ5KATbcRpTsaVE4FBM+X07nshpXiu09NQv6zgpKI3
-      jp0NyjqkqGUEUj5kikQJHW7EaU7GhZMGo/QE09X4QlCP57p+QVrBSQC74IRz
-      TEpB9tlKYBWYsNzEaOVGnOZkXDhJS0bALU6j74WYnuJpqNf1J0oECThF5TAa
-      lopkuX5MjN5hcHojTnMyLpwIrIIJp6vxpaBaX9dVd25WJCqBNYojoTEGEief
-      30FpyFYYJdRGpOZkjKRQkL4F6ulqfCGpH/ynar6dm6Nv+xWwWFgQlhToTCJr
-      EKwoB1vau9PAnjeCNSfjAguV1NNY/Wd+IbCTb5uX7lRGhxW4IuQyIngMGJX0
-      MkmDAUIQNmSROJuNcM3JuODSzjkjb+GaWF8Kq0rDCkzknEQjhQddOpb1EZ3l
-      bGP52DKHjTDNyRhTZcssM2lWpzfTCwE11VDGvBWIkhQpCi2NDAk8KeLkwCSp
-      FWJpWlslaU7G2KXAaqJbki62F0JquR/apm+HNaAY0byNUsAUZIgyCKllaVoh
-      sUsa4kZZmpNxAaWcQDMBNbG+FNa563q/IlEBUDtvbLYKnS5vGZu0KM8EnwCl
-      SVtNCHMyxkuH2ohboNoP1wsZdUOCBk8rIEWPOaBURqHKb+N5Rg2OGRX4RH6r
-      4WBOxghJGGcnlEbfr7/+ASDnGJgQDwAA
-    http_version: '1.1'
-  recorded_at: Fri, 23 Mar 2012 17:52:34 GMT
-- request:
-    method: get
-    uri: http://127.0.0.1:56966/__identify__
+    uri: http://127.0.0.1:62251/__identify__
     body: ''
     headers:
       accept-encoding:
@@ -78,12 +20,12 @@ http_interactions:
       - close
       server:
       - thin 1.3.1 codename Triple Espresso
-    body: '70268967450960'
+    body: '70133895449480'
     http_version: '1.1'
-  recorded_at: Sat, 31 Mar 2012 22:38:32 GMT
+  recorded_at: Mon, 07 May 2012 21:04:06 GMT
 - request:
     method: get
-    uri: http://127.0.0.1:58237/__identify__
+    uri: http://127.0.0.1:63013/__identify__
     body: ''
     headers:
       accept-encoding:
@@ -101,12 +43,12 @@ http_interactions:
       - close
       server:
       - thin 1.3.1 codename Triple Espresso
-    body: '70359588089800'
+    body: '70281246238340'
     http_version: '1.1'
-  recorded_at: Sat, 31 Mar 2012 22:49:00 GMT
+  recorded_at: Mon, 07 May 2012 21:05:31 GMT
 - request:
     method: get
-    uri: http://127.0.0.1:58279/__identify__
+    uri: http://127.0.0.1:63093/__identify__
     body: ''
     headers:
       accept-encoding:
@@ -124,12 +66,12 @@ http_interactions:
       - close
       server:
       - thin 1.3.1 codename Triple Espresso
-    body: '70325223206160'
+    body: '70218277845520'
     http_version: '1.1'
-  recorded_at: Sat, 31 Mar 2012 22:51:44 GMT
+  recorded_at: Mon, 07 May 2012 21:07:38 GMT
 - request:
     method: get
-    uri: http://127.0.0.1:58402/__identify__
+    uri: http://127.0.0.1:63297/__identify__
     body: ''
     headers:
       accept-encoding:
@@ -147,12 +89,12 @@ http_interactions:
       - close
       server:
       - thin 1.3.1 codename Triple Espresso
-    body: '70351921081900'
+    body: '70102427170760'
     http_version: '1.1'
-  recorded_at: Sat, 31 Mar 2012 22:53:07 GMT
+  recorded_at: Mon, 07 May 2012 21:11:37 GMT
 - request:
     method: get
-    uri: http://127.0.0.1:64709/__identify__
+    uri: http://127.0.0.1:63320/__identify__
     body: ''
     headers:
       accept-encoding:
@@ -170,12 +112,12 @@ http_interactions:
       - close
       server:
       - thin 1.3.1 codename Triple Espresso
-    body: '70093197482820'
+    body: '70242007127580'
     http_version: '1.1'
-  recorded_at: Sun, 01 Apr 2012 12:57:21 GMT
+  recorded_at: Mon, 07 May 2012 21:12:02 GMT
 - request:
     method: get
-    uri: http://127.0.0.1:52841/__identify__
+    uri: http://127.0.0.1:63339/__identify__
     body: ''
     headers:
       accept-encoding:
@@ -193,12 +135,12 @@ http_interactions:
       - close
       server:
       - thin 1.3.1 codename Triple Espresso
-    body: '70162131288160'
+    body: '70184910783920'
     http_version: '1.1'
-  recorded_at: Sun, 01 Apr 2012 13:45:37 GMT
+  recorded_at: Mon, 07 May 2012 21:12:23 GMT
 - request:
     method: get
-    uri: http://127.0.0.1:50055/__identify__
+    uri: http://127.0.0.1:64043/__identify__
     body: ''
     headers:
       accept-encoding:
@@ -216,467 +158,7 @@ http_interactions:
       - close
       server:
       - thin 1.3.1 codename Triple Espresso
-    body: '70105303613960'
+    body: '70180918371200'
     http_version: '1.1'
-  recorded_at: Mon, 02 Apr 2012 18:19:36 GMT
-- request:
-    method: get
-    uri: http://127.0.0.1:58380/__identify__
-    body: ''
-    headers:
-      accept-encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      accept:
-      - ! '*/*'
-      user-agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      connection:
-      - close
-      server:
-      - thin 1.3.1 codename Triple Espresso
-    body: '70345855500580'
-    http_version: '1.1'
-  recorded_at: Tue, 03 Apr 2012 01:24:05 GMT
-- request:
-    method: get
-    uri: http://127.0.0.1:58966/__identify__
-    body: ''
-    headers:
-      accept-encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      accept:
-      - ! '*/*'
-      user-agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      connection:
-      - close
-      server:
-      - thin 1.3.1 codename Triple Espresso
-    body: '70241646942580'
-    http_version: '1.1'
-  recorded_at: Tue, 03 Apr 2012 01:32:57 GMT
-- request:
-    method: get
-    uri: http://127.0.0.1:59746/__identify__
-    body: ''
-    headers:
-      accept-encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      accept:
-      - ! '*/*'
-      user-agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      connection:
-      - close
-      server:
-      - thin 1.3.1 codename Triple Espresso
-    body: '70162699761760'
-    http_version: '1.1'
-  recorded_at: Tue, 03 Apr 2012 18:18:25 GMT
-- request:
-    method: get
-    uri: http://127.0.0.1:59938/__identify__
-    body: ''
-    headers:
-      accept-encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      accept:
-      - ! '*/*'
-      user-agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      connection:
-      - close
-      server:
-      - thin 1.3.1 codename Triple Espresso
-    body: '70267641370240'
-    http_version: '1.1'
-  recorded_at: Tue, 03 Apr 2012 18:25:15 GMT
-- request:
-    method: get
-    uri: http://127.0.0.1:63676/__identify__
-    body: ''
-    headers:
-      accept-encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      accept:
-      - ! '*/*'
-      user-agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      connection:
-      - close
-      server:
-      - thin 1.3.1 codename Triple Espresso
-    body: '70148380799880'
-    http_version: '1.1'
-  recorded_at: Wed, 04 Apr 2012 00:06:38 GMT
-- request:
-    method: get
-    uri: http://127.0.0.1:63698/__identify__
-    body: ''
-    headers:
-      accept-encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      accept:
-      - ! '*/*'
-      user-agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      connection:
-      - close
-      server:
-      - thin 1.3.1 codename Triple Espresso
-    body: '70095383029280'
-    http_version: '1.1'
-  recorded_at: Wed, 04 Apr 2012 00:07:14 GMT
-- request:
-    method: get
-    uri: http://127.0.0.1:63720/__identify__
-    body: ''
-    headers:
-      accept-encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      accept:
-      - ! '*/*'
-      user-agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      connection:
-      - close
-      server:
-      - thin 1.3.1 codename Triple Espresso
-    body: '70182951553980'
-    http_version: '1.1'
-  recorded_at: Wed, 04 Apr 2012 00:07:55 GMT
-- request:
-    method: get
-    uri: http://127.0.0.1:63787/__identify__
-    body: ''
-    headers:
-      accept-encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      accept:
-      - ! '*/*'
-      user-agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      connection:
-      - close
-      server:
-      - thin 1.3.1 codename Triple Espresso
-    body: '70131401032360'
-    http_version: '1.1'
-  recorded_at: Wed, 04 Apr 2012 00:08:28 GMT
-- request:
-    method: get
-    uri: http://127.0.0.1:57557/__identify__
-    body: ''
-    headers:
-      accept-encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      accept:
-      - ! '*/*'
-      user-agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      connection:
-      - close
-      server:
-      - thin 1.3.1 codename Triple Espresso
-    body: '70308910602600'
-    http_version: '1.1'
-  recorded_at: Mon, 09 Apr 2012 00:31:39 GMT
-- request:
-    method: get
-    uri: http://127.0.0.1:58051/__identify__
-    body: ''
-    headers:
-      accept-encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      accept:
-      - ! '*/*'
-      user-agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      connection:
-      - close
-      server:
-      - thin 1.3.1 codename Triple Espresso
-    body: '70298822825200'
-    http_version: '1.1'
-  recorded_at: Mon, 09 Apr 2012 00:33:32 GMT
-- request:
-    method: get
-    uri: http://127.0.0.1:58174/__identify__
-    body: ''
-    headers:
-      accept-encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      accept:
-      - ! '*/*'
-      user-agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      connection:
-      - close
-      server:
-      - thin 1.3.1 codename Triple Espresso
-    body: '70150067049760'
-    http_version: '1.1'
-  recorded_at: Mon, 09 Apr 2012 00:34:06 GMT
-- request:
-    method: get
-    uri: http://127.0.0.1:59163/__identify__
-    body: ''
-    headers:
-      accept-encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      accept:
-      - ! '*/*'
-      user-agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      connection:
-      - close
-      server:
-      - thin 1.3.1 codename Triple Espresso
-    body: '70158913734540'
-    http_version: '1.1'
-  recorded_at: Mon, 09 Apr 2012 00:38:23 GMT
-- request:
-    method: get
-    uri: http://127.0.0.1:55468/__identify__
-    body: ''
-    headers:
-      accept-encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      accept:
-      - ! '*/*'
-      user-agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      connection:
-      - close
-      server:
-      - thin 1.3.1 codename Triple Espresso
-    body: '70244609148340'
-    http_version: '1.1'
-  recorded_at: Wed, 02 May 2012 13:57:49 GMT
-- request:
-    method: get
-    uri: http://127.0.0.1:55521/__identify__
-    body: ''
-    headers:
-      accept-encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      accept:
-      - ! '*/*'
-      user-agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      connection:
-      - close
-      server:
-      - thin 1.3.1 codename Triple Espresso
-    body: '70293481170200'
-    http_version: '1.1'
-  recorded_at: Wed, 02 May 2012 14:01:10 GMT
-- request:
-    method: get
-    uri: http://127.0.0.1:55539/__identify__
-    body: ''
-    headers:
-      accept-encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      accept:
-      - ! '*/*'
-      user-agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      connection:
-      - close
-      server:
-      - thin 1.3.1 codename Triple Espresso
-    body: '70166028383900'
-    http_version: '1.1'
-  recorded_at: Wed, 02 May 2012 14:02:10 GMT
-- request:
-    method: get
-    uri: http://127.0.0.1:55556/__identify__
-    body: ''
-    headers:
-      accept-encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      accept:
-      - ! '*/*'
-      user-agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      connection:
-      - close
-      server:
-      - thin 1.3.1 codename Triple Espresso
-    body: '70245958594820'
-    http_version: '1.1'
-  recorded_at: Wed, 02 May 2012 14:03:18 GMT
-- request:
-    method: get
-    uri: http://127.0.0.1:55579/__identify__
-    body: ''
-    headers:
-      accept-encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      accept:
-      - ! '*/*'
-      user-agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      connection:
-      - close
-      server:
-      - thin 1.3.1 codename Triple Espresso
-    body: '70267958755000'
-    http_version: '1.1'
-  recorded_at: Wed, 02 May 2012 14:03:52 GMT
-- request:
-    method: get
-    uri: http://127.0.0.1:55599/__identify__
-    body: ''
-    headers:
-      accept-encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      accept:
-      - ! '*/*'
-      user-agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      connection:
-      - close
-      server:
-      - thin 1.3.1 codename Triple Espresso
-    body: '70332739524540'
-    http_version: '1.1'
-  recorded_at: Wed, 02 May 2012 14:04:25 GMT
-- request:
-    method: get
-    uri: http://127.0.0.1:55673/__identify__
-    body: ''
-    headers:
-      accept-encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      accept:
-      - ! '*/*'
-      user-agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      connection:
-      - close
-      server:
-      - thin 1.3.1 codename Triple Espresso
-    body: '70197534250180'
-    http_version: '1.1'
-  recorded_at: Wed, 02 May 2012 14:06:08 GMT
-- request:
-    method: get
-    uri: http://127.0.0.1:55683/__identify__
-    body: ''
-    headers:
-      accept-encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      accept:
-      - ! '*/*'
-      user-agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      connection:
-      - close
-      server:
-      - thin 1.3.1 codename Triple Espresso
-    body: '70092409747900'
-    http_version: '1.1'
-  recorded_at: Wed, 02 May 2012 14:07:11 GMT
+  recorded_at: Mon, 07 May 2012 21:31:58 GMT
 recorded_with: VCR 2.0.0.rc1
