@@ -2,9 +2,11 @@
 http_interactions:
 - request:
     method: get
-    uri: http://ci.berman.challengepost.com/job/platform-master/lastBuild/api/json
+    uri: http://jenkins:95f8473aca2b06a851472072f1a30b91@ci.berman.challengepost.com/job/platform-master/lastBuild/api/json
     body: ''
     headers:
+      authorization:
+      - Basic amVua2luczo5NWY4NDczYWNhMmIwNmE4NTE0NzIwNzJmMWEzMGI5MQ==
       accept-encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       accept:
@@ -21,44 +23,41 @@ http_interactions:
       server:
       - nginx/1.0.5
       date:
-      - Mon, 07 May 2012 21:04:07 GMT
+      - Fri, 29 Jun 2012 21:13:38 GMT
       content-type:
-      - application/javascript;charset=UTF-8
+      - application/json;charset=UTF-8
       connection:
       - close
       content-encoding:
       - gzip
       content-length:
-      - '1138'
+      - '1028'
       x-powered-by:
       - Servlet/2.5 (Winstone/0.9.10)
     body: !binary |-
-      H4sIAAAAAAAAAM2X227jNhCGX0Vgb+2YJ5Gi7zZIgS1QbBe73asmEHgYxtro
-      BJEqGgR591J2so1ipbXRAwr4QqJnyP+bGZKjB6RtrLo2oO0vD8jqMcDhMey6
-      IV5BsEPVTwZoiz5HPURwmbnPxj7EAXST9UP3FWzMrlFf6+i7oVk3OkQY1tDG
-      4f4aZWasape1Y2NgyBRDK/TsfDn9g7aK/TH08TBdWmxxuhfOX4Y6WX3tzGbR
-      coMebx5XD2i/eri8vxx0a3cfdANo+4C6obqt2o3d6bqG9hb6LsRS930Zu/J5
-      uslu7/1hLx1tKV4dBj5BGOuksR3reoUG+LUK+wA9oM/v35GkihDvrPbSAuNY
-      E5tbRwtvNacKGy+dtpQLbWjCMXtd+4if79zucU6jSeF4XD2bhtE0VZhUh9Lp
-      sDOdHlw5QN1pB+6InIiTybn0gvtCF1oyA5pKyY12yiQYWihgVJGcOr1Mfrrz
-      nPwvcGbog67qwAgr4cD2GpWfiiqUBuEY4zk3kDMsgVJKjPcMNHMYtMUJgsMi
-      6hnOc9RX8udZ7cGWvvqtam+PueSpXEz6guMcEyFzzyhY7gnXTAlLBGbaK8WU
-      KpRf5DrD+VUKX2ifQR029fFmzE+uSU1pwYiBAkuPvcGpoqjykhSWiYKIopBE
-      CiLUItAZznOgJ90zlhpSUfbdcXLIqSxcKgYFV8yJXFnpFBFaSZ+Oi0ITrI0t
-      cNpABV5kOcN5zvKse15tEbxuu1CaobuDtjysV9JjuuJUOqc1AYxJrjkHJzhT
-      WilRUKVyRzHGLj3zAvgi3RnOr0rvLZAZrg73rS370dRV2JUvTpxj3vxUXk+s
-      YNZ7Sxy3YJSRFFJ5OV0QmbO84NJiIMIs8p7hPOd9m2QG/P77d1dHbOLkY0R6
-      Y5XjwDkmIHMFQEwupPWQ57QgOD0wq3O7yHaG85xtL3q69//uRG9v3/Q7Cgs7
-      OeXG0JQUwakBr4o8F0xJcJ5Qm0vtucXeSkHx8ul6hvPSBp6UT0CJqE54U/sV
-      P/3/zssVCrY5dGpoyuX0u1mh1HtWPjWrU3t68xTu/U0XhxFWyL1sVQ/hd+Og
-      D++pc4MQq0an9vXq2yhhjIqpon0yv6pC6pXun9Z91VNm36X7JkmuUm+EKCZ0
-      jfM1liWRa8zWZDpT7gD6H7skx+s6JD3ty4tqmJVFEpLU6KbfS0jp5LniWCW7
-      cd/U7mLst5uNrS7SDI1uL2ad3YXtms1C37tJK23QITDxp6lfTy/JM7l9hjjl
-      t4rQHJp77X3qssF91HE3jaDp+t00nYM6bG6HbuzLaeRiMGiK/BjTx8A0gzah
-      q8cIX07VmT4nhs3QhXCXlkSHSD+F+NtoSngybar4gzuvgJqQwo1CHE3WQJLo
-      sqrN9uqzST1aijQVMt0F/xVT+hT5M4XXbXJ3qShnVZURsc3llstsjTnGz2X3
-      jwamf0r8AwJXxZ/v+0nC9DjxVPX09nZJpD2aquKuat2hoifYse6HKj5V178S
-      0ZvH3wEMV2dUrA4AAA==
+      H4sIAAAAAAAAAM2Xy27bOBSGX8XgbO2YV1HMrkkKdFF0BjW6agOBl8NYjW7Q
+      ZTBBkHefY8tBrFgd2JhNAS1EkYf8v8Nj8vczsb7P66oj19+fibdDB+Nrt63b
+      /g463+bNbgC5Jpvetj2EhXtaDE3Xt2DLRdPWP8H3ix+kKWwf67ZclbbroV1B
+      1bdPP8jCDXkRFtVQOmgXXKdkSV6jb3Zd5Bo/vn37a5wQl5ud8Cj6W1vgqJ+1
+      W8+OXJOX+5flM9mv39083bS28tsvtgRy/UzqNn/Iq7Xf2qKA6gGauusz2zRZ
+      X2ev0+3G7aO/7MWjULocP3yFbihQYzUUxZK08Hfe7VP0TDafPjBUxVgM3kbt
+      QUhqmVc+8DR6K7mhLupgPZeJdRxx3F7XPueXB1d7nPNoMB0vy9ehXQM+i/k/
+      efVwgsn0uZhCx1RSRVmiVRQcvIxMWmESzxIqbDRGGJOaOIt5QfAU81j7BKq1
+      edEJJjIYQd5zyXO5EmMhCUJIJR0oQTVwzpmLUYAVgYL1VDiQMMt1QfCU6538
+      6X4Nrsy7ncwuC7bbutq2IWuhqG2AcIqanF2pUsdExtSmVqMsy7WWzgbjsPh4
+      akBwwxQPdr5Szw9+t4X/jTNBH3/UJ4hS8HMZjVNOJ2CMDOCCE9KlWnihvQzK
+      YMUxoNJppWcZLwieMh50T1gKQMimPt0vdi6L1EZAKo0IiTJeB8MSa3TE4yK1
+      jFrnU4obktJZlguCpyyvuqc12UO0Vd1lrq0focrG9TJ+SpeeSxesxXxSpqyU
+      EBIpjDUmSbkxKnBKacB3mYKcpbsg+F01/gpkgmu7p8pnzeCKvNtmRxV8yqvO
+      5Y3MJ8LH6FmQHpxxmoPhJtiUaSVUKrWnwBI3y3tB8JT31yQzxYrPCaA4G9A5
+      jhISyR1EkyqVCKMhRMa90jZKT6PXCafzN8QFwXPlulM+Afr08cPdCUty9m2n
+      o/MmSJCSMtDKADCnEu0jKMVTRvFFeKv8LMsFwVOWveidkfm/Ex2dR5iSAls7
+      /9V//f3OyyXpfDk6NbJDHx8S8X68rYcK9wiNWPeYN4cW3ut93dvXTqYp1ufQ
+      FocpeuiQskE/u5/sfknQx+YRje/O6t4ftn/vhKItOliScOx7x3oIQ2vHNtM8
+      TYxZEpw2Ly064ru3vkSyVOFxFzHoLu/QfD0dVLwzqYs/8AJbrBaHdGE2crzG
+      CaeMr2iy4iZjasU1Ptj1CNB8rt/0Vcd3YHuoW7L5dnv7cbPB8agLxdkSf7kM
+      PSTaKCq15HyfFRy57fvmer32+RVOU9rqauIcr3xdrmd89RqXW5MxXf2fu38E
+      2MBIDNtAv6ufvIfykNPHvApj7nA7/VA0bT6m++Vflxog7nMMAAA=
     http_version: '1.1'
-  recorded_at: Mon, 07 May 2012 21:04:07 GMT
+  recorded_at: Fri, 29 Jun 2012 21:13:38 GMT
 recorded_with: VCR 2.0.0.rc1

@@ -85,7 +85,7 @@ module Jenkins
 
     def connection
       @connection = Faraday.new(url: @configuration.host, port: 80) do |conn|
-        # conn.request :basic_auth, @configuration.user_name, @configuration.token
+        conn.request :basic_auth, @configuration.user_name, @configuration.token
         conn.request :json
 
         conn.response :json, :content_type => /\bjson|javascript$/

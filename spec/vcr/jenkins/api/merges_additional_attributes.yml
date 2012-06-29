@@ -2,9 +2,11 @@
 http_interactions:
 - request:
     method: get
-    uri: http://ci.berman.challengepost.com/api/json
+    uri: http://jenkins:95f8473aca2b06a851472072f1a30b91@ci.berman.challengepost.com/api/json
     body: ''
     headers:
+      authorization:
+      - Basic amVua2luczo5NWY4NDczYWNhMmIwNmE4NTE0NzIwNzJmMWEzMGI5MQ==
       accept-encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       accept:
@@ -21,40 +23,44 @@ http_interactions:
       server:
       - nginx/1.0.5
       date:
-      - Mon, 07 May 2012 21:04:07 GMT
+      - Fri, 29 Jun 2012 21:13:37 GMT
       content-type:
-      - application/javascript;charset=UTF-8
+      - application/json;charset=UTF-8
       connection:
       - close
       content-encoding:
       - gzip
       content-length:
-      - '657'
+      - '730'
       x-powered-by:
       - Servlet/2.5 (Winstone/0.9.10)
     body: !binary |-
-      H4sIAAAAAAAAAK2WT4+bMBDFvwqy1BsJq54qblHTS5XsRk3VS7WKDMwSd41N
-      bZM0ivLdOyQkAsISDNz4935vPDzDHAnVmsUCogUNgGvi/z6eXl2SyAiIT55f
-      fixnC+ISgedz0KFiqWFS4C2zBSeh2oByvoN4Z0I7+UPFs880yfX5WZZ8+wdh
-      ZqRC+heXRGWMyDh3yR8ZnJ2JuMiCjPFoow01md5oUDtQSMoUx3tbY1Lf80I2
-      DUAlVEzDLeUcRAyp1GYaysRDnNeA8JARSi5V7sAzICf35hjm4knI2eSyJlu7
-      ur7N613IPYcohoBqsDWqiNtcUk7Nm1TJJIIdcJkmIIytWROj7Kkg2lDBkofG
-      kxtfj1FDCWfbgvyY2be9BWVdQaxklo7ThwvKuoKtTMbpQA7q5N5vV9Xk3aN3
-      eX6M1N2RykXQQCrTpZCBoatQ6v1+7I5vSh2Gmp8h1m9gYNYrlF6dHxT1EsOi
-      6/jTiZmIe7sW+lqv26zGCPo9qtPGvsoGJryKsXIelu4KxablA5NdxVgteFCk
-      y5A2V62lrQdK2ohGpizc0DAf/DYDhpKPOJ29+/2LGhCdHXt+EZoYdxHFYV3i
-      cIv6haQR8Y8nl6SKJVQdfjHY44VrSTPObSrA1ZC/GQODrnO5x2H9jXINLtGc
-      7mAWY8tX+BEm/hNCNXxVWZJP8cVDeGWNU79i5kB8ozK8tMNyKmO+fUE36Zzq
-      bSCpimwAeQHeTVnhrYr9YY27ChtpzrxfzCvkT5+f5uWUN/ksrSNdt1gWif6Y
-      7qxYCpwJcM65GuyFB1ciHubMZve1/eapG66ve6eFP97yCuCD9f3MN7czO29u
-      a7ezGKkXeYXLXtbWONQg4/X0Hwuc+ccOEAAA
+      H4sIAAAAAAAAALWYXW+bMBSG/0pkaXfQdNvNxl207GbqR7RWu5mqyMAp8Wow
+      80e6rMp/32FlHW4IzQnuRaRg/D7va8M5CTwwbowoKsjPeArSsOT7w/YmYqXK
+      gSXs4vLr+eyMRazC4zmYTIvaClXhKbuCScmNBT35AtWdqMykmdTOveBlo2+O
+      XPn5F2TOKo30DxHLu5jKSRmxHyr968yqR1nqhMyXxnLrzNKAXoNGktMSz62s
+      rZPpNBMnKeiSVyfZiksJVQG1MvYkU+UUcdMexBQZmZJKNw7SAdtGT45ZI44z
+      KeLHNVHtnuuHvO4qdS8hLyDlBqhGnnjIpZbc3ipdxjmsQaq6hMpSzfoYXU8N
+      +UuW8RPZhHDv4KhB8Lug7/cAihqg0MrVJr4FvCd1oO14xjwykqkhCxmn4VGj
+      rFQZ5uI0IKp5zTWexboVv3F2iBQekVqnvjp0Ce2Dj0wZsL76wCPT4YjevEK4
+      v9yR2V6jMQw6hMkbrGvspY/MGayl7GLJybRLN28/vg8Sp2Ud0uSO+zfzTH7Q
+      Yh+nhuhVOySK/8gu5FEovuP6SxdCcQ3VOfpxRyQZ1RN2UZQEo6q9wzjIEx8s
+      ClEVR/u1+kNKuJ0aorJ2Ud0APFXavhBiZHn5GMpOjywwj0JddKgq28Oj3AQh
+      yqyHRboSowqtCxlyNUZRPVAyRLSqFtmSZ82Lh+WIh+J9nIHL6EmO+0nuQRy8
+      2CObVR9jZ5E3EVNr0Kg/UzxnycM2YrUWJdebbwLuceBfpJmUlAS4GvbTCbDo
+      Olf3FUtuuTQQMSP5GmYF7vgCS5clpwitZPP2CvL/GZyBT9qVzXulVocjV5A5
+      LeyGJVY7HFpjQu/FEz1jVzqJJ1cUeWM/Rd2bd6cxfq483pybFRnWiDzKYk5m
+      LOY+gb6khb+SRVv7dE4r7KVNzsl15EFxw8/bMurQr2dk4PXMI4hL+oahBhk3
+      2z9bTpKhjhUAAA==
     http_version: '1.1'
-  recorded_at: Mon, 07 May 2012 21:04:07 GMT
+  recorded_at: Fri, 29 Jun 2012 21:13:37 GMT
 - request:
     method: get
-    uri: http://ci.berman.challengepost.com/job/platform-master/250/api/json
+    uri: http://jenkins:95f8473aca2b06a851472072f1a30b91@ci.berman.challengepost.com/job/platform-master-entry/250/api/json
     body: ''
     headers:
+      authorization:
+      - Basic amVua2luczo5NWY4NDczYWNhMmIwNmE4NTE0NzIwNzJmMWEzMGI5MQ==
       accept-encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       accept:
@@ -71,48 +77,40 @@ http_interactions:
       server:
       - nginx/1.0.5
       date:
-      - Mon, 07 May 2012 21:04:07 GMT
+      - Fri, 29 Jun 2012 21:13:38 GMT
       content-type:
-      - application/javascript;charset=UTF-8
+      - application/json;charset=UTF-8
       connection:
       - close
       content-encoding:
       - gzip
       content-length:
-      - '1020'
+      - '566'
       x-powered-by:
       - Servlet/2.5 (Winstone/0.9.10)
     body: !binary |-
-      H4sIAAAAAAAAAM2XS2/bOBDHv4rBvTo1n6LoW5MU6GHRXTToqQ0EPoaxGr0g
-      yYsNgnz3HUkOasUK1sZeFtBBMjnk/zfDGY6fifV9Xlcd2X5/Jt7uO5heu13d
-      9rfQ+TZvhglkS+562/YQVu5ptW+6vgVbrpq2/gm+X/0gTWH7WLflVWm7Htor
-      qPr26QdZuX1ehFW1Lx20q1STNXk1vh5GyDbVv376c1oON1tc7sj4W1vgrJ+1
-      2yzO3JCX+5f1Mxl3766frltb+d0XWwLZPpO6zR/yauN3tiigeoCm7vrMNk3W
-      19nrcsO80frLKJ1sOV1PP3yFbl+gxmpfFGvSwl95Nzromdx9/shQFWMxeBu1
-      ByGpZV75wNPoreSGuqiD9Vwm1nHEcaOu0eOXG1cjznk06I6X9evUbu/KvBtU
-      d1mw3c7Vtg1ZC0VtA4QTcpacTS51TGRMbWq1cGC51tLZYBzC8NSA4IYpHuwy
-      +fnGc/J/wZmhtzYvOsFEBhPbW1R5LmpiLCRBCKmkAyWoBs45czEKsCJQsJ4i
-      hIRF1AuM56hv5M+j2oDPYv53Xj2cculzuYSOqaSKskSrKDh4GZm0wiSeJVTY
-      aIwwJjVxkesC4zchPNI+g5qS+jQZ1dnZaJhUwYCnUgEFlkgOhjlIPGYZxfxy
-      QTOOAheBLjCeAx10z1gKwEPZ1KfBYeeySG0EpNKIkCjjdTAssUZHLBepZdQ6
-      n1JMoJQuslxgPGd51T0/bT1EW9Vd5tr6Eaps2i/jp3TpuXTBWgaUMmWlhJBI
-      YawxScqNUYFTSgO+yxTkIt0Fxm+O3nsgM1zbPVU+a/auyLtddlRxTnnVubyR
-      +UT4GD0L0oMzTuPp4ibYlGklVCq1H86cW+S9wHjO+z7JDPjzp4+3J2zJ2WVE
-      R+dNkCAlZaCVAWBOJdpHUIqnjOKL8Fb5RbYLjOdso+jh3v+vC72fvvicuEWc
-      HXLnOAYFy4iDaFKlEmE0hMi4V9pG6Wn0OuF0ubpeYLyUwIPyAQiJCsQb2q/+
-      6/+vXq5J58upUyNDLKeHRLz5bup9hd7F0t895s3hC2/svu7t6yBTQzndt8Vh
-      iR46pGywmx0Xu18T7GLziG3v0OjeHwI33pnRFh2sSTjueqdIhn1rp28meCIN
-      pgEum5cW++HbozEcHFIkotFt3mHz9XRQ8aZJXf2GFxj6IMdmi3DK+BVVVzTJ
-      KL3CRwocegRofq9/qaqOb772cM7I3bebm093dzgf1aAkWzajjoTrJJXYWPDR
-      Fzhz1/fNdrPx+QdcprTVh1m/+MHX5Wahm97gdhsyOan/Y/gXgB9oiWZ30A+n
-      Ju+hPHjyMa/C5DEMot8XTZtPTn75B2Vo4MBnDAAA
+      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
+      XiyElq9r6Q9d8WOj30bRI/gOX5qJ18cEAAA=
     http_version: '1.1'
-  recorded_at: Mon, 07 May 2012 21:04:07 GMT
+  recorded_at: Fri, 29 Jun 2012 21:13:38 GMT
 - request:
     method: get
-    uri: http://ci.berman.challengepost.com/job/platform-master/lastBuild/api/json
+    uri: http://jenkins:95f8473aca2b06a851472072f1a30b91@ci.berman.challengepost.com/job/platform-master/lastBuild/api/json
     body: ''
     headers:
+      authorization:
+      - Basic amVua2luczo5NWY4NDczYWNhMmIwNmE4NTE0NzIwNzJmMWEzMGI5MQ==
       accept-encoding:
       - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
       accept:
@@ -129,44 +127,92 @@ http_interactions:
       server:
       - nginx/1.0.5
       date:
-      - Mon, 07 May 2012 21:04:07 GMT
+      - Fri, 29 Jun 2012 21:13:38 GMT
       content-type:
-      - application/javascript;charset=UTF-8
+      - application/json;charset=UTF-8
       connection:
       - close
       content-encoding:
       - gzip
       content-length:
-      - '1138'
+      - '1028'
       x-powered-by:
       - Servlet/2.5 (Winstone/0.9.10)
     body: !binary |-
-      H4sIAAAAAAAAAM2X227jNhCGX0Vgb+2YJ5Gi7zZIgS1QbBe73asmEHgYxtro
-      BJEqGgR591J2so1ipbXRAwr4QqJnyP+bGZKjB6RtrLo2oO0vD8jqMcDhMey6
-      IV5BsEPVTwZoiz5HPURwmbnPxj7EAXST9UP3FWzMrlFf6+i7oVk3OkQY1tDG
-      4f4aZWasape1Y2NgyBRDK/TsfDn9g7aK/TH08TBdWmxxuhfOX4Y6WX3tzGbR
-      coMebx5XD2i/eri8vxx0a3cfdANo+4C6obqt2o3d6bqG9hb6LsRS930Zu/J5
-      uslu7/1hLx1tKV4dBj5BGOuksR3reoUG+LUK+wA9oM/v35GkihDvrPbSAuNY
-      E5tbRwtvNacKGy+dtpQLbWjCMXtd+4if79zucU6jSeF4XD2bhtE0VZhUh9Lp
-      sDOdHlw5QN1pB+6InIiTybn0gvtCF1oyA5pKyY12yiQYWihgVJGcOr1Mfrrz
-      nPwvcGbog67qwAgr4cD2GpWfiiqUBuEY4zk3kDMsgVJKjPcMNHMYtMUJgsMi
-      6hnOc9RX8udZ7cGWvvqtam+PueSpXEz6guMcEyFzzyhY7gnXTAlLBGbaK8WU
-      KpRf5DrD+VUKX2ifQR029fFmzE+uSU1pwYiBAkuPvcGpoqjykhSWiYKIopBE
-      CiLUItAZznOgJ90zlhpSUfbdcXLIqSxcKgYFV8yJXFnpFBFaSZ+Oi0ITrI0t
-      cNpABV5kOcN5zvKse15tEbxuu1CaobuDtjysV9JjuuJUOqc1AYxJrjkHJzhT
-      WilRUKVyRzHGLj3zAvgi3RnOr0rvLZAZrg73rS370dRV2JUvTpxj3vxUXk+s
-      YNZ7Sxy3YJSRFFJ5OV0QmbO84NJiIMIs8p7hPOd9m2QG/P77d1dHbOLkY0R6
-      Y5XjwDkmIHMFQEwupPWQ57QgOD0wq3O7yHaG85xtL3q69//uRG9v3/Q7Cgs7
-      OeXG0JQUwakBr4o8F0xJcJ5Qm0vtucXeSkHx8ul6hvPSBp6UT0CJqE54U/sV
-      P/3/zssVCrY5dGpoyuX0u1mh1HtWPjWrU3t68xTu/U0XhxFWyL1sVQ/hd+Og
-      D++pc4MQq0an9vXq2yhhjIqpon0yv6pC6pXun9Z91VNm36X7JkmuUm+EKCZ0
-      jfM1liWRa8zWZDpT7gD6H7skx+s6JD3ty4tqmJVFEpLU6KbfS0jp5LniWCW7
-      cd/U7mLst5uNrS7SDI1uL2ad3YXtms1C37tJK23QITDxp6lfTy/JM7l9hjjl
-      t4rQHJp77X3qssF91HE3jaDp+t00nYM6bG6HbuzLaeRiMGiK/BjTx8A0gzah
-      q8cIX07VmT4nhs3QhXCXlkSHSD+F+NtoSngybar4gzuvgJqQwo1CHE3WQJLo
-      sqrN9uqzST1aijQVMt0F/xVT+hT5M4XXbXJ3qShnVZURsc3llstsjTnGz2X3
-      jwamf0r8AwJXxZ/v+0nC9DjxVPX09nZJpD2aquKuat2hoifYse6HKj5V178S
-      0ZvH3wEMV2dUrA4AAA==
+      H4sIAAAAAAAAAM2Xy27bOBSGX8XgbO2YV1HMrkkKdFF0BjW6agOBl8NYjW7Q
+      ZTBBkHefY8tBrFgd2JhNAS1EkYf8v8Nj8vczsb7P66oj19+fibdDB+Nrt63b
+      /g463+bNbgC5Jpvetj2EhXtaDE3Xt2DLRdPWP8H3ix+kKWwf67ZclbbroV1B
+      1bdPP8jCDXkRFtVQOmgXXKdkSV6jb3Zd5Bo/vn37a5wQl5ud8Cj6W1vgqJ+1
+      W8+OXJOX+5flM9mv39083bS28tsvtgRy/UzqNn/Iq7Xf2qKA6gGauusz2zRZ
+      X2ev0+3G7aO/7MWjULocP3yFbihQYzUUxZK08Hfe7VP0TDafPjBUxVgM3kbt
+      QUhqmVc+8DR6K7mhLupgPZeJdRxx3F7XPueXB1d7nPNoMB0vy9ehXQM+i/k/
+      efVwgsn0uZhCx1RSRVmiVRQcvIxMWmESzxIqbDRGGJOaOIt5QfAU81j7BKq1
+      edEJJjIYQd5zyXO5EmMhCUJIJR0oQTVwzpmLUYAVgYL1VDiQMMt1QfCU6538
+      6X4Nrsy7ncwuC7bbutq2IWuhqG2AcIqanF2pUsdExtSmVqMsy7WWzgbjsPh4
+      akBwwxQPdr5Szw9+t4X/jTNBH3/UJ4hS8HMZjVNOJ2CMDOCCE9KlWnihvQzK
+      YMUxoNJppWcZLwieMh50T1gKQMimPt0vdi6L1EZAKo0IiTJeB8MSa3TE4yK1
+      jFrnU4obktJZlguCpyyvuqc12UO0Vd1lrq0focrG9TJ+SpeeSxesxXxSpqyU
+      EBIpjDUmSbkxKnBKacB3mYKcpbsg+F01/gpkgmu7p8pnzeCKvNtmRxV8yqvO
+      5Y3MJ8LH6FmQHpxxmoPhJtiUaSVUKrWnwBI3y3tB8JT31yQzxYrPCaA4G9A5
+      jhISyR1EkyqVCKMhRMa90jZKT6PXCafzN8QFwXPlulM+Afr08cPdCUty9m2n
+      o/MmSJCSMtDKADCnEu0jKMVTRvFFeKv8LMsFwVOWveidkfm/Ex2dR5iSAls7
+      /9V//f3OyyXpfDk6NbJDHx8S8X68rYcK9wiNWPeYN4cW3ut93dvXTqYp1ufQ
+      FocpeuiQskE/u5/sfknQx+YRje/O6t4ftn/vhKItOliScOx7x3oIQ2vHNtM8
+      TYxZEpw2Ly064ru3vkSyVOFxFzHoLu/QfD0dVLwzqYs/8AJbrBaHdGE2crzG
+      CaeMr2iy4iZjasU1Ptj1CNB8rt/0Vcd3YHuoW7L5dnv7cbPB8agLxdkSf7kM
+      PSTaKCq15HyfFRy57fvmer32+RVOU9rqauIcr3xdrmd89RqXW5MxXf2fu38E
+      2MBIDNtAv6ufvIfykNPHvApj7nA7/VA0bT6m++Vflxog7nMMAAA=
     http_version: '1.1'
-  recorded_at: Mon, 07 May 2012 21:04:07 GMT
+  recorded_at: Fri, 29 Jun 2012 21:13:38 GMT
+- request:
+    method: get
+    uri: http://jenkins:95f8473aca2b06a851472072f1a30b91@ci.berman.challengepost.com/job/platform-master-entry/278/api/json
+    body: ''
+    headers:
+      authorization:
+      - Basic amVua2luczo5NWY4NDczYWNhMmIwNmE4NTE0NzIwNzJmMWEzMGI5MQ==
+      accept-encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      accept:
+      - ! '*/*'
+      user-agent:
+      - Ruby
+      connection:
+      - close
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      server:
+      - nginx/1.0.5
+      date:
+      - Fri, 29 Jun 2012 21:14:24 GMT
+      content-type:
+      - application/json;charset=UTF-8
+      connection:
+      - close
+      content-encoding:
+      - gzip
+      content-length:
+      - '597'
+      x-powered-by:
+      - Servlet/2.5 (Winstone/0.9.10)
+    body: !binary |-
+      H4sIAAAAAAAAAM1US4/aMBD+K5F7TciDhBBuBSq1UrWtlt3TClWOM4BZx4n8
+      2Aoh/nvHcVaAtIf2VimHzMvzfTOffSaUGd5JTRYvZ8Ko1eB/9aFTZg2aKd67
+      BLIgG0OVgSaoTwGmqeAI8pVjZUic+a3BlHvXA23hxnnZXsIzqS0XjV6elopK
+      dvApZ9Ipvucybqk2oJxjSHuwbe3MrJyH3vMI2gpDFtIKERIFb1wP4M5k8/Vz
+      is2quqjLGVRV3kDd1NO8npdTNi1Z3hQVnVYpJHldFiVCrAcEA9t/L5ae2z1u
+      ZHi5hESgtUS05vH/wxcSzdpxMQT34T+yo1ysOitxtAmmvPL+apnO0JugVWKs
+      p/u9gj1FTTyBRrI9SubmzB7lwhnvqTROU1vXulPAqGrcQAbDi62509nTAYJh
+      2cFvqgNtGQOtd1YgK2UFjM2XQ4byevARDebj4BsVFt3pJLlsRz4/Oz7Acj7n
+      dFh3eBdGpEN/LvdksaNCQ3gP0auvsYp6OytmsywpQoJj4K0byPoay9Msn2MM
+      GYg1172gpxEl/ppdp9rIrycCadQp+IRqD6Jg3DWi5+5mZUmaRcksyqpfaRFl
+      SZTNMfQK0H/vrijl7YUZ6ePFfV6tvmw2mI/oECJteyQ+zZOqKmfZvCqqYauY
+      eTCmX8Qx4xM8pqVywg5UCJB73K02E9a18bGr4w+Bx9g0Jn505odbJBpYj8Ub
+      MG7j3EA7zhcfhMbPERXJrOgVN14LtNadsAae/xaQe2niI2vxLKTu5/z+8rx7
+      Ufh/AD4RwCnqBAAA
+    http_version: '1.1'
+  recorded_at: Fri, 29 Jun 2012 21:14:24 GMT
 recorded_with: VCR 2.0.0.rc1

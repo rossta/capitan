@@ -20,19 +20,19 @@ describe Jenkins::API, :vcr, :record => :new_episodes do
   describe "build" do
 
     it "display build attributes for job, build number" do
-      build_object = api.build('platform-master', 250)
+      build_object = api.build('platform-master-entry', 278)
 
-      build_object.job_name.should == 'platform-master'
-      build_object.build_number.should == 250
+      build_object.job_name.should == 'platform-master-entry'
+      build_object.build_number.should == 278
       build_object.result.should == 'SUCCESS'
       build_object.built_at.should be_a(Time)
       build_object.building.should be_false
       build_object.branch_name.should == 'origin/master'
-      build_object.sha.should =~ /^9145d9ec04/
+      build_object.sha.should =~ /^9b5b76e99/
     end
 
     it "merges additional attributes" do
-      build_object = api.build('platform-master', 250, :foo => 'bar')
+      build_object = api.build('platform-master-entry', 278, :foo => 'bar')
       build_object.foo.should == 'bar'
     end
 
