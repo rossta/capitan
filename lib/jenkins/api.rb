@@ -1,5 +1,6 @@
 require 'faraday_middleware'
 require 'ostruct'
+require 'uri'
 
 module Jenkins
 
@@ -59,7 +60,7 @@ module Jenkins
     end
 
     def get(path = nil)
-      response = connection.get("#{path}/api/json")
+      response = connection.get(URI::escape("#{path}/api/json"))
       if response.success?
         response.body
       else
