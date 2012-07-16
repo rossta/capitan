@@ -67,8 +67,8 @@ module Jenkins
       end
     end
 
+
     def connection
-      puts [@configuration.user_name, @configuration.token].inspect
       @connection = Faraday.new(url: @configuration.host, port: 80) do |conn|
         # conn.request :basic_auth, @configuration.user_name, @configuration.token
         conn.request :json
@@ -82,19 +82,6 @@ module Jenkins
     end
 
     protected
-
-    def connection
-      @connection = Faraday.new(url: @configuration.host, port: 80) do |conn|
-        conn.request :basic_auth, @configuration.user_name, @configuration.token
-        conn.request :json
-
-        conn.response :json, :content_type => /\bjson|javascript$/
-        conn.response :logger unless Rails.env.test?
-
-        conn.use :instrumentation
-        conn.adapter Faraday.default_adapter
-      end
-    end
 
     def branch_name_from_build_json(build_json, build_number)
       actions_json = build_json["actions"] || []
